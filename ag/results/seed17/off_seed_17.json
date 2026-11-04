@@ -1,0 +1,109 @@
+{
+  "config": {
+    "nx": 80,
+    "layer_cells": 20,
+    "spacing_nm": 1.0,
+    "voltage": 3.0,
+    "temperature_K": 300.0,
+    "attempt_Hz": 10000000000000.0,
+    "eps_aln": 8.5,
+    "eps_alscn": 15.0,
+    "polarization_C_m2": 0.0,
+    "hop_aln_eV": 0.48,
+    "hop_alscn_eV": 0.5,
+    "interface_eV": 0.025,
+    "source_barrier_eV": 0.68,
+    "reaction_barrier_eV": 0.52,
+    "pt_nucleation_eV": 0.08,
+    "metal_standard_eV": -0.1,
+    "bond_eV": 0.06,
+    "migration_eV": 0.8,
+    "disorder_eV": 0.025,
+    "max_events": 350000,
+    "max_time_s": 2.0,
+    "seed": 17
+  },
+  "status": "first_bridge",
+  "time_s": 0.2818551473096087,
+  "events": 143268,
+  "connected": true,
+  "counts": {
+    "inject": 860,
+    "absorb": 0,
+    "hop": 140047,
+    "reduce": 1603,
+    "oxidize": 744,
+    "migrate": 14
+  },
+  "ag_balance_error": 0,
+  "field_residual": 3.036169040940106e-15,
+  "trace": [
+    {
+      "time_s": 0.0,
+      "events": 0,
+      "metal": 0,
+      "ions": 0,
+      "connected": false,
+      "net_source": 0
+    },
+    {
+      "time_s": 0.010023939143302942,
+      "events": 6552,
+      "metal": 25,
+      "ions": 2,
+      "connected": false,
+      "net_source": 27
+    },
+    {
+      "time_s": 0.029011092628530126,
+      "events": 17616,
+      "metal": 75,
+      "ions": 3,
+      "connected": false,
+      "net_source": 78
+    },
+    {
+      "time_s": 0.05427675786595935,
+      "events": 33337,
+      "metal": 150,
+      "ions": 10,
+      "connected": false,
+      "net_source": 160
+    },
+    {
+      "time_s": 0.1017102554381311,
+      "events": 60862,
+      "metal": 300,
+      "ions": 3,
+      "connected": false,
+      "net_source": 303
+    },
+    {
+      "time_s": 0.16514201644547805,
+      "events": 95717,
+      "metal": 500,
+      "ions": 2,
+      "connected": false,
+      "net_source": 502
+    },
+    {
+      "time_s": 0.2460295479226519,
+      "events": 132632,
+      "metal": 750,
+      "ions": 5,
+      "connected": false,
+      "net_source": 755
+    },
+    {
+      "time_s": 0.2818551473096087,
+      "events": 143268,
+      "metal": 859,
+      "ions": 1,
+      "connected": true,
+      "net_source": 860
+    }
+  ],
+  "potential_state": "before_bridge_event",
+  "wall_s": 179.72751389999758,
+  "variant": "off"
+}

@@ -1,0 +1,9 @@
+{
+  "nx": 80,
+  "layer_cells": 20,
+  "spacing_nm": 1.0,
+  "voltage": 3.0,
+  "polarization_C_m2": -0.004,
+  "max_events": 350000,
+  "max_time_s": 2.0
+}

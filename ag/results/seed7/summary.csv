@@ -1,0 +1,4 @@
+﻿variant,seed,status,connected,time_s,events,metal,ions,ag_balance_error,wall_s
+assist,7,first_bridge,True,0.33354075623505364,159438,950,2,0,79.2024629999978
+off,7,first_bridge,True,0.23445257712793133,116647,676,2,0,128.6100660000011
+oppose,7,event_budget,False,0.27386984016411586,350000,710,80,0,259.91533830000117
