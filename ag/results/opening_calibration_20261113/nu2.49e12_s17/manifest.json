@@ -1,0 +1,1123 @@
+{
+  "configuration": {
+    "backend": "infinite_ag_v1_restored",
+    "parameter_status": "Opening-window calibration trial: only effective attempt_Hz changed from morphology reference",
+    "model": {
+      "nx": 150,
+      "layer_cells": 20,
+      "spacing_nm": 1.0,
+      "voltage": 0.0,
+      "temperature_K": 300.0,
+      "attempt_Hz": 2490000000000.0,
+      "eps_aln": 8.5,
+      "eps_alscn": 15.0,
+      "polarization_C_m2": -0.004,
+      "hop_aln_eV": 0.48,
+      "hop_alscn_eV": 0.5,
+      "interface_eV": 0.025,
+      "source_barrier_eV": 0.68,
+      "reaction_barrier_eV": 0.52,
+      "pt_nucleation_eV": 0.08,
+      "metal_standard_eV": -0.1,
+      "bond_eV": 0.06,
+      "pt_adhesion_eV": 0.06,
+      "surface_redox_only": true,
+      "migration_eV": 0.8,
+      "disorder_eV": 0.025,
+      "max_events": 100000000,
+      "max_time_s": 4.24,
+      "seed": 17,
+      "disorder_seed": 811,
+      "record_events": false,
+      "vacancy_affected_fraction_by_layer": [
+        0.0,
+        0.15,
+        0.0
+      ],
+      "vacancy_ag_ion_penalty_eV": 0.05,
+      "vacancy_seed": 812
+    },
+    "electronics": {
+      "metal_resistivity_ohm_m": 1.6e-08,
+      "effective_depth_nm": 1.0,
+      "contact_resistance_ohm": 500.0,
+      "tunnel_prefactor_S": 7.748091729e-05,
+      "tunnel_barrier_eV": 1.0,
+      "tunnel_effective_mass_ratio": 1.0,
+      "max_tunnel_gap_nm": 2.0,
+      "min_tunnel_conductance_S": 1e-15,
+      "leakage_per_column_S": 1e-12,
+      "leakage_voltage_scale_V": 2.0,
+      "series_resistance_ohm": 100.0,
+      "compliance_A": 0.001,
+      "leakage_model": "sinh",
+      "leakage_saturation_A": 1e-06,
+      "leakage_half_voltage_V": 1.0,
+      "leakage_exponent": 2.0,
+      "leakage_reference_columns": 150.0,
+      "network_parallel_factor": 1.0
+    },
+    "protocol": {
+      "source": "forming_data/SET [(1) _forming_; 1_9_2025 9_44_22 PM].csv",
+      "sweep": "full",
+      "dwell_s": 0.02,
+      "evolution": "dynamic",
+      "settling": {
+        "min_s": 0.1,
+        "max_s": 0.2,
+        "window_s": 0.02
+      }
+    },
+    "restore_reference": "results/morphology_reproduction_20261112/vacancy_penalty_seed_17_filament.npz",
+    "historical_reference_dwell_s": 0.0001,
+    "morphology_reference": "results/vacancy_forming_20261108/vacancy_penalty_seed_17.json",
+    "reference_protocol_changes": {
+      "historical": "0-3 V, 0.1 ms steps, then 0.5 s at peak, first-bridge stop",
+      "transfer": "original forming 202 points 0-1.5-0 V, 20 ms each, dynamic post-bridge, 0.1-0.2 s zero hold"
+    },
+    "calibration_target": {
+      "observable": "first geometric bridge command voltage",
+      "window_V": [
+        1.32,
+        1.335
+      ],
+      "training_seed": 17,
+      "timing": "20 ms per measured voltage point; 50 Hz nominal PLC=1",
+      "source": "project experimental forming bracket; literature attribution not assumed"
+    }
+  },
+  "physics_source_sha256": {
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10",
+    "dynamic_kmc.py": "9da984308e9703dae0c2d3101d9522ca0521c2eb890ca6ad3b86c3ef6d2410c8"
+  },
+  "driver_sha256": "900ed2ac1a7573f4f997cdfb350f3201fe80390f5cba0524ea6c7c5f5d1b1543",
+  "runner_sha256": "94ef429ac0ea8b5c98f7725daca1ed55b34da14902012879453ab8b6920ef734",
+  "calibration_scope": "Kinetic clock fitting; no voltage gate, no artificial filament, no rescaling of voltage axis",
+  "training_seed": 17,
+  "target_window_V": [
+    1.32,
+    1.335
+  ],
+  "measurement": {
+    "source": "D:\\Al4memorister\\ag\\forming_data\\SET [(1) _forming_; 1_9_2025 9_44_22 PM].csv",
+    "source_sha256": "0ccdd01f018d308e19b40db4af5c6422582c27ff2dae5d8e416ee17000096747",
+    "original_points": 202,
+    "points": [
+      {
+        "voltage_V": 0.0,
+        "measured_A": 3.2570000000000004e-12,
+        "source_row": 259
+      },
+      {
+        "voltage_V": 0.015000000000000001,
+        "measured_A": 1.86895e-09,
+        "source_row": 260
+      },
+      {
+        "voltage_V": 0.030000000000000002,
+        "measured_A": 2.17355e-09,
+        "source_row": 261
+      },
+      {
+        "voltage_V": 0.045000000000000005,
+        "measured_A": 2.52181e-09,
+        "source_row": 262
+      },
+      {
+        "voltage_V": 0.060000000000000005,
+        "measured_A": 4.11983e-09,
+        "source_row": 263
+      },
+      {
+        "voltage_V": 0.075,
+        "measured_A": 8.25443e-09,
+        "source_row": 264
+      },
+      {
+        "voltage_V": 0.09000000000000001,
+        "measured_A": 9.56532e-09,
+        "source_row": 265
+      },
+      {
+        "voltage_V": 0.10500000000000001,
+        "measured_A": 1.0854899999999998e-08,
+        "source_row": 266
+      },
+      {
+        "voltage_V": 0.12000000000000001,
+        "measured_A": 5.0459e-09,
+        "source_row": 267
+      },
+      {
+        "voltage_V": 0.135,
+        "measured_A": 1.2331599999999999e-08,
+        "source_row": 268
+      },
+      {
+        "voltage_V": 0.15,
+        "measured_A": 2.30518e-08,
+        "source_row": 269
+      },
+      {
+        "voltage_V": 0.165,
+        "measured_A": 2.0860799999999996e-08,
+        "source_row": 270
+      },
+      {
+        "voltage_V": 0.18000000000000002,
+        "measured_A": 2.4414199999999997e-08,
+        "source_row": 271
+      },
+      {
+        "voltage_V": 0.195,
+        "measured_A": 3.6089e-08,
+        "source_row": 272
+      },
+      {
+        "voltage_V": 0.21000000000000002,
+        "measured_A": 3.9061999999999996e-08,
+        "source_row": 273
+      },
+      {
+        "voltage_V": 0.225,
+        "measured_A": 4.86548e-08,
+        "source_row": 274
+      },
+      {
+        "voltage_V": 0.24000000000000002,
+        "measured_A": 5.4240099999999993e-08,
+        "source_row": 275
+      },
+      {
+        "voltage_V": 0.255,
+        "measured_A": 6.95855e-08,
+        "source_row": 276
+      },
+      {
+        "voltage_V": 0.27,
+        "measured_A": 7.25329e-08,
+        "source_row": 277
+      },
+      {
+        "voltage_V": 0.28500000000000003,
+        "measured_A": 7.009269999999999e-08,
+        "source_row": 278
+      },
+      {
+        "voltage_V": 0.3,
+        "measured_A": 7.648749999999999e-08,
+        "source_row": 279
+      },
+      {
+        "voltage_V": 0.315,
+        "measured_A": 8.42095e-08,
+        "source_row": 280
+      },
+      {
+        "voltage_V": 0.33,
+        "measured_A": 8.72601e-08,
+        "source_row": 281
+      },
+      {
+        "voltage_V": 0.34500000000000003,
+        "measured_A": 8.941309999999999e-08,
+        "source_row": 282
+      },
+      {
+        "voltage_V": 0.36000000000000004,
+        "measured_A": 9.529369999999999e-08,
+        "source_row": 283
+      },
+      {
+        "voltage_V": 0.375,
+        "measured_A": 1.08943e-07,
+        "source_row": 284
+      },
+      {
+        "voltage_V": 0.39,
+        "measured_A": 1.18191e-07,
+        "source_row": 285
+      },
+      {
+        "voltage_V": 0.405,
+        "measured_A": 1.32481e-07,
+        "source_row": 286
+      },
+      {
+        "voltage_V": 0.42000000000000004,
+        "measured_A": 1.45888e-07,
+        "source_row": 287
+      },
+      {
+        "voltage_V": 0.435,
+        "measured_A": 1.51336e-07,
+        "source_row": 288
+      },
+      {
+        "voltage_V": 0.45,
+        "measured_A": 1.7013899999999999e-07,
+        "source_row": 289
+      },
+      {
+        "voltage_V": 0.465,
+        "measured_A": 1.7398999999999999e-07,
+        "source_row": 290
+      },
+      {
+        "voltage_V": 0.48000000000000004,
+        "measured_A": 1.8925599999999998e-07,
+        "source_row": 291
+      },
+      {
+        "voltage_V": 0.49500000000000005,
+        "measured_A": 2.10448e-07,
+        "source_row": 292
+      },
+      {
+        "voltage_V": 0.51,
+        "measured_A": 2.33669e-07,
+        "source_row": 293
+      },
+      {
+        "voltage_V": 0.525,
+        "measured_A": 2.54915e-07,
+        "source_row": 294
+      },
+      {
+        "voltage_V": 0.54,
+        "measured_A": 2.50601e-07,
+        "source_row": 295
+      },
+      {
+        "voltage_V": 0.555,
+        "measured_A": 2.69916e-07,
+        "source_row": 296
+      },
+      {
+        "voltage_V": 0.5700000000000001,
+        "measured_A": 2.61475e-07,
+        "source_row": 297
+      },
+      {
+        "voltage_V": 0.5850000000000001,
+        "measured_A": 2.94977e-07,
+        "source_row": 298
+      },
+      {
+        "voltage_V": 0.6,
+        "measured_A": 3.07404e-07,
+        "source_row": 299
+      },
+      {
+        "voltage_V": 0.615,
+        "measured_A": 3.23853e-07,
+        "source_row": 300
+      },
+      {
+        "voltage_V": 0.63,
+        "measured_A": 3.25366e-07,
+        "source_row": 301
+      },
+      {
+        "voltage_V": 0.645,
+        "measured_A": 3.31971e-07,
+        "source_row": 302
+      },
+      {
+        "voltage_V": 0.66,
+        "measured_A": 3.5188099999999997e-07,
+        "source_row": 303
+      },
+      {
+        "voltage_V": 0.675,
+        "measured_A": 3.55946e-07,
+        "source_row": 304
+      },
+      {
+        "voltage_V": 0.6900000000000001,
+        "measured_A": 4.13857e-07,
+        "source_row": 305
+      },
+      {
+        "voltage_V": 0.7050000000000001,
+        "measured_A": 3.84992e-07,
+        "source_row": 306
+      },
+      {
+        "voltage_V": 0.7200000000000001,
+        "measured_A": 4.29724e-07,
+        "source_row": 307
+      },
+      {
+        "voltage_V": 0.735,
+        "measured_A": 4.02837e-07,
+        "source_row": 308
+      },
+      {
+        "voltage_V": 0.75,
+        "measured_A": 4.16224e-07,
+        "source_row": 309
+      },
+      {
+        "voltage_V": 0.765,
+        "measured_A": 4.30494e-07,
+        "source_row": 310
+      },
+      {
+        "voltage_V": 0.78,
+        "measured_A": 3.23418e-07,
+        "source_row": 311
+      },
+      {
+        "voltage_V": 0.795,
+        "measured_A": 3.93099e-07,
+        "source_row": 312
+      },
+      {
+        "voltage_V": 0.81,
+        "measured_A": 4.62984e-07,
+        "source_row": 313
+      },
+      {
+        "voltage_V": 0.8250000000000001,
+        "measured_A": 5.16288e-07,
+        "source_row": 314
+      },
+      {
+        "voltage_V": 0.8400000000000001,
+        "measured_A": 5.61323e-07,
+        "source_row": 315
+      },
+      {
+        "voltage_V": 0.8550000000000001,
+        "measured_A": 5.89802e-07,
+        "source_row": 316
+      },
+      {
+        "voltage_V": 0.87,
+        "measured_A": 5.946249999999999e-07,
+        "source_row": 317
+      },
+      {
+        "voltage_V": 0.885,
+        "measured_A": 6.35327e-07,
+        "source_row": 318
+      },
+      {
+        "voltage_V": 0.9,
+        "measured_A": 6.1129e-07,
+        "source_row": 319
+      },
+      {
+        "voltage_V": 0.915,
+        "measured_A": 5.93461e-07,
+        "source_row": 320
+      },
+      {
+        "voltage_V": 0.93,
+        "measured_A": 5.58835e-07,
+        "source_row": 321
+      },
+      {
+        "voltage_V": 0.9450000000000001,
+        "measured_A": 6.02837e-07,
+        "source_row": 322
+      },
+      {
+        "voltage_V": 0.9600000000000001,
+        "measured_A": 6.068339999999999e-07,
+        "source_row": 323
+      },
+      {
+        "voltage_V": 0.9750000000000001,
+        "measured_A": 4.68e-07,
+        "source_row": 324
+      },
+      {
+        "voltage_V": 0.9900000000000001,
+        "measured_A": 3.37356e-07,
+        "source_row": 325
+      },
+      {
+        "voltage_V": 1.0050000000000001,
+        "measured_A": 3.64171e-07,
+        "source_row": 326
+      },
+      {
+        "voltage_V": 1.02,
+        "measured_A": 5.439939999999999e-07,
+        "source_row": 327
+      },
+      {
+        "voltage_V": 1.0350000000000001,
+        "measured_A": 6.08865e-07,
+        "source_row": 328
+      },
+      {
+        "voltage_V": 1.05,
+        "measured_A": 6.38865e-07,
+        "source_row": 329
+      },
+      {
+        "voltage_V": 1.065,
+        "measured_A": 6.30799e-07,
+        "source_row": 330
+      },
+      {
+        "voltage_V": 1.08,
+        "measured_A": 6.98897e-07,
+        "source_row": 331
+      },
+      {
+        "voltage_V": 1.095,
+        "measured_A": 7.5669e-07,
+        "source_row": 332
+      },
+      {
+        "voltage_V": 1.11,
+        "measured_A": 6.11427e-07,
+        "source_row": 333
+      },
+      {
+        "voltage_V": 1.125,
+        "measured_A": 8.05279e-07,
+        "source_row": 334
+      },
+      {
+        "voltage_V": 1.1400000000000001,
+        "measured_A": 5.613849999999999e-07,
+        "source_row": 335
+      },
+      {
+        "voltage_V": 1.155,
+        "measured_A": 5.94957e-07,
+        "source_row": 336
+      },
+      {
+        "voltage_V": 1.1700000000000002,
+        "measured_A": 5.268329999999999e-07,
+        "source_row": 337
+      },
+      {
+        "voltage_V": 1.185,
+        "measured_A": 6.65012e-07,
+        "source_row": 338
+      },
+      {
+        "voltage_V": 1.2,
+        "measured_A": 6.91735e-07,
+        "source_row": 339
+      },
+      {
+        "voltage_V": 1.215,
+        "measured_A": 6.8831e-07,
+        "source_row": 340
+      },
+      {
+        "voltage_V": 1.23,
+        "measured_A": 6.5639e-07,
+        "source_row": 341
+      },
+      {
+        "voltage_V": 1.245,
+        "measured_A": 1.08286e-07,
+        "source_row": 342
+      },
+      {
+        "voltage_V": 1.26,
+        "measured_A": 1.21302e-07,
+        "source_row": 343
+      },
+      {
+        "voltage_V": 1.2750000000000001,
+        "measured_A": 8.0128e-08,
+        "source_row": 344
+      },
+      {
+        "voltage_V": 1.29,
+        "measured_A": 8.1061e-08,
+        "source_row": 345
+      },
+      {
+        "voltage_V": 1.3050000000000002,
+        "measured_A": 9.084e-08,
+        "source_row": 346
+      },
+      {
+        "voltage_V": 1.32,
+        "measured_A": 3.77884e-07,
+        "source_row": 347
+      },
+      {
+        "voltage_V": 1.335,
+        "measured_A": 0.0010000410000000001,
+        "source_row": 348
+      },
+      {
+        "voltage_V": 1.35,
+        "measured_A": 0.001000039,
+        "source_row": 349
+      },
+      {
+        "voltage_V": 1.365,
+        "measured_A": 0.001000038,
+        "source_row": 350
+      },
+      {
+        "voltage_V": 1.3800000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 351
+      },
+      {
+        "voltage_V": 1.395,
+        "measured_A": 0.001000039,
+        "source_row": 352
+      },
+      {
+        "voltage_V": 1.4100000000000001,
+        "measured_A": 0.00100004,
+        "source_row": 353
+      },
+      {
+        "voltage_V": 1.425,
+        "measured_A": 0.001000039,
+        "source_row": 354
+      },
+      {
+        "voltage_V": 1.4400000000000002,
+        "measured_A": 0.001000039,
+        "source_row": 355
+      },
+      {
+        "voltage_V": 1.455,
+        "measured_A": 0.001000039,
+        "source_row": 356
+      },
+      {
+        "voltage_V": 1.47,
+        "measured_A": 0.001000039,
+        "source_row": 357
+      },
+      {
+        "voltage_V": 1.485,
+        "measured_A": 0.001000039,
+        "source_row": 358
+      },
+      {
+        "voltage_V": 1.5,
+        "measured_A": 0.001000039,
+        "source_row": 359
+      },
+      {
+        "voltage_V": 1.5,
+        "measured_A": 0.001000039,
+        "source_row": 360
+      },
+      {
+        "voltage_V": 1.485,
+        "measured_A": 0.001000038,
+        "source_row": 361
+      },
+      {
+        "voltage_V": 1.47,
+        "measured_A": 0.001000039,
+        "source_row": 362
+      },
+      {
+        "voltage_V": 1.455,
+        "measured_A": 0.001000039,
+        "source_row": 363
+      },
+      {
+        "voltage_V": 1.4400000000000002,
+        "measured_A": 0.001000038,
+        "source_row": 364
+      },
+      {
+        "voltage_V": 1.425,
+        "measured_A": 0.001000038,
+        "source_row": 365
+      },
+      {
+        "voltage_V": 1.4100000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 366
+      },
+      {
+        "voltage_V": 1.395,
+        "measured_A": 0.001000039,
+        "source_row": 367
+      },
+      {
+        "voltage_V": 1.3800000000000001,
+        "measured_A": 0.00100004,
+        "source_row": 368
+      },
+      {
+        "voltage_V": 1.365,
+        "measured_A": 0.001000038,
+        "source_row": 369
+      },
+      {
+        "voltage_V": 1.35,
+        "measured_A": 0.001000038,
+        "source_row": 370
+      },
+      {
+        "voltage_V": 1.335,
+        "measured_A": 0.001000038,
+        "source_row": 371
+      },
+      {
+        "voltage_V": 1.32,
+        "measured_A": 0.001000038,
+        "source_row": 372
+      },
+      {
+        "voltage_V": 1.3050000000000002,
+        "measured_A": 0.001000038,
+        "source_row": 373
+      },
+      {
+        "voltage_V": 1.29,
+        "measured_A": 0.001000038,
+        "source_row": 374
+      },
+      {
+        "voltage_V": 1.2750000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 375
+      },
+      {
+        "voltage_V": 1.26,
+        "measured_A": 0.001000039,
+        "source_row": 376
+      },
+      {
+        "voltage_V": 1.245,
+        "measured_A": 0.00100004,
+        "source_row": 377
+      },
+      {
+        "voltage_V": 1.23,
+        "measured_A": 0.001000039,
+        "source_row": 378
+      },
+      {
+        "voltage_V": 1.215,
+        "measured_A": 0.001000039,
+        "source_row": 379
+      },
+      {
+        "voltage_V": 1.2,
+        "measured_A": 0.001000039,
+        "source_row": 380
+      },
+      {
+        "voltage_V": 1.185,
+        "measured_A": 0.001000039,
+        "source_row": 381
+      },
+      {
+        "voltage_V": 1.1700000000000002,
+        "measured_A": 0.001000039,
+        "source_row": 382
+      },
+      {
+        "voltage_V": 1.155,
+        "measured_A": 0.00100004,
+        "source_row": 383
+      },
+      {
+        "voltage_V": 1.1400000000000001,
+        "measured_A": 0.0010000410000000001,
+        "source_row": 384
+      },
+      {
+        "voltage_V": 1.125,
+        "measured_A": 0.00100004,
+        "source_row": 385
+      },
+      {
+        "voltage_V": 1.11,
+        "measured_A": 0.001000038,
+        "source_row": 386
+      },
+      {
+        "voltage_V": 1.095,
+        "measured_A": 0.001000039,
+        "source_row": 387
+      },
+      {
+        "voltage_V": 1.08,
+        "measured_A": 0.001000039,
+        "source_row": 388
+      },
+      {
+        "voltage_V": 1.065,
+        "measured_A": 0.001000039,
+        "source_row": 389
+      },
+      {
+        "voltage_V": 1.05,
+        "measured_A": 0.001000039,
+        "source_row": 390
+      },
+      {
+        "voltage_V": 1.0350000000000001,
+        "measured_A": 0.001000038,
+        "source_row": 391
+      },
+      {
+        "voltage_V": 1.02,
+        "measured_A": 0.001000039,
+        "source_row": 392
+      },
+      {
+        "voltage_V": 1.0050000000000001,
+        "measured_A": 0.001000038,
+        "source_row": 393
+      },
+      {
+        "voltage_V": 0.9900000000000001,
+        "measured_A": 0.00100004,
+        "source_row": 394
+      },
+      {
+        "voltage_V": 0.9750000000000001,
+        "measured_A": 0.00100004,
+        "source_row": 395
+      },
+      {
+        "voltage_V": 0.9600000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 396
+      },
+      {
+        "voltage_V": 0.9450000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 397
+      },
+      {
+        "voltage_V": 0.93,
+        "measured_A": 0.001000038,
+        "source_row": 398
+      },
+      {
+        "voltage_V": 0.915,
+        "measured_A": 0.001000039,
+        "source_row": 399
+      },
+      {
+        "voltage_V": 0.9,
+        "measured_A": 0.001000039,
+        "source_row": 400
+      },
+      {
+        "voltage_V": 0.885,
+        "measured_A": 0.001000038,
+        "source_row": 401
+      },
+      {
+        "voltage_V": 0.87,
+        "measured_A": 0.001000039,
+        "source_row": 402
+      },
+      {
+        "voltage_V": 0.8550000000000001,
+        "measured_A": 0.001000038,
+        "source_row": 403
+      },
+      {
+        "voltage_V": 0.8400000000000001,
+        "measured_A": 0.001000038,
+        "source_row": 404
+      },
+      {
+        "voltage_V": 0.8250000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 405
+      },
+      {
+        "voltage_V": 0.81,
+        "measured_A": 0.001000038,
+        "source_row": 406
+      },
+      {
+        "voltage_V": 0.795,
+        "measured_A": 0.001000039,
+        "source_row": 407
+      },
+      {
+        "voltage_V": 0.78,
+        "measured_A": 0.001000039,
+        "source_row": 408
+      },
+      {
+        "voltage_V": 0.765,
+        "measured_A": 0.001000038,
+        "source_row": 409
+      },
+      {
+        "voltage_V": 0.75,
+        "measured_A": 0.001000039,
+        "source_row": 410
+      },
+      {
+        "voltage_V": 0.735,
+        "measured_A": 0.00100004,
+        "source_row": 411
+      },
+      {
+        "voltage_V": 0.7200000000000001,
+        "measured_A": 0.00100004,
+        "source_row": 412
+      },
+      {
+        "voltage_V": 0.7050000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 413
+      },
+      {
+        "voltage_V": 0.6900000000000001,
+        "measured_A": 0.00100004,
+        "source_row": 414
+      },
+      {
+        "voltage_V": 0.675,
+        "measured_A": 0.001000039,
+        "source_row": 415
+      },
+      {
+        "voltage_V": 0.66,
+        "measured_A": 0.001000039,
+        "source_row": 416
+      },
+      {
+        "voltage_V": 0.645,
+        "measured_A": 0.00100004,
+        "source_row": 417
+      },
+      {
+        "voltage_V": 0.63,
+        "measured_A": 0.00100004,
+        "source_row": 418
+      },
+      {
+        "voltage_V": 0.615,
+        "measured_A": 0.00100004,
+        "source_row": 419
+      },
+      {
+        "voltage_V": 0.6,
+        "measured_A": 0.001000038,
+        "source_row": 420
+      },
+      {
+        "voltage_V": 0.5850000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 421
+      },
+      {
+        "voltage_V": 0.5700000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 422
+      },
+      {
+        "voltage_V": 0.555,
+        "measured_A": 0.00100004,
+        "source_row": 423
+      },
+      {
+        "voltage_V": 0.54,
+        "measured_A": 0.00100004,
+        "source_row": 424
+      },
+      {
+        "voltage_V": 0.525,
+        "measured_A": 0.001000039,
+        "source_row": 425
+      },
+      {
+        "voltage_V": 0.51,
+        "measured_A": 0.001000039,
+        "source_row": 426
+      },
+      {
+        "voltage_V": 0.49500000000000005,
+        "measured_A": 0.00100004,
+        "source_row": 427
+      },
+      {
+        "voltage_V": 0.48000000000000004,
+        "measured_A": 0.00100004,
+        "source_row": 428
+      },
+      {
+        "voltage_V": 0.465,
+        "measured_A": 0.001000039,
+        "source_row": 429
+      },
+      {
+        "voltage_V": 0.45,
+        "measured_A": 0.001000039,
+        "source_row": 430
+      },
+      {
+        "voltage_V": 0.435,
+        "measured_A": 0.001000039,
+        "source_row": 431
+      },
+      {
+        "voltage_V": 0.42000000000000004,
+        "measured_A": 0.001000039,
+        "source_row": 432
+      },
+      {
+        "voltage_V": 0.405,
+        "measured_A": 0.00100004,
+        "source_row": 433
+      },
+      {
+        "voltage_V": 0.39,
+        "measured_A": 0.00100004,
+        "source_row": 434
+      },
+      {
+        "voltage_V": 0.375,
+        "measured_A": 0.0010000410000000001,
+        "source_row": 435
+      },
+      {
+        "voltage_V": 0.36000000000000004,
+        "measured_A": 0.001000038,
+        "source_row": 436
+      },
+      {
+        "voltage_V": 0.34500000000000003,
+        "measured_A": 0.001000039,
+        "source_row": 437
+      },
+      {
+        "voltage_V": 0.33,
+        "measured_A": 0.001000039,
+        "source_row": 438
+      },
+      {
+        "voltage_V": 0.315,
+        "measured_A": 0.00100004,
+        "source_row": 439
+      },
+      {
+        "voltage_V": 0.3,
+        "measured_A": 0.0010000410000000001,
+        "source_row": 440
+      },
+      {
+        "voltage_V": 0.28500000000000003,
+        "measured_A": 0.001000038,
+        "source_row": 441
+      },
+      {
+        "voltage_V": 0.27,
+        "measured_A": 0.001000038,
+        "source_row": 442
+      },
+      {
+        "voltage_V": 0.255,
+        "measured_A": 0.001000039,
+        "source_row": 443
+      },
+      {
+        "voltage_V": 0.24000000000000002,
+        "measured_A": 0.001000038,
+        "source_row": 444
+      },
+      {
+        "voltage_V": 0.225,
+        "measured_A": 0.001000038,
+        "source_row": 445
+      },
+      {
+        "voltage_V": 0.21000000000000002,
+        "measured_A": 0.001000039,
+        "source_row": 446
+      },
+      {
+        "voltage_V": 0.195,
+        "measured_A": 0.001000039,
+        "source_row": 447
+      },
+      {
+        "voltage_V": 0.18000000000000002,
+        "measured_A": 0.001000039,
+        "source_row": 448
+      },
+      {
+        "voltage_V": 0.165,
+        "measured_A": 0.001000039,
+        "source_row": 449
+      },
+      {
+        "voltage_V": 0.15,
+        "measured_A": 0.001000038,
+        "source_row": 450
+      },
+      {
+        "voltage_V": 0.135,
+        "measured_A": 0.001000039,
+        "source_row": 451
+      },
+      {
+        "voltage_V": 0.12000000000000001,
+        "measured_A": 0.001000039,
+        "source_row": 452
+      },
+      {
+        "voltage_V": 0.10500000000000001,
+        "measured_A": 0.001000038,
+        "source_row": 453
+      },
+      {
+        "voltage_V": 0.09000000000000001,
+        "measured_A": 0.001000038,
+        "source_row": 454
+      },
+      {
+        "voltage_V": 0.075,
+        "measured_A": 0.00100004,
+        "source_row": 455
+      },
+      {
+        "voltage_V": 0.060000000000000005,
+        "measured_A": 0.001000038,
+        "source_row": 456
+      },
+      {
+        "voltage_V": 0.045000000000000005,
+        "measured_A": 0.00100004,
+        "source_row": 457
+      },
+      {
+        "voltage_V": 0.030000000000000002,
+        "measured_A": 0.00068139,
+        "source_row": 458
+      },
+      {
+        "voltage_V": 0.015000000000000001,
+        "measured_A": 0.000340522,
+        "source_row": 459
+      },
+      {
+        "voltage_V": 0.0,
+        "measured_A": 1.0422739999999999e-07,
+        "source_row": 460
+      }
+    ],
+    "compliance_A": 0.001
+  },
+  "dwell_s": 0.02
+}

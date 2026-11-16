@@ -1,0 +1,86 @@
+[
+  {
+    "path": "results/forming_refit_20261109/scout/refine_source/b0.69750_s17",
+    "last_progress": {
+      "point": 74,
+      "voltage_V": 1.11,
+      "time_s": 0.75,
+      "events": 796009,
+      "status": "protocol_complete_no_bridge",
+      "metal": 673,
+      "ions": 350
+    },
+    "status": "interrupted_no_completed_summary",
+    "included_in_selection": false
+  },
+  {
+    "path": "results/forming_refit_20261109/scout/refine_source/b0.69750_s27",
+    "last_progress": {
+      "point": 74,
+      "voltage_V": 1.11,
+      "time_s": 0.75,
+      "events": 795614,
+      "status": "protocol_complete_no_bridge",
+      "metal": 629,
+      "ions": 380
+    },
+    "status": "interrupted_no_completed_summary",
+    "included_in_selection": false
+  },
+  {
+    "path": "results/forming_refit_20261109/scout/refine_source/b0.69750_s7",
+    "last_progress": {
+      "point": 78,
+      "voltage_V": 1.1700000000000002,
+      "time_s": 0.79,
+      "events": 840120,
+      "status": "protocol_complete_no_bridge",
+      "metal": 805,
+      "ions": 348
+    },
+    "status": "interrupted_no_completed_summary",
+    "included_in_selection": false
+  },
+  {
+    "path": "results/forming_refit_20261109/scout/transport_refine/b0.67500_s17",
+    "last_progress": {
+      "point": 68,
+      "voltage_V": 1.02,
+      "time_s": 0.6900000000000001,
+      "events": 717716,
+      "status": "protocol_complete_no_bridge",
+      "metal": 225,
+      "ions": 1124
+    },
+    "status": "interrupted_no_completed_summary",
+    "included_in_selection": false
+  },
+  {
+    "path": "results/forming_refit_20261109/scout/transport_refine/b0.67500_s27",
+    "last_progress": {
+      "point": 69,
+      "voltage_V": 1.0350000000000001,
+      "time_s": 0.7000000000000001,
+      "events": 723238,
+      "status": "protocol_complete_no_bridge",
+      "metal": 215,
+      "ions": 1173
+    },
+    "status": "interrupted_no_completed_summary",
+    "included_in_selection": false
+  },
+  {
+    "path": "results/forming_refit_20261109/scout/transport_refine/b0.67500_s7",
+    "last_progress": {
+      "point": 70,
+      "voltage_V": 1.05,
+      "time_s": 0.71,
+      "events": 725953,
+      "status": "protocol_complete_no_bridge",
+      "metal": 269,
+      "ions": 1133
+    },
+    "status": "interrupted_no_completed_summary",
+    "included_in_selection": false
+  }
+]

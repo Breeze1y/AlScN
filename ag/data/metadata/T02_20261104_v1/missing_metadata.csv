@@ -1,0 +1,7 @@
+﻿item,status,impact,recovery_source
+point_dwell_time,unknown_not_imputed,absolute kinetic barriers/time not identifiable,existing B1500A exports or scripts
+reset_compliance,unknown_not_imputed,1mA parser flag is not an instrument setting,existing measurement settings
+Sc_fraction,unknown_not_imputed,use effective layer parameters; no concentration inference,existing deposition notes
+cross_session_history,unknown_not_imputed,no exact state continuation between sessions,existing test log
+instrument_noise_by_range,unknown_not_imputed,near-zero currents require sensitivity analysis,existing range settings
+institutional_deadlines,unknown_not_imputed,June 2027 planning is not an official submission deadline,existing school notice

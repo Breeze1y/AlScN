@@ -1,0 +1,50 @@
+{
+  "model": {
+    "hop_aln_eV": {
+      "current": 0.59,
+      "reference": 0.48
+    },
+    "hop_alscn_eV": {
+      "current": 0.61,
+      "reference": 0.5
+    },
+    "source_barrier_eV": {
+      "current": 0.62,
+      "reference": 0.68
+    },
+    "pt_nucleation_eV": {
+      "current": 0.16,
+      "reference": 0.08
+    }
+  },
+  "electronics": {
+    "leakage_per_column_S": {
+      "current": 5.120385603218799e-10,
+      "reference": 1e-12
+    },
+    "series_resistance_ohm": {
+      "current": 0.0,
+      "reference": 100.0
+    },
+    "leakage_model": {
+      "current": "ohmic_saturating_power",
+      "reference": "sinh"
+    },
+    "leakage_saturation_A": {
+      "current": 5.394207076467205e-07,
+      "reference": 1e-06
+    },
+    "leakage_half_voltage_V": {
+      "current": 0.6142655781905964,
+      "reference": 1.0
+    },
+    "leakage_exponent": {
+      "current": 3.101638538129987,
+      "reference": 2.0
+    },
+    "network_parallel_factor": {
+      "current": 49.25650314993054,
+      "reference": 1.0
+    }
+  }
+}

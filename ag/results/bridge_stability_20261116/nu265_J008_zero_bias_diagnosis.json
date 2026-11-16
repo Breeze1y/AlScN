@@ -1,0 +1,170 @@
+{
+  "folder": "D:\\Al4memorister\\ag\\results\\bridge_stability_20261116\\bond_0.080\\nu2.65e12_s17",
+  "zero_endpoints": [
+    {
+      "time_from_zero_s": 0.0,
+      "G_S": 0.0029375094371464168,
+      "metal": 2458,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.019999999999999574,
+      "G_S": 0.0029360525522173914,
+      "metal": 2459,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.03999999999999915,
+      "G_S": 0.002936052551236039,
+      "metal": 2457,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.05999999999999872,
+      "G_S": 0.0029406888058032656,
+      "metal": 2458,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.0799999999999983,
+      "G_S": 0.002940688709062475,
+      "metal": 2459,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.09999999999999787,
+      "G_S": 0.002951801764022128,
+      "metal": 2458,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.11999999999999744,
+      "G_S": 0.002938256149933577,
+      "metal": 2459,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.13999999999999702,
+      "G_S": 0.0029400205559804455,
+      "metal": 2461,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.1599999999999966,
+      "G_S": 0.0030058862872885017,
+      "metal": 2460,
+      "vertex_bottleneck_4": 2
+    },
+    {
+      "time_from_zero_s": 0.17999999999999616,
+      "G_S": 0.0014091468680838236,
+      "metal": 2459,
+      "vertex_bottleneck_4": 1
+    },
+    {
+      "time_from_zero_s": 0.19999999999999574,
+      "G_S": 0.001409146906825586,
+      "metal": 2460,
+      "vertex_bottleneck_4": 1
+    }
+  ],
+  "largest_last100ms_changes": [
+    {
+      "time_s": 4.203540468683443,
+      "event": 6548924,
+      "kind": "oxidize",
+      "G_before_S": 0.003005886287288502,
+      "G_after_S": 0.001386093272050002,
+      "relative_step": -0.538873683308777
+    },
+    {
+      "time_s": 4.1909759276302,
+      "event": 6548801,
+      "kind": "reduce",
+      "G_before_S": 0.002934879475410609,
+      "G_after_S": 0.003005994750749414,
+      "relative_step": 0.024231071815600025
+    },
+    {
+      "time_s": 4.208239809562652,
+      "event": 6548937,
+      "kind": "migrate",
+      "G_before_S": 0.0013860960215225791,
+      "G_after_S": 0.0014091496198199932,
+      "relative_step": 0.01663203554403858
+    },
+    {
+      "time_s": 4.1502553152004955,
+      "event": 6547269,
+      "kind": "oxidize",
+      "G_before_S": 0.002951801764022128,
+      "G_after_S": 0.00293515594237503,
+      "relative_step": -0.0056392071615325445
+    },
+    {
+      "time_s": 4.180797912434188,
+      "event": 6548199,
+      "kind": "oxidize",
+      "G_before_S": 0.0029400205559804455,
+      "G_after_S": 0.0029353461104652664,
+      "relative_step": -0.0015899363375778686
+    },
+    {
+      "time_s": 4.213357058640141,
+      "event": 6548999,
+      "kind": "reduce",
+      "G_before_S": 0.001407449763973398,
+      "G_after_S": 0.0014091468680838236,
+      "relative_step": 0.0012058008419670863
+    },
+    {
+      "time_s": 4.213277755151584,
+      "event": 6548988,
+      "kind": "oxidize",
+      "G_before_S": 0.0014091468680838236,
+      "G_after_S": 0.001407449763973398,
+      "relative_step": -0.0012043486373661816
+    },
+    {
+      "time_s": 4.157278917118859,
+      "event": 6547512,
+      "kind": "reduce",
+      "G_before_S": 0.0029351559423750296,
+      "G_after_S": 0.002938256149933577,
+      "relative_step": 0.0010562326565990432
+    },
+    {
+      "time_s": 4.1763299595971874,
+      "event": 6548069,
+      "kind": "reduce",
+      "G_before_S": 0.002938258899228546,
+      "G_after_S": 0.002940020555980445,
+      "relative_step": 0.0005995580417919033
+    },
+    {
+      "time_s": 4.150307678727032,
+      "event": 6547272,
+      "kind": "reduce",
+      "G_before_S": 0.0029338522902282913,
+      "G_after_S": 0.00293515594237503,
+      "relative_step": 0.0004443482553913025
+    },
+    {
+      "time_s": 4.150267587212213,
+      "event": 6547270,
+      "kind": "oxidize",
+      "G_before_S": 0.00293515594237503,
+      "G_after_S": 0.0029338522902282913,
+      "relative_step": -0.0004441508977147679
+    },
+    {
+      "time_s": 4.190768340612237,
+      "event": 6548780,
+      "kind": "oxidize",
+      "G_before_S": 0.002935346264795393,
+      "G_after_S": 0.002934879475410609,
+      "relative_step": -0.00015902361857023095
+    }
+  ],
+  "scope": "Event type inferred from inventory; no exact event coordinates available; vertex cuts assessed only on saved 20 ms geometries"
+}

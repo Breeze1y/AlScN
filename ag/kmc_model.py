@@ -3,7 +3,10 @@
 All energies eV, potentials V, distances nm. One occupied voxel is an
 effective Ag packet, NOT one resolved atom. No prescribed growth path.
 """
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, replace
+from pathlib import Path
+import hashlib
+import json
 import numpy as np
 from scipy import sparse, ndimage
 from scipy.sparse.linalg import spsolve
@@ -11,6 +14,7 @@ from scipy.sparse.linalg import spsolve
 KB = 8.617333262e-5
 EPS0 = 8.8541878128e-12
 CROSS = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]])
+CHECKPOINT_SCHEMA = 2
 
 
 @dataclass
@@ -32,11 +36,35 @@ class Config:
     pt_nucleation_eV: float = 0.08
     metal_standard_eV: float = -0.10
     bond_eV: float = 0.06
+    pt_adhesion_eV: float = 0.06
+    surface_redox_only: bool = True
     migration_eV: float = 0.80
     disorder_eV: float = 0.025
     max_events: int = 350000
     max_time_s: float = 2.0
     seed: int = 7
+    disorder_seed: int | None = None
+    record_events: bool = False
+    vacancy_affected_fraction_by_layer: tuple[float, float, float] = (0.0, 0.0, 0.0)
+    vacancy_ag_ion_penalty_eV: float = 0.0
+    vacancy_seed: int = 0
+
+    def __post_init__(self):
+        fractions = self.vacancy_affected_fraction_by_layer
+        if not isinstance(fractions, (list, tuple)) or len(fractions) != 3:
+            raise ValueError('Specify three vacancy-affected fractions in Ag-to-Pt layer order')
+        fractions = tuple(float(fraction) for fraction in fractions)
+        if not all(0.0 <= fraction <= 1.0 for fraction in fractions):
+            raise ValueError('Vacancy-affected fractions must be finite and in [0, 1]')
+        penalty = float(self.vacancy_ag_ion_penalty_eV)
+        if not np.isfinite(penalty) or penalty < 0.0:
+            raise ValueError('Ag ion vacancy penalty must be finite and nonnegative')
+        if (isinstance(self.vacancy_seed, bool) or
+                not isinstance(self.vacancy_seed, (int, np.integer)) or self.vacancy_seed < 0):
+            raise ValueError('Vacancy seed must be a nonnegative integer')
+        self.vacancy_affected_fraction_by_layer = fractions
+        self.vacancy_ag_ion_penalty_eV = penalty
+        self.vacancy_seed = int(self.vacancy_seed)
 
 
 class Model:
@@ -61,13 +89,36 @@ class Model:
         self.valid = self.neighbors >= 0
         self.layer = np.zeros(self.n, int)
         self.layer.reshape(self.shape)[1+cfg.layer_cells:1+2*cfg.layer_cells] = 1
-        self.site = self.rng.normal(0, cfg.disorder_eV, self.n)
+        self.zone = np.clip((np.arange(self.n)//cfg.nx-1)//cfg.layer_cells,0,2)
+        disorder_rng = self.rng if cfg.disorder_seed is None else np.random.default_rng(cfg.disorder_seed)
+        self.site = disorder_rng.normal(0, cfg.disorder_eV, self.n)
+        # Static host annotation independent of Ag occupancy and the event RNG.
+        # The effective ion energy is shared by injection, hopping and redox.
+        self.vacancy_mask = np.zeros(self.n, dtype=bool)
+        fractions = np.asarray(cfg.vacancy_affected_fraction_by_layer)
+        if fractions.any():
+            probability = fractions[self.zone[self.interior]]
+            vacancy_rng = np.random.default_rng(cfg.vacancy_seed)
+            self.vacancy_mask[self.interior] = vacancy_rng.random(probability.size) < probability
+        self.vacancy_mask.setflags(write=False)
+        self._vacancy_indices = np.flatnonzero(self.vacancy_mask)
+        if cfg.vacancy_ag_ion_penalty_eV:
+            self.site[self._vacancy_indices] += cfg.vacancy_ag_ion_penalty_eV
+        self.vacancy_affected_sites_by_layer = np.bincount(self.zone[self._vacancy_indices], minlength=3)
         self.time = 0.0
         self.steps = 0
         self.net_source = 0
         self.counts = {k: 0 for k in ('inject', 'absorb', 'hop', 'reduce', 'oxidize', 'migrate')}
         self.snapshots = []
         self.trace = []
+        self.pending_event = None
+        self.snapshot_target = 25
+        self.event_log = []
+        self.protocol_position = None
+        self.hop_layer_counts = np.zeros((3,3),dtype=np.int64)
+        self.net_deposition = np.zeros(3,dtype=np.int64)
+        self.ion_residence_s = np.zeros(3,dtype=float)
+        self.vacancy_ion_residence_s = np.zeros(3,dtype=float)
         self.update_structure()
         self.save()
 
@@ -118,9 +169,10 @@ class Model:
                 pf = (eps[j]*p[i] + eps[i]*p[j]) / (eps[i]+eps[j])
                 # outward displacement: eps(phi_i-phi_j)/h + P_out
                 rhs[r] -= (1 if direction == 1 else -1) * pf / h
-            rows.extend(r[~f]); cols.extend(index[j[~f]]); data.extend(-g[~f])
-        rows.extend(np.arange(len(unknown))); cols.extend(np.arange(len(unknown))); data.extend(diag)
-        matrix = sparse.csr_matrix((data, (rows, cols)), shape=(len(unknown),)*2)
+            rows.append(r[~f]); cols.append(index[j[~f]]); data.append(-g[~f])
+        rows.append(np.arange(len(unknown))); cols.append(np.arange(len(unknown))); data.append(diag)
+        matrix = sparse.csr_matrix((np.concatenate(data), (np.concatenate(rows), np.concatenate(cols))),
+                                   shape=(len(unknown),)*2)
         values[unknown] = spsolve(matrix, rhs)
         self.field_residual = float(np.max(np.abs(matrix @ values[unknown] - rhs)) / max(np.max(np.abs(rhs)), 1))
         return values
@@ -155,9 +207,13 @@ class Model:
                         (c.hop_aln_eV+c.hop_alscn_eV)/2+c.interface_eV)
         add('hop', a, b, base + np.maximum(dg, 0))
         reachable = ((self.cathode[self.safe]) & self.valid).any(axis=1)
+        if c.surface_redox_only:
+            # Symmetric admissibility: neighbors do not change when a single
+            # ion becomes metal, so both directions use the same host access.
+            reachable &= (self.valid & (s[self.safe]!=2)).any(axis=1)
         # Electron reservoir at Pt=0; ion energy includes +q*phi.
         candidates = np.flatnonzero(self.interior & reachable & ((s == 1) | (s == 2)))
-        dg = c.metal_standard_eV - c.bond_eV*self.coord[candidates] - self.site[candidates] - self.phi[candidates]
+        dg = c.metal_standard_eV - self.binding(candidates) - self.site[candidates] - self.phi[candidates]
         pt_only = self.coord[candidates] == ((self.safe[candidates] >= self.n-c.nx) & self.valid[candidates]).sum(axis=1)
         base = c.reaction_barrier_eV + c.pt_nucleation_eV*pt_only
         red = s[candidates] == 1
@@ -168,55 +224,197 @@ class Model:
         a = np.repeat(metals, 4); b = self.neighbors[metals].ravel()
         ok = (b >= 0) & self.interior[np.maximum(b, 0)] & (s[np.maximum(b, 0)] == 0)
         a, b = a[ok], b[ok]
-        dg = -c.bond_eV*(self.coord[b]-1-self.coord[a])
+        dg = self.binding(a)-(self.binding(b)-c.bond_eV)
         add('migrate', a, b, c.migration_eV + np.maximum(dg, 0))
         return groups
+
+    def binding(self, sites):
+        """Effective Ag-Ag cohesion and Pt-contact adhesion, in eV."""
+        neighbors=self.safe[sites]
+        metal=(self.state[neighbors]==2)&self.valid[sites]
+        pt=neighbors>=self.n-self.c.nx
+        return np.sum(metal*np.where(pt,self.c.pt_adhesion_eV,self.c.bond_eV),axis=1)
 
     def save(self):
         self.snapshots.append(self.state.reshape(self.shape).copy())
         self.trace.append(dict(time_s=self.time, events=self.steps,
                                metal=int(((self.state == 2)&self.interior).sum()),
                                ions=int((self.state == 1).sum()), connected=self.connected,
-                               net_source=self.net_source))
+                               net_source=self.net_source,
+                               layer_metals=[int(np.sum((self.state==2)&self.interior&(self.zone==z))) for z in range(3)],
+                               layer_ions=[int(np.sum((self.state==1)&(self.zone==z))) for z in range(3)],
+                               hop_layer_counts=self.hop_layer_counts.tolist(),
+                               net_deposition=self.net_deposition.tolist(),
+                               ion_residence_s=self.ion_residence_s.tolist(),
+                               vacancy_ion_residence_s=self.vacancy_ion_residence_s.tolist()))
 
-    def run(self):
-        targets = iter([25, 75, 150, 300, 500, 750, 1100, 1600])
-        target = next(targets)
-        reason = 'event_budget'
-        while self.steps < self.c.max_events:
-            groups = self.catalogue()
-            totals = np.array([g[3].sum() for g in groups])
-            total = totals.sum()
-            if total <= 0:
-                reason = 'no_events'; break
-            dt = -np.log(max(self.rng.random(), np.finfo(float).tiny))/total
-            if self.time+dt > self.c.max_time_s:
-                self.time = self.c.max_time_s; reason = 'time_limit'; break
-            # Independent waiting-time and event random draws.
-            draw = self.rng.random()*total
-            k = min(int(np.searchsorted(np.cumsum(totals), draw, side='right')), len(groups)-1)
-            kind, aa, bb, rates = groups[k]
-            local = draw - totals[:k].sum()
-            e = min(int(np.searchsorted(np.cumsum(rates), local, side='right')), len(aa)-1)
-            a, b = aa[e], bb[e]
+    def advance(self, until_s, max_events=None):
+        """Advance a constant-voltage segment, retaining a sampled future event.
+
+        max_events is a cumulative ceiling, not an extra budget. Observational
+        pauses preserve the exact CT-KMC path; voltage changes invalidate the
+        pending event because its hazard was sampled under the previous field.
+        First bridging still terminates V1; post-bridge physics is not enabled.
+        """
+        until_s = float(until_s)
+        if not np.isfinite(until_s) or until_s < self.time:
+            raise ValueError('until_s must be finite and not before current time')
+        limit = self.c.max_events if max_events is None else int(max_events)
+        if limit < self.steps: raise ValueError('event ceiling precedes current event count')
+        if self.connected: return self.result('first_bridge')
+        reason = 'protocol_complete_no_bridge'
+        while self.time < until_s:
+            if self.steps >= limit:
+                reason = 'event_budget_unknown'; break
+            if self.pending_event is None:
+                proposal = self.sample_event()
+                if proposal is None:
+                    self.integrate_residence(until_s-self.time)
+                    self.time = until_s; break
+                self.pending_event = proposal
+            proposal = self.pending_event
+            if proposal['time_s'] > until_s:
+                self.integrate_residence(until_s-self.time)
+                self.time = until_s; break
+            self.pending_event = None
+            kind, a, b = proposal['kind'], proposal['a'], proposal['b']
+            self.integrate_residence(proposal['time_s']-self.time)
+            if kind=='hop': self.hop_layer_counts[self.zone[a],self.zone[b]]+=1
+            elif kind=='reduce': self.net_deposition[self.zone[a]]+=1
+            elif kind=='oxidize': self.net_deposition[self.zone[a]]-=1
             if kind == 'inject': self.state[a] = 1; self.net_source += 1
             elif kind == 'absorb': self.state[a] = 0; self.net_source -= 1
             elif kind in ('hop', 'migrate'): self.state[b] = self.state[a]; self.state[a] = 0
             elif kind == 'reduce': self.state[a] = 2
             elif kind == 'oxidize': self.state[a] = 1
-            self.steps += 1; self.time += dt; self.counts[kind] += 1
-            if self.steps % 50000 == 0:
-                print(f'seed={self.c.seed} P={self.c.polarization_C_m2:+.4f} step={self.steps} t={self.time:.4g}s Ag={np.sum((self.state==2)&self.interior)}', flush=True)
+            self.steps += 1; self.time = proposal['time_s']; self.counts[kind] += 1
+            if self.c.record_events:
+                self.event_log.append(dict(proposal, event_index=self.steps))
             if kind in ('reduce', 'oxidize', 'migrate'):
                 self.update_structure()
                 if self.connected:
                     reason = 'first_bridge'; break
                 metal = int(((self.state == 2)&self.interior).sum())
-                if metal >= target:
-                    self.save(); target = next(targets, self.n)
-        self.save()
+                if metal >= self.snapshot_target:
+                    self.save()
+                    self.snapshot_target = next((x for x in [25,75,150,300,500,750,1100,1600]
+                                                 if x>self.snapshot_target), self.n)
+        if self.trace[-1]['events'] != self.steps or self.trace[-1]['time_s'] != self.time:
+            self.save()
+        return self.result(reason)
+
+    def integrate_residence(self, dt):
+        self.ion_residence_s += np.bincount(self.zone[self.state==1],minlength=3)*dt
+        if self._vacancy_indices.size:
+            occupied = self._vacancy_indices[self.state[self._vacancy_indices] == 1]
+            self.vacancy_ion_residence_s += np.bincount(self.zone[occupied], minlength=3)*dt
+
+    def sample_event(self):
+        groups = self.catalogue()
+        totals = np.array([g[3].sum() for g in groups])
+        total = totals.sum()
+        if total <= 0: return None
+        dt = -np.log(max(self.rng.random(), np.finfo(float).tiny))/total
+        draw = self.rng.random()*total
+        k = min(int(np.searchsorted(np.cumsum(totals), draw, side='right')), len(groups)-1)
+        kind, aa, bb, rates = groups[k]
+        local = draw - totals[:k].sum()
+        e = min(int(np.searchsorted(np.cumsum(rates), local, side='right')), len(aa)-1)
+        return dict(kind=kind, a=int(aa[e]), b=int(bb[e]), time_s=float(self.time+dt))
+
+    def result(self, reason):
         occupied = int(((self.state > 0)&self.interior).sum())
         return dict(config=asdict(self.c), status=reason, time_s=self.time, events=self.steps,
                     connected=self.connected, counts=self.counts,
                     ag_balance_error=occupied-self.net_source,
+                    vacancy_affected_sites_by_layer=self.vacancy_affected_sites_by_layer.tolist(),
                     field_residual=self.field_residual, trace=self.trace)
+
+    def run(self):
+        return self.advance(self.c.max_time_s)
+
+    def set_voltage(self, voltage):
+        voltage = float(voltage)
+        if not np.isfinite(voltage): raise ValueError('voltage must be finite')
+        if voltage != self.c.voltage:
+            if self.connected: raise RuntimeError('Post-bridge electronic physics is not implemented')
+            self.c = replace(self.c, voltage=voltage)
+            self.pending_event = None
+            self.update_structure()
+
+    def run_protocol(self, segments, max_events=None):
+        normalized = [dict(voltage_V=float(s['voltage_V']), duration_s=float(s['duration_s'])) for s in segments]
+        if any(not np.isfinite(s['duration_s']) or s['duration_s']<0 or not np.isfinite(s['voltage_V']) for s in normalized):
+            raise ValueError('Invalid protocol segment')
+        if self.protocol_position is None:
+            self.protocol_position = dict(segments=normalized, index=0, deadline_s=None)
+        position = self.protocol_position
+        if position['segments'] != normalized: raise ValueError('Cannot replace an in-progress protocol')
+        while position['index'] < len(normalized):
+            segment = normalized[position['index']]
+            if position['deadline_s'] is None:
+                self.set_voltage(segment['voltage_V'])
+                position['deadline_s'] = self.time+segment['duration_s']
+            result = self.advance(position['deadline_s'], max_events)
+            if result['status'] != 'protocol_complete_no_bridge': return result
+            position['index'] += 1
+            position['deadline_s'] = None
+        return self.result('protocol_complete_no_bridge')
+
+    def save_checkpoint(self, path):
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        metadata = dict(schema=CHECKPOINT_SCHEMA, config=asdict(self.c), time_s=self.time, events=self.steps,
+                        net_source=self.net_source, counts=self.counts, rng=self.rng.bit_generator.state,
+                        pending_event=self.pending_event, snapshot_target=self.snapshot_target,
+                        trace=self.trace, event_log=self.event_log, protocol_position=self.protocol_position,
+                        connected=self.connected, field_residual=self.field_residual,
+                        source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+        arrays = dict(state=self.state, site=self.site, phi=self.phi, snapshots=np.array(self.snapshots),
+                      hop_layer_counts=self.hop_layer_counts,net_deposition=self.net_deposition,
+                      ion_residence_s=self.ion_residence_s, vacancy_mask=self.vacancy_mask,
+                      vacancy_ion_residence_s=self.vacancy_ion_residence_s)
+        metadata_text = json.dumps(metadata, sort_keys=True)
+        checksum = hashlib.sha256(metadata_text.encode()+b''.join(v.tobytes() for v in arrays.values())).hexdigest()
+        with path.open('xb') as f:
+            np.savez_compressed(f, **arrays, metadata_json=metadata_text, checksum=checksum)
+        return path
+
+    @classmethod
+    def load_checkpoint(cls, path):
+        with np.load(path, allow_pickle=False) as data:
+            text = str(data['metadata_json'])
+            metadata = json.loads(text)
+            if metadata['schema'] != CHECKPOINT_SCHEMA:
+                raise ValueError('Unsupported checkpoint schema; use the matching archived source')
+            arrays = {k:data[k].copy() for k in ['state','site','phi','snapshots','hop_layer_counts',
+                      'net_deposition','ion_residence_s','vacancy_mask','vacancy_ion_residence_s']}
+            checksum = hashlib.sha256(text.encode()+b''.join(v.tobytes() for v in arrays.values())).hexdigest()
+            if checksum != str(data['checksum']): raise ValueError('Checkpoint checksum mismatch')
+        if metadata['source_sha256'] != hashlib.sha256(Path(__file__).read_bytes()).hexdigest():
+            raise ValueError('Checkpoint source version mismatch')
+        model = cls(Config(**metadata['config']))
+        if any(arrays[k].shape!=(model.n,) for k in ['state','site','phi']): raise ValueError('Checkpoint shape mismatch')
+        if not np.array_equal(arrays['vacancy_mask'], model.vacancy_mask):
+            raise ValueError('Checkpoint vacancy mask differs from the configured static field')
+        vacancy_residence = arrays['vacancy_ion_residence_s']
+        if (vacancy_residence.shape != (3,) or not np.isfinite(vacancy_residence).all() or
+                (vacancy_residence < 0).any() or (vacancy_residence > arrays['ion_residence_s'] + 1e-12).any()):
+            raise ValueError('Invalid checkpoint vacancy residence totals')
+        model.state, model.site, model.phi = arrays['state'], arrays['site'], arrays['phi']
+        if not np.isin(model.state,[0,1,2]).all() or not (model.state[~model.interior]==2).all():
+            raise ValueError('Invalid state/electrodes')
+        if int(np.count_nonzero(model.state[model.interior])) != metadata['net_source']:
+            raise ValueError('Checkpoint Ag ledger mismatch')
+        model.time=metadata['time_s']; model.steps=metadata['events']; model.net_source=metadata['net_source']
+        for key in ['counts','pending_event','snapshot_target','trace','event_log','protocol_position','field_residual']:
+            setattr(model,key,metadata[key])
+        model.snapshots=list(arrays['snapshots'])
+        for key in ['hop_layer_counts','net_deposition','ion_residence_s']: setattr(model,key,arrays[key])
+        model.vacancy_ion_residence_s = vacancy_residence
+        model.rng.bit_generator.state=metadata['rng']
+        model.cathode=model.component(-1); model.anode=model.component(0)
+        model.connected=bool(model.cathode[:model.c.nx].any())
+        if model.connected!=metadata['connected']: raise ValueError('Checkpoint topology mismatch')
+        model.coord=((model.state[model.safe]==2)&model.valid).sum(axis=1)
+        return model

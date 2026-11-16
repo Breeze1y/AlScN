@@ -1,0 +1,30 @@
+{
+  "scope": "All six nonempty event groups in the same mixed occupied, bridged configuration; changing source exchange barrier does not change local filament kinetics at fixed configuration",
+  "results": [
+    {
+      "source_barrier_eV": 0.679,
+      "inject_and_absorb_factor": 1.039439605511953,
+      "hop_reduce_oxidize_migrate_unchanged": true,
+      "source_forward_reverse_ratio_unchanged": true
+    },
+    {
+      "source_barrier_eV": 0.678,
+      "inject_and_absorb_factor": 1.0804346935068447,
+      "hop_reduce_oxidize_migrate_unchanged": true,
+      "source_forward_reverse_ratio_unchanged": true
+    },
+    {
+      "source_barrier_eV": 0.677,
+      "inject_and_absorb_factor": 1.1230466116001825,
+      "hop_reduce_oxidize_migrate_unchanged": true,
+      "source_forward_reverse_ratio_unchanged": true
+    }
+  ],
+  "physics_hashes": {
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10",
+    "dynamic_kmc.py": "5957c7dca40832debd3585216c04c77408ed29dda81f2e113c0bd8a37cf75f58"
+  }
+}

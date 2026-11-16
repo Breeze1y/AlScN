@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-04",
+  "type": "research_plan_and_local_experiment_ml_dataset_processing",
+  "inputs": {
+    "ag/kmc_model.py": "a1d362e8154ed874ab93f52d5bed52dc6ef463160c03aeb8140cb36fd00e59fa",
+    "ag/run.py": "f1e6a9710f9fd711841dc8b775e2d924fc9a219b2ffabe6d2cda1834f2004f65",
+    "ag/README.md": "e72d121eb8d734aa6617627a957c701215b4806327b40b0d549ba7fe236a4386",
+    "ag/results/study/summary.json": "c2cee97d6d96f90c3c47990572a498511b366a36609a2be9599b1ce7a67ebb9a",
+    "ai4alscn/硕士课题完整执行方案-KMC主线-20261102.md": "dfb1517c7bd3c65f2f2ff9ac22758aa9896f370de885646cc0bacd7aeccf8005",
+    "ai4alscn/device_data/processed/features_cycles.csv": "b8863db82f9aa49746349c420dad8730bd6fc51d3e111e2e77bd41614aa3e80e",
+    "ai4alscn/device_data/processed/features_forming.csv": "03b28d362ba813fc1dc13aeacd2987ddcc8e15104882b1f95fc0aea7e6477ccb",
+    "ag/scripts/prepare_ml_set_reset_dataset.py": "edb2b6a409342d24771510b17b51ff45bb1e4f2e0205d47f4bd72871e3ec8443"
+  },
+  "outputs": {
+    "ag\\docs\\毕业设计完整执行方案-20261104.md": "22b6f032f125c0eadae66fc0bc7b2d5d83baa7f83246d2f37353abc0e440ca71",
+    "ag\\docs\\毕业设计执行任务清单-20261104.csv": "2ed8a1d4651d67f418dc7063b132ce619133498265cf2efa432f27fd9014fd29",
+    "ag\\docs\\任务执行记录-20261104.md": "aa1d658205f75eadd4e6aff4fc1f57ecc0efd67753e5abf35a53d47fc82729c8",
+    "ag\\docs\\nature-data原始数据处理与T07复核-20261104.md": "c05a476f324796e27b6cf28eb180d45ac537fa42e920e7dd56a69e9f2c972717",
+    "ag\\data\\nature_data_processed_20261104\\processing_summary.json": "3f9ca00d9c1542825b96aa969edee1a073b3d2f54e67d17063940d2dc505dac0",
+    "ag\\data\\nature_data_analysis_v7_20261104\\analysis_summary.json": "aab78b0e6ca4811fd79f2c7799a8827184a3afc2ddac3cd61df21653ced85922",
+    "ag\\data\\nature_data_analysis_v7_20261104\\processing_verification.json": "6d20a15a4a4f940bd2d6857004875349d34584d85e7d092223b0dc976a84ca29",
+    "ag\\README.md": "b24c50d55a80e7c53710772538bb340fecec0f7cb7cc1abe8d2fde48d043623f",
+    "ag\\docs\\nature-data和A双批次数据汇总-T07-20261104.md": "004f372cbd1d114bbee58d6351eb906cfb49097f733a3426906f42a6f7b3ce6a",
+    "ag\\datasets\\set_reset_ml_20261104\\A_batch_duplicate_cleanup_log.csv": "464c0628fa581993ef8776a8a4ee0ee104bd3da6734eb70353d91cdd51c3bf64",
+    "ag\\datasets\\set_reset_ml_20261104\\A_batch_source_verification.json": "f57964302b671aa1dbf24d024c11da67416051922e2597b5deaec8dd8399d7c4",
+    "ag\\datasets\\set_reset_ml_20261104\\common_waveform_protocols.csv": "a8a9f827cfb73bcb580dd5946258ea691120acea3d0bf92a47b098c873305fc8",
+    "ag\\datasets\\set_reset_ml_20261104\\cycle_features.csv": "8a3397a773a306c83e9e32596f592f097f836cb7e60d7935f6d3343d580a6e3b",
+    "ag\\datasets\\set_reset_ml_20261104\\cycle_targets.csv": "41d27d20f713dfb8637b2f471e6dd2695723b013096026b2b939c559885df50a",
+    "ag\\datasets\\set_reset_ml_20261104\\cycle_waveform_points.csv": "acf542be0c99ebff7b23dd44b6250c597e6106bd849285fcd2f38684662fd845",
+    "ag\\datasets\\set_reset_ml_20261104\\data_dictionary.csv": "98bde29c8b2b08f85172a43d289344404087a24857d57019d5846b5d77a4f603",
+    "ag\\datasets\\set_reset_ml_20261104\\dataset_manifest.json": "446ecca8343aa3a6de39d7fb2608f3adabbe81751629d862b72e310ab1bcc6f6",
+    "ag\\datasets\\set_reset_ml_20261104\\excluded_or_unpaired_records.csv": "3f7f90a7584ad18ef5debed0e37587c1667d9242336f3b939c98a0fc9cf06821",
+    "ag\\datasets\\set_reset_ml_20261104\\model_input_feature_columns.json": "be212ebacc8531b05b6c1941743bd8cff2cba405b83f58d7848b647bad838966",
+    "ag\\datasets\\set_reset_ml_20261104\\nature_data_source_verification.json": "69ef066b1fd1becd47f04d1f9e0f4b672ccbf1a2326953d021e07cc77860806c",
+    "ag\\datasets\\set_reset_ml_20261104\\README.md": "2bc7d1c3e40c9864f5f827bd41eb48dbde00d003effb7fbbdbd392559f738b77",
+    "ag\\datasets\\set_reset_ml_20261104\\source_file_manifest.csv": "cb68d1e82856d734367f918b1c5c42ce23612ec8b171a0316a64a9a47759bd92",
+    "ag\\datasets\\set_reset_ml_20261104\\split_assignments.csv": "2eff4ba4398bcc27b68a8f63aed617853ec9e4b632cdee642f5183e972bc5fce",
+    "ag\\datasets\\set_reset_ml_20261104\\split_group_manifest.csv": "f3b4bc2fd00d1a89ef0a30b06fdb3755c6c2e9ce5e580740850763fee20264e2",
+    "ag\\datasets\\set_reset_ml_20261104\\waveform_protocol_inventory.csv": "bc7cf61f87eda46306a141a31361aa1346bbe14061d28bf0a6da6a032b0d6156"
+  },
+  "checks": {
+    "task_count": 24,
+    "initial_plan_local_links_checked": 14,
+    "nature_data_source_csv_count": 3182,
+    "nature_data_value_rows": 418781,
+    "nature_data_integrity_checks_passed": 8,
+    "missing_links": [],
+    "machine_learning_dataset": {
+      "path": "ag/datasets/set_reset_ml_20261104",
+      "row_counts": {
+        "paired_cycle_examples": 3474,
+        "waveform_point_rows": 1627410,
+        "read_target_available": 2381,
+        "target_two_state_ge_20_positive": 2287,
+        "provisional_stable_candidates": 988,
+        "condition_groups": 42,
+        "shared_waveform_profiles": 2,
+        "excluded_or_unpaired_records": 258
+      },
+      "output_sha256_entries": 15,
+      "dictionary_covers_all_csv_columns": true,
+      "directory_groups_single_split": true,
+      "target_columns_excluded_from_model_features": true,
+      "cross_batch_shared_profiles_compliance_fully_matched": false,
+      "final_holdout_frozen": false,
+      "model_training_performed": false
+    }
+  },
+  "note": "Dataset package and candidate split files are local research outputs; final holdout is not frozen and no model has been trained. Raw experimental loop point tables have not been published to GitHub."
+}

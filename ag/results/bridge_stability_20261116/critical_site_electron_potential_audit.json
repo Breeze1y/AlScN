@@ -1,0 +1,135 @@
+{
+  "scope": "Same first-bridge geometry held at 1.35 V; oxidation estimates before next structure update",
+  "critical_sites": [
+    {
+      "row": 1,
+      "x": 74,
+      "coord": 2,
+      "metal_phi_V": 0.6816251757693366,
+      "old_neighbor_mean_V": 0.931624758030625,
+      "spurious_delta_phi_V": 0.2499995822612885,
+      "old_oxidize_Hz": 4448.359157025456,
+      "local_node_oxidize_Hz": 3.6217233827684185
+    },
+    {
+      "row": 2,
+      "x": 74,
+      "coord": 3,
+      "metal_phi_V": 0.6656252025046141,
+      "old_neighbor_mean_V": 0.6656252025046142,
+      "spurious_delta_phi_V": 1.1102230246251565e-16,
+      "old_oxidize_Hz": 0.09920466900306922,
+      "local_node_oxidize_Hz": 0.09920466900306853
+    },
+    {
+      "row": 7,
+      "x": 72,
+      "coord": 3,
+      "metal_phi_V": 0.6212320490044088,
+      "old_neighbor_mean_V": 0.6212320490044089,
+      "spurious_delta_phi_V": 1.1102230246251565e-16,
+      "old_oxidize_Hz": 0.062289193973502376,
+      "local_node_oxidize_Hz": 0.06228919397350216
+    },
+    {
+      "row": 8,
+      "x": 72,
+      "coord": 3,
+      "metal_phi_V": 0.605232056252845,
+      "old_neighbor_mean_V": 0.6052320565121302,
+      "spurious_delta_phi_V": 2.592851489069403e-10,
+      "old_oxidize_Hz": 0.24899822607803787,
+      "local_node_oxidize_Hz": 0.24899822358068563
+    },
+    {
+      "row": 27,
+      "x": 71,
+      "coord": 2,
+      "metal_phi_V": 0.4417485714680188,
+      "old_neighbor_mean_V": 0.4417485714680188,
+      "spurious_delta_phi_V": 0.0,
+      "old_oxidize_Hz": 2.029611113143667,
+      "local_node_oxidize_Hz": 2.029611113143667
+    },
+    {
+      "row": 28,
+      "x": 71,
+      "coord": 3,
+      "metal_phi_V": 0.42574857638996,
+      "old_neighbor_mean_V": 0.42574857638996,
+      "spurious_delta_phi_V": 0.0,
+      "old_oxidize_Hz": 0.08196762221121849,
+      "local_node_oxidize_Hz": 0.08196762221121849
+    },
+    {
+      "row": 35,
+      "x": 70,
+      "coord": 2,
+      "metal_phi_V": 0.36064297285752245,
+      "old_neighbor_mean_V": 0.36064297339830936,
+      "spurious_delta_phi_V": 5.407869152485034e-10,
+      "old_oxidize_Hz": 3.3268445295981803,
+      "local_node_oxidize_Hz": 3.3268444600053506
+    },
+    {
+      "row": 54,
+      "x": 67,
+      "coord": 3,
+      "metal_phi_V": 0.22359415715199416,
+      "old_neighbor_mean_V": 0.22359415715199416,
+      "spurious_delta_phi_V": 0.0,
+      "old_oxidize_Hz": 0.03133661912309801,
+      "local_node_oxidize_Hz": 0.03133661912309801
+    },
+    {
+      "row": 55,
+      "x": 67,
+      "coord": 2,
+      "metal_phi_V": 0.20759416020162225,
+      "old_neighbor_mean_V": 0.20759416020162225,
+      "spurious_delta_phi_V": 0.0,
+      "old_oxidize_Hz": 3.2368198842218763,
+      "local_node_oxidize_Hz": 3.2368198842218763
+    },
+    {
+      "row": 56,
+      "x": 67,
+      "coord": 2,
+      "metal_phi_V": 0.1915941632512503,
+      "old_neighbor_mean_V": 0.1915941632512957,
+      "spurious_delta_phi_V": 4.5380366131553274e-14,
+      "old_oxidize_Hz": 3.9804934545902557,
+      "local_node_oxidize_Hz": 3.9804934545832698
+    },
+    {
+      "row": 57,
+      "x": 65,
+      "coord": 3,
+      "metal_phi_V": 0.14359417240076358,
+      "old_neighbor_mean_V": 0.14359417240076358,
+      "spurious_delta_phi_V": 0.0,
+      "old_oxidize_Hz": 0.12826888555231042,
+      "local_node_oxidize_Hz": 0.12826888555231042
+    },
+    {
+      "row": 57,
+      "x": 66,
+      "coord": 2,
+      "metal_phi_V": 0.15959416935081672,
+      "old_neighbor_mean_V": 0.15959416935086637,
+      "spurious_delta_phi_V": 4.9654724776360126e-14,
+      "old_oxidize_Hz": 0.731074633506085,
+      "local_node_oxidize_Hz": 0.7310746335046826
+    },
+    {
+      "row": 57,
+      "x": 67,
+      "coord": 2,
+      "metal_phi_V": 0.17559416630096916,
+      "old_neighbor_mean_V": 0.17559416630103353,
+      "spurious_delta_phi_V": 6.436517985264345e-14,
+      "old_oxidize_Hz": 0.3292469600486993,
+      "local_node_oxidize_Hz": 0.3292469600478794
+    }
+  ]
+}

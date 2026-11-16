@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "physical_devices": 1,
+  "cycle_sessions": 5,
+  "cycles": 500,
+  "forming_records": 1,
+  "session_identity_source": "prior_user_confirmation; not inferred from CSV",
+  "protocol": {
+    "order": [
+      "SET",
+      "RESET"
+    ],
+    "points_per_segment": 202,
+    "peak_V": 1.5,
+    "step_V": 0.015,
+    "repeated_peak_rows": [
+      100,
+      101
+    ],
+    "time_known": false,
+    "forming_usage": "one-time preprocessing, not repeated each cycle"
+  },
+  "instrument_flags": {
+    "near_1mA_analysis_flag": "abs(I)>=0.99mA heuristic; not confirmed per-point compliance",
+    "noise_floor_A": null,
+    "preserve_all_points": true
+  },
+  "observations": [
+    {
+      "path": "session_20250615_100432PM_points.csv",
+      "sha256": "b2060a01165e9179245afcd4913b8e3bf5fe26d7dad6de2f586b937162e91956",
+      "rows": 40400
+    },
+    {
+      "path": "session_20250615_103647PM_points.csv",
+      "sha256": "88885f257754fc14116786f66a347ae47883250793775d22eff81d3569bb5377",
+      "rows": 40400
+    },
+    {
+      "path": "session_20250615_110637PM_points.csv",
+      "sha256": "3ed4b4381c8e9e168c16f3472487069dead00debe54bf205f08666223e20a512",
+      "rows": 40400
+    },
+    {
+      "path": "session_20250615_113854PM_points.csv",
+      "sha256": "1777d77be6b182ac31f97e61be3a865a9acaefebad7d9d4ba7b9e2f6b97646cc",
+      "rows": 40400
+    },
+    {
+      "path": "session_20250615_93355PM_points.csv",
+      "sha256": "c551512c76028d9104b9d6929956e111ce17a227b925bd9ab5caf7ed6f2c5cc3",
+      "rows": 40400
+    },
+    {
+      "path": "forming_record_01_points.csv",
+      "sha256": "ba338803bb3cfbeac87d372270a596b5615d6df47bd0f8f825a860550be1f747",
+      "rows": 202
+    }
+  ],
+  "missing_metadata": [
+    {
+      "item": "point_dwell_time",
+      "status": "unknown_not_imputed",
+      "impact": "absolute kinetic barriers/time not identifiable",
+      "recovery_source": "existing B1500A exports or scripts"
+    },
+    {
+      "item": "reset_compliance",
+      "status": "unknown_not_imputed",
+      "impact": "1mA parser flag is not an instrument setting",
+      "recovery_source": "existing measurement settings"
+    },
+    {
+      "item": "Sc_fraction",
+      "status": "unknown_not_imputed",
+      "impact": "use effective layer parameters; no concentration inference",
+      "recovery_source": "existing deposition notes"
+    },
+    {
+      "item": "cross_session_history",
+      "status": "unknown_not_imputed",
+      "impact": "no exact state continuation between sessions",
+      "recovery_source": "existing test log"
+    },
+    {
+      "item": "instrument_noise_by_range",
+      "status": "unknown_not_imputed",
+      "impact": "near-zero currents require sensitivity analysis",
+      "recovery_source": "existing range settings"
+    },
+    {
+      "item": "institutional_deadlines",
+      "status": "unknown_not_imputed",
+      "impact": "June 2027 planning is not an official submission deadline",
+      "recovery_source": "existing school notice"
+    }
+  ]
+}

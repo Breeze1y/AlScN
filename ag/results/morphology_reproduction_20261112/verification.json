@@ -1,0 +1,59 @@
+{
+  "all_six_exact": true,
+  "cases": {
+    "uncoupled_seed_7": {
+      "fresh_blank_initialization": true,
+      "final_state_exact": true,
+      "static_maps_exact": true,
+      "events_exact": true,
+      "counts_exact": true,
+      "bridge_time_exact": true,
+      "mass_balanced": true
+    },
+    "uncoupled_seed_17": {
+      "fresh_blank_initialization": true,
+      "final_state_exact": true,
+      "static_maps_exact": true,
+      "events_exact": true,
+      "counts_exact": true,
+      "bridge_time_exact": true,
+      "mass_balanced": true
+    },
+    "uncoupled_seed_27": {
+      "fresh_blank_initialization": true,
+      "final_state_exact": true,
+      "static_maps_exact": true,
+      "events_exact": true,
+      "counts_exact": true,
+      "bridge_time_exact": true,
+      "mass_balanced": true
+    },
+    "vacancy_penalty_seed_7": {
+      "fresh_blank_initialization": true,
+      "final_state_exact": true,
+      "static_maps_exact": true,
+      "events_exact": true,
+      "counts_exact": true,
+      "bridge_time_exact": true,
+      "mass_balanced": true
+    },
+    "vacancy_penalty_seed_17": {
+      "fresh_blank_initialization": true,
+      "final_state_exact": true,
+      "static_maps_exact": true,
+      "events_exact": true,
+      "counts_exact": true,
+      "bridge_time_exact": true,
+      "mass_balanced": true
+    },
+    "vacancy_penalty_seed_27": {
+      "fresh_blank_initialization": true,
+      "final_state_exact": true,
+      "static_maps_exact": true,
+      "events_exact": true,
+      "counts_exact": true,
+      "bridge_time_exact": true,
+      "mass_balanced": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-12",
+  "authorized_scope": "User confirmed replacement of old KMC scripts/configuration/model notes; retain papers, literature excerpts, skills, original data and historical numerical results",
+  "deleted_files": 231,
+  "by_category": {
+    "old_script": 138,
+    "old_document": 28,
+    "old_configuration": 25,
+    "old_bytecode": 40
+  },
+  "deleted_bytes": 2437811,
+  "kept_current": [
+    "configs/current_kmc.json",
+    "docs/当前KMC过程详述与论文方法底稿-20261109.md",
+    "electronics.py",
+    "electrostatics.py",
+    "kmc_model.py",
+    "run_kmc.py",
+    "scripts/research_setup.py",
+    "test_kmc.py"
+  ],
+  "protected_roots": [
+    ".agents",
+    ".git",
+    "data",
+    "datasets",
+    "forming_data",
+    "papers"
+  ],
+  "literature_excerpts_retained": true,
+  "archive_created": false
+}

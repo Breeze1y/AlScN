@@ -1,0 +1,75 @@
+{
+  "physics_source_sha256": {
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10"
+  },
+  "runner_sha256": "f1fd808bc6cf19ad6906b1ff48ca541b12452b82ba11f2f5eec5a08224f77b67",
+  "configuration": {
+    "backend": "infinite_ag_v1_restored",
+    "parameter_status": "Restored frozen forming V1 physics and electronics; historical reference is 10 ms/point, fresh default remains 20 ms/point",
+    "model": {
+      "nx": 150,
+      "layer_cells": 20,
+      "spacing_nm": 1.0,
+      "voltage": 0.0,
+      "temperature_K": 300.0,
+      "attempt_Hz": 10000000000000.0,
+      "eps_aln": 8.5,
+      "eps_alscn": 15.0,
+      "polarization_C_m2": -0.004,
+      "hop_aln_eV": 0.59,
+      "hop_alscn_eV": 0.61,
+      "interface_eV": 0.025,
+      "source_barrier_eV": 0.682,
+      "reaction_barrier_eV": 0.52,
+      "pt_nucleation_eV": 0.16,
+      "metal_standard_eV": -0.1,
+      "bond_eV": 0.06,
+      "pt_adhesion_eV": 0.06,
+      "surface_redox_only": true,
+      "migration_eV": 0.8,
+      "disorder_eV": 0.025,
+      "max_events": 2000000,
+      "max_time_s": 2.02,
+      "seed": 17,
+      "disorder_seed": 811,
+      "record_events": false,
+      "vacancy_affected_fraction_by_layer": [
+        0.0,
+        0.15,
+        0.0
+      ],
+      "vacancy_ag_ion_penalty_eV": 0.05,
+      "vacancy_seed": 812
+    },
+    "electronics": {
+      "metal_resistivity_ohm_m": 1.6e-08,
+      "effective_depth_nm": 1.0,
+      "contact_resistance_ohm": 500.0,
+      "tunnel_prefactor_S": 7.748091729e-05,
+      "tunnel_barrier_eV": 1.0,
+      "tunnel_effective_mass_ratio": 1.0,
+      "max_tunnel_gap_nm": 2.0,
+      "min_tunnel_conductance_S": 1e-15,
+      "leakage_per_column_S": 5.120385603218799e-10,
+      "leakage_voltage_scale_V": 2.0,
+      "series_resistance_ohm": 0.0,
+      "compliance_A": 0.001,
+      "leakage_model": "ohmic_saturating_power",
+      "leakage_saturation_A": 5.394207076467205e-07,
+      "leakage_half_voltage_V": 0.6142655781905964,
+      "leakage_exponent": 3.101638538129987,
+      "leakage_reference_columns": 150.0,
+      "network_parallel_factor": 49.25650314993054
+    },
+    "protocol": {
+      "source": "forming_data/SET [(1) _forming_; 1_9_2025 9_44_22 PM].csv",
+      "sweep": "up",
+      "dwell_s": 0.02
+    },
+    "restore_reference": "evidence/F03_cycle_initial_states_20261109/forming_seed_17.npz",
+    "historical_reference_dwell_s": 0.01
+  }
+}

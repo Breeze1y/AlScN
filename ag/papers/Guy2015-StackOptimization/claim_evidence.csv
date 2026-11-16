@@ -1,0 +1,16 @@
+﻿id,claim,pdf_pages,anchor,type,limitation
+G01,Common parameters for forming/SET and HRS/LRS retention,"2,3,6,7",III.B–D;IV.B,原文,Does not prove full naturally generated RESET lifecycle
+G02,2D lattice hop distance is material-dependent atomic distance,2,III.B,原文,Cannot treat mesh refinement as physically identical by default
+G03,"Volume diffusion, surface diffusion, surface desorption, oxidation, reduction",2,Fig3,原图,Not the same as project eight-event list; detailed catalog incomplete
+G04,TST attempt rate 1e13/s and Lorentz factor1/3,3,Eq1–4,原文,Not measured Ag/nitride constants
+G05,Energy sign differs between Eq2 and4,3,"Eq2,4",原图与代数核查,Unify final-minus-initial convention for own implementation
+G06,Distance-dependent TAT edge resistance with R0=12.9kohm,3,Eq6,原文,Not bulk Ag resistivity; graph topology not fully specified
+G07,Literal normalized finite-time probabilities differ from CTMC rates,3,"III.D,Eq5,7,Fig4",原文与算法推导,No source code; do not claim actual author code is proven wrong
+G08,Work-function changes have competing reaction and field effects,"4,5","Eq8;Fig6,7",原文条件下,Oxidation-limiting is not universal ECM conclusion
+G09,Thickness/permittivity/hopping affect time-voltage slope,"5,6",Fig8–10,原文模型,No unique inverse mapping; thin-RL disturb statement conditional
+G10,Residual initial filament changes SET,"4,6",IV.A;Fig11,原文,Prescribed controls must be labelled
+G11,LRS and HRS can converge during retention,"6,7",Fig12,原文,Electrical failure differs from only geometrical rupture
+G12,"70,100,130C temperature comparison and 1.2eV reported activation",7,Fig13;IV.B,原文,Apparent retention activation not individual Ag MIG barrier
+G13,Table contains S1–S7 while prose names S1–S6,2,TableI and II,原图核查,Table used for seven rows; MOx not identified
+G14,"Current model lacks TAT graph, has ionic TRAP and paired local redox",code,"model,event_rules,surface_reactions,residual,events",代码核查,No claim of implemented paper model
+G15,"Layered sensitivity, surrogate inversion and read-disturb controls",not applicable,Report adaptation sections,本课题建议,Not claimed as paper ML method

@@ -1,0 +1,176 @@
+﻿table,field,data_type,unit,definition
+cycle_features.csv,sample_id,text,,Candidate-pair identifier used to join tables.
+cycle_features.csv,batch_id,text,,"Batch grouping; use for splitting or auditing, not as a predictor."
+cycle_features.csv,condition_group_id,text,,Batch plus source-condition directory; leakage-prevention group.
+cycle_features.csv,run_group_id,text,,Condition directory plus inferred run segment.
+cycle_features.csv,dataset_branch,text,,Source directory condition label.
+cycle_features.csv,inferred_run_segment,integer,,Segment inferred from counter resets in the directory.
+cycle_features.csv,filename_test_index,integer,,Test index parsed from the source filename.
+cycle_features.csv,protocol_profile_id,text,,Shared voltage-sweep/read-bias profile identifier; compliance is separate.
+cycle_features.csv,waveform_quality_pass,binary,0/1,"Basic time-order, polarity and numeric-waveform quality flag; filter metadata, not a predictor."
+cycle_features.csv,set_primary_start_V,numeric,V,SET: Instrument sweep start voltage.
+cycle_features.csv,set_primary_stop_V,numeric,V,SET: Instrument sweep stop voltage.
+cycle_features.csv,set_primary_step_V,numeric,V,SET: Instrument sweep voltage step.
+cycle_features.csv,set_primary_compliance_A,numeric,A,SET: Instrument primary-channel compliance setting.
+cycle_features.csv,reset_primary_start_V,numeric,V,RESET: Instrument sweep start voltage.
+cycle_features.csv,reset_primary_stop_V,numeric,V,RESET: Instrument sweep stop voltage.
+cycle_features.csv,reset_primary_step_V,numeric,V,RESET: Instrument sweep voltage step.
+cycle_features.csv,reset_primary_compliance_A,numeric,A,RESET: Instrument primary-channel compliance setting.
+cycle_features.csv,set_waveform_point_count,integer,point,SET: Number of waveform rows.
+cycle_features.csv,reset_waveform_point_count,integer,point,RESET: Number of waveform rows.
+cycle_features.csv,set_numeric_V_point_count,integer,point,SET: Number of rows with numeric V1.
+cycle_features.csv,reset_numeric_V_point_count,integer,point,RESET: Number of rows with numeric V1.
+cycle_features.csv,set_numeric_I_point_count,integer,point,SET: Number of rows with numeric I1.
+cycle_features.csv,reset_numeric_I_point_count,integer,point,RESET: Number of rows with numeric I1.
+cycle_features.csv,set_V_min_V,numeric,V,SET: Observed minimum V1.
+cycle_features.csv,set_V_max_V,numeric,V,SET: Observed maximum V1.
+cycle_features.csv,reset_V_min_V,numeric,V,RESET: Observed minimum V1.
+cycle_features.csv,reset_V_max_V,numeric,V,RESET: Observed maximum V1.
+cycle_features.csv,set_first_abs_I_A,numeric,A,SET: Absolute I1 at the first numeric waveform point.
+cycle_features.csv,set_median_abs_I_A,numeric,A,SET: Median absolute I1 across waveform points.
+cycle_features.csv,set_mean_abs_I_A,numeric,A,SET: Mean absolute I1 across waveform points.
+cycle_features.csv,set_peak_abs_I_A,numeric,A,SET: Maximum absolute I1 across waveform points.
+cycle_features.csv,set_signed_I_at_peak_A,numeric,A,SET: Signed I1 at the maximum-absolute-current point.
+cycle_features.csv,set_last_signed_I_A,numeric,A,SET: Signed I1 at the last numeric waveform point.
+cycle_features.csv,set_compliance_point_fraction,numeric,fraction,SET: Share of waveform points reaching 98% of compliance.
+cycle_features.csv,set_integral_abs_I_dV_A_V,numeric,A·V,"SET: Trapezoidal absolute-I1 path integral over absolute voltage increments, summed by source data block; not energy."
+cycle_features.csv,set_integral_signed_I_dV_A_V,numeric,A·V,"SET: Trapezoidal signed-I1 integral over voltage increments, summed by source data block; not energy."
+cycle_features.csv,set_first_V_at_abs_I_ge_1e-06_V,numeric,V,SET: first voltage in acquisition order where absolute I1 reaches 1e-06 A; blank if not reached.
+cycle_features.csv,set_reaches_abs_I_1e-06_flag,binary,0/1,SET: whether absolute I1 reaches 1e-06 A.
+cycle_features.csv,set_first_V_at_abs_I_ge_1e-04_V,numeric,V,SET: first voltage in acquisition order where absolute I1 reaches 1e-04 A; blank if not reached.
+cycle_features.csv,set_reaches_abs_I_1e-04_flag,binary,0/1,SET: whether absolute I1 reaches 1e-04 A.
+cycle_features.csv,set_first_V_at_abs_I_ge_1e-03_V,numeric,V,SET: first voltage in acquisition order where absolute I1 reaches 1e-03 A; blank if not reached.
+cycle_features.csv,set_reaches_abs_I_1e-03_flag,binary,0/1,SET: whether absolute I1 reaches 1e-03 A.
+cycle_features.csv,reset_first_abs_I_A,numeric,A,RESET: Absolute I1 at the first numeric waveform point.
+cycle_features.csv,reset_median_abs_I_A,numeric,A,RESET: Median absolute I1 across waveform points.
+cycle_features.csv,reset_mean_abs_I_A,numeric,A,RESET: Mean absolute I1 across waveform points.
+cycle_features.csv,reset_peak_abs_I_A,numeric,A,RESET: Maximum absolute I1 across waveform points.
+cycle_features.csv,reset_signed_I_at_peak_A,numeric,A,RESET: Signed I1 at the maximum-absolute-current point.
+cycle_features.csv,reset_last_signed_I_A,numeric,A,RESET: Signed I1 at the last numeric waveform point.
+cycle_features.csv,reset_compliance_point_fraction,numeric,fraction,RESET: Share of waveform points reaching 98% of compliance.
+cycle_features.csv,reset_integral_abs_I_dV_A_V,numeric,A·V,"RESET: Trapezoidal absolute-I1 path integral over absolute voltage increments, summed by source data block; not energy."
+cycle_features.csv,reset_integral_signed_I_dV_A_V,numeric,A·V,"RESET: Trapezoidal signed-I1 integral over voltage increments, summed by source data block; not energy."
+cycle_features.csv,reset_first_V_at_abs_I_ge_1e-06_V,numeric,V,RESET: first voltage in acquisition order where absolute I1 reaches 1e-06 A; blank if not reached.
+cycle_features.csv,reset_reaches_abs_I_1e-06_flag,binary,0/1,RESET: whether absolute I1 reaches 1e-06 A.
+cycle_features.csv,reset_first_V_at_abs_I_ge_1e-04_V,numeric,V,RESET: first voltage in acquisition order where absolute I1 reaches 1e-04 A; blank if not reached.
+cycle_features.csv,reset_reaches_abs_I_1e-04_flag,binary,0/1,RESET: whether absolute I1 reaches 1e-04 A.
+cycle_features.csv,reset_first_V_at_abs_I_ge_1e-03_V,numeric,V,RESET: first voltage in acquisition order where absolute I1 reaches 1e-03 A; blank if not reached.
+cycle_features.csv,reset_reaches_abs_I_1e-03_flag,binary,0/1,RESET: whether absolute I1 reaches 1e-03 A.
+cycle_targets.csv,sample_id,text,,Candidate-pair identifier used to join tables.
+cycle_targets.csv,label_read_pair_available,binary,0/1,Both post-SET and post-RESET read resistances are available at matching bias.
+cycle_targets.csv,read_bias_matched_flag,binary,0/1,Post-SET and post-RESET read biases match.
+cycle_targets.csv,SET_read_bias_V,numeric,V,Post-SET read bias; label-source value.
+cycle_targets.csv,RESET_read_bias_V,numeric,V,Immediate post-RESET read bias; label-source value.
+cycle_targets.csv,R_after_SET_ohm,numeric,ohm,Post-SET read resistance; target-source value.
+cycle_targets.csv,R_after_RESET_ohm,numeric,ohm,Immediate post-RESET read resistance; target-source value.
+cycle_targets.csv,target_HRS_over_LRS_read_ratio,numeric,ratio,Immediate post-RESET resistance divided by post-SET resistance at matched read bias.
+cycle_targets.csv,target_log10_HRS_over_LRS,numeric,log10(ratio),Base-10 logarithm of the read-resistance ratio.
+cycle_targets.csv,target_two_state_ge_20,binary,0/1,Whether the matched-bias ratio reaches the provisional 20x threshold; blank when no target is available.
+cycle_targets.csv,target_stable_calibration_provisional,binary,0/1,Provisional MAD/drift-screening label; not experimentally validated ground truth.
+cycle_targets.csv,stable_label_assessable_flag,binary,0/1,Both read-bias and MAD sample-availability conditions permit provisional stability assessment.
+cycle_targets.csv,stable_calibration_candidate_source_flag,binary,0/1,Source analysis stable-candidate flag.
+cycle_targets.csv,SET_read_MAD_assessment_available_flag,binary,0/1,Enough post-SET read samples exist to calculate the MAD review.
+cycle_targets.csv,RESET_read_MAD_assessment_available_flag,binary,0/1,Enough post-RESET read samples exist to calculate the MAD review.
+cycle_targets.csv,SET_read_MAD_review_flag,binary,0/1,Post-SET read resistance triggers the segment MAD review.
+cycle_targets.csv,RESET_read_MAD_review_flag,binary,0/1,Immediate post-RESET read resistance triggers the segment MAD review.
+cycle_targets.csv,run_drift_review_flag,binary,0/1,The inferred run triggers the post-RESET drift review.
+cycle_waveform_points.csv,loop_id,text,,Candidate SET/RESET pair identifier used to join tables.
+cycle_waveform_points.csv,batch_id,text,,"Batch grouping; use for splitting or auditing, not as a predictor."
+cycle_waveform_points.csv,dataset_branch,text,,Source directory condition label.
+cycle_waveform_points.csv,inferred_run_segment,integer,,Segment inferred from counter resets in the directory.
+cycle_waveform_points.csv,filename_test_index,integer,,Test index parsed from the source filename.
+cycle_waveform_points.csv,event_phase,category,,SET or RESET source waveform.
+cycle_waveform_points.csv,source_relpath,text,,Source CSV path relative to its batch directory.
+cycle_waveform_points.csv,block_index,integer,,DataName block index in the source CSV.
+cycle_waveform_points.csv,point_index_in_block,integer,,Measurement index within the source block.
+cycle_waveform_points.csv,source_csv_row,integer,row,Original CSV row containing the DataValue.
+cycle_waveform_points.csv,V1_V,numeric,V,Raw signed voltage-channel value.
+cycle_waveform_points.csv,I1_A,numeric,A,Raw signed current-channel value.
+cycle_waveform_points.csv,I_reported_A,numeric,A,"Raw exported I value, preserved separately from I1."
+cycle_waveform_points.csv,R_reported_ohm,numeric,ohm,"Raw exported R value, blank when absent."
+cycle_waveform_points.csv,R_abs_V1_over_I1_ohm,numeric,ohm,Derived absolute V1/I1; distinct from raw R.
+cycle_waveform_points.csv,Time_s,numeric,s,Raw Time value when present.
+cycle_waveform_points.csv,primary_compliance_A,numeric,A,Instrument primary-channel compliance setting.
+cycle_waveform_points.csv,point_near_primary_compliance_flag,binary,0/1,Absolute I1 reaches 98% of the primary compliance setting.
+split_assignments.csv,sample_id,text,,Candidate-pair identifier used to join tables.
+split_assignments.csv,batch_id,text,,"Batch grouping; use for splitting or auditing, not as a predictor."
+split_assignments.csv,condition_group_id,text,,Batch plus source-condition directory; leakage-prevention group.
+split_assignments.csv,run_group_id,text,,Condition directory plus inferred run segment.
+split_assignments.csv,directory_group_split_draft,category,,Draft train/validation/test assignment shared by a whole condition directory.
+split_assignments.csv,protocol_profile_id,text,,Shared voltage-sweep/read-bias profile identifier; compliance is separate.
+split_assignments.csv,shared_waveform_profile_across_batches_flag,binary,0/1,"Voltage endpoints, steps and read bias occur in both batches."
+split_assignments.csv,cross_batch_holdout_candidate,category,,Candidate common-profile split role; not a finalized external validation.
+split_assignments.csv,read_target_available_flag,binary,0/1,A same-read-bias target is available for the sample.
+split_group_manifest.csv,condition_group_id,text,,Batch plus source-condition directory; leakage-prevention group.
+split_group_manifest.csv,batch_id,text,,"Batch grouping; use for splitting or auditing, not as a predictor."
+split_group_manifest.csv,directory_group_split_draft,category,,Draft train/validation/test assignment shared by a whole condition directory.
+split_group_manifest.csv,candidate_pair_count,integer,cycle,Number of candidate paired loops in the condition group.
+split_group_manifest.csv,read_target_available_count,integer,cycle,Number of group members with matched-bias read targets.
+waveform_protocol_inventory.csv,protocol_profile_id,text,,Shared voltage-sweep/read-bias profile identifier; compliance is separate.
+waveform_protocol_inventory.csv,set_start_V,numeric,V,SET sweep start voltage for this waveform profile.
+waveform_protocol_inventory.csv,set_stop_V,numeric,V,SET sweep stop voltage for this waveform profile.
+waveform_protocol_inventory.csv,set_step_V,numeric,V,SET sweep voltage step for this waveform profile.
+waveform_protocol_inventory.csv,reset_start_V,numeric,V,RESET sweep start voltage for this waveform profile.
+waveform_protocol_inventory.csv,reset_stop_V,numeric,V,RESET sweep stop voltage for this waveform profile.
+waveform_protocol_inventory.csv,reset_step_V,numeric,V,RESET sweep voltage step for this waveform profile.
+waveform_protocol_inventory.csv,matched_read_bias_V,numeric,V,Matched post-SET/post-RESET read bias defining the profile.
+waveform_protocol_inventory.csv,nature_data_sample_count,integer,cycle,Candidate-loop count from nature_data batch.
+waveform_protocol_inventory.csv,A_batch_sample_count,integer,cycle,Candidate-loop count from A batch.
+waveform_protocol_inventory.csv,shared_waveform_profile_across_batches_flag,binary,0/1,"Voltage endpoints, steps and read bias occur in both batches."
+waveform_protocol_inventory.csv,nature_data_SET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+waveform_protocol_inventory.csv,nature_data_RESET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+waveform_protocol_inventory.csv,A_batch_SET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+waveform_protocol_inventory.csv,A_batch_RESET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+waveform_protocol_inventory.csv,compliance_exactly_matched_flag,binary,0/1,Whether SET and RESET compliance-value sets match across batches.
+common_waveform_protocols.csv,protocol_profile_id,text,,Shared voltage-sweep/read-bias profile identifier; compliance is separate.
+common_waveform_protocols.csv,set_start_V,numeric,V,SET sweep start voltage for this waveform profile.
+common_waveform_protocols.csv,set_stop_V,numeric,V,SET sweep stop voltage for this waveform profile.
+common_waveform_protocols.csv,set_step_V,numeric,V,SET sweep voltage step for this waveform profile.
+common_waveform_protocols.csv,reset_start_V,numeric,V,RESET sweep start voltage for this waveform profile.
+common_waveform_protocols.csv,reset_stop_V,numeric,V,RESET sweep stop voltage for this waveform profile.
+common_waveform_protocols.csv,reset_step_V,numeric,V,RESET sweep voltage step for this waveform profile.
+common_waveform_protocols.csv,matched_read_bias_V,numeric,V,Matched post-SET/post-RESET read bias defining the profile.
+common_waveform_protocols.csv,nature_data_sample_count,integer,cycle,Candidate-loop count from nature_data batch.
+common_waveform_protocols.csv,A_batch_sample_count,integer,cycle,Candidate-loop count from A batch.
+common_waveform_protocols.csv,shared_waveform_profile_across_batches_flag,binary,0/1,"Voltage endpoints, steps and read bias occur in both batches."
+common_waveform_protocols.csv,nature_data_SET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+common_waveform_protocols.csv,nature_data_RESET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+common_waveform_protocols.csv,A_batch_SET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+common_waveform_protocols.csv,A_batch_RESET_compliance_values_A,numeric/text,,Protocol-profile count or instrument compliance values for the named batch.
+common_waveform_protocols.csv,compliance_exactly_matched_flag,binary,0/1,Whether SET and RESET compliance-value sets match across batches.
+source_file_manifest.csv,batch_id,text,,"Batch grouping; use for splitting or auditing, not as a predictor."
+source_file_manifest.csv,phase,category,,Source waveform phase: SET or RESET.
+source_file_manifest.csv,source_relpath,text,,Source CSV path relative to its batch directory.
+source_file_manifest.csv,sha256,text,hex,SHA-256 digest of the source file.
+source_file_manifest.csv,file_bytes,integer,byte,Source CSV file size.
+source_file_manifest.csv,datavalue_rows,integer,row,Number of DataValue rows in the source CSV.
+source_file_manifest.csv,loop_id,text,,Candidate SET/RESET pair identifier used to join tables.
+A_batch_duplicate_cleanup_log.csv,sha256,text,hex,SHA-256 digest of the source file.
+A_batch_duplicate_cleanup_log.csv,canonical_source_relpath,text,,Relative path of the byte-identical source copy retained during duplicate cleanup.
+A_batch_duplicate_cleanup_log.csv,duplicate_source_relpath,text,,Relative path of the byte-identical duplicate source copy that was removed.
+A_batch_duplicate_cleanup_log.csv,file_bytes,integer,byte,Source CSV file size.
+A_batch_duplicate_cleanup_log.csv,cleanup_status,category,,Action recorded for this exact-duplicate source path.
+excluded_or_unpaired_records.csv,batch_id,text,,"Batch grouping; use for splitting or auditing, not as a predictor."
+excluded_or_unpaired_records.csv,dataset_branch,text,,Source directory condition label.
+excluded_or_unpaired_records.csv,inferred_run_segment,integer,,Segment inferred from counter resets in the directory.
+excluded_or_unpaired_records.csv,filename_test_index,integer,,Test index parsed from the source filename.
+excluded_or_unpaired_records.csv,set_file_count,integer,file,Number of candidate SET files found for the inferred group.
+excluded_or_unpaired_records.csv,reset_file_count,integer,file,Number of candidate RESET files found for the inferred group.
+excluded_or_unpaired_records.csv,pairing_status,category,,"Inferred matching outcome, such as paired, one-sided, or ambiguous."
+excluded_or_unpaired_records.csv,cycle_identity_verified,binary,0/1,Whether the inferred pair is unambiguous from available filename/time evidence; no independent physical cycle ID exists.
+excluded_or_unpaired_records.csv,set_source_relpath,text,,SET source path relative to its batch input directory.
+excluded_or_unpaired_records.csv,reset_source_relpath,text,,RESET source path relative to its batch input directory.
+excluded_or_unpaired_records.csv,set_point_count,integer,point,Number of retained SET waveform measurement points.
+excluded_or_unpaired_records.csv,reset_point_count,integer,point,Number of retained RESET waveform measurement points.
+excluded_or_unpaired_records.csv,set_V1_min_V,numeric,V,Minimum SET V1 voltage observed in the source waveform.
+excluded_or_unpaired_records.csv,set_V1_max_V,numeric,V,Maximum SET V1 voltage observed in the source waveform.
+excluded_or_unpaired_records.csv,reset_V1_min_V,numeric,V,Minimum RESET V1 voltage observed in the source waveform.
+excluded_or_unpaired_records.csv,reset_V1_max_V,numeric,V,Maximum RESET V1 voltage observed in the source waveform.
+excluded_or_unpaired_records.csv,set_I1_abs_peak_A,numeric,A,Maximum absolute SET I1 current in the source waveform.
+excluded_or_unpaired_records.csv,reset_I1_abs_peak_A,numeric,A,Maximum absolute RESET I1 current in the source waveform.
+excluded_or_unpaired_records.csv,set_near_1mA_heuristic_flag,binary,0/1,Heuristic flag indicating SET peak current is near 1 mA; review against per-file compliance.
+excluded_or_unpaired_records.csv,reset_near_1mA_heuristic_flag,binary,0/1,Heuristic flag indicating RESET peak current is near 1 mA; review against per-file compliance.
+excluded_or_unpaired_records.csv,set_datetime_local_no_timezone,datetime text,local time,SET source timestamp without timezone metadata.
+excluded_or_unpaired_records.csv,reset_datetime_local_no_timezone,datetime text,local time,RESET source timestamp without timezone metadata.
+excluded_or_unpaired_records.csv,reset_after_set_timestamp_by_filename,binary,0/1,Whether the inferred RESET timestamp follows SET based on available file metadata.
+excluded_or_unpaired_records.csv,review_reason,text,,Reason the unpaired or ambiguous record is retained for manual review.

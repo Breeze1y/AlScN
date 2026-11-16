@@ -1,0 +1,49 @@
+{
+  "title": "Investigation of Forming, SET, and Data Retention of Conductive-Bridge Random-Access Memory for Stack Optimization",
+  "authors": [
+    "Jérémy Guy",
+    "Gabriel Molas",
+    "Philippe Blaise",
+    "Mathieu Bernard",
+    "Anne Roule",
+    "Gilles Le Carval",
+    "Vincent Delaye",
+    "Alain Toffoli",
+    "Gérard Ghibaudo",
+    "Fabien Clermidy",
+    "Barbara De Salvo",
+    "Luca Perniola"
+  ],
+  "journal": "IEEE Transactions on Electron Devices",
+  "year": 2015,
+  "volume": 62,
+  "issue": 11,
+  "pages": "3482–3489",
+  "doi_from_local_pdf": "10.1109/TED.2015.2476825",
+  "ieee_article_id_from_metadata": "7277031",
+  "source": "D:\\Al4memorister\\ai4alscn\\ref-paper\\MC仿真\\Investigation_of_Forming_SET_and_Data_Retention_of_Conductive-Bridge_Random-Access_Memory_for_Stack_Optimization.pdf",
+  "sha256": "0b130c71f1faf24c8fa4275a66d0bb53b9bd65b3fdee2dbf9ebc0b1d3d42223e",
+  "pages_read_and_rendered": 8,
+  "external_verification": {
+    "ieee_url": "https://ieeexplore.ieee.org/document/7277031",
+    "ieee_result": "Anti-bot JavaScript page; bibliographic content not independently verified through publisher response",
+    "doi_url": "https://doi.org/10.1109/TED.2015.2476825",
+    "doi_result": "Not accessible via browser tool; identifier verified in local PDF only",
+    "unrelated_search_hits": "Ignored; no reliance on numeric article-ID search false matches"
+  },
+  "scope": [
+    "All 8 pages extracted and visually reviewed; page8 contains references and biographies",
+    "Current KMC event, sampling, source/surface, electrical, ionic and lifecycle code inspected",
+    "No model code changed; no new simulations or tests run"
+  ],
+  "reproduction_gaps": [
+    "Equation2 and equation4 have inconsistent signs for energy difference",
+    "Normalized 1-exp(-rate*dt) prose is not identical to rate-weighted single-event Gillespie sampling",
+    "No complete event-by-event numeric barrier table or code",
+    "Surface diffusion/desorption shown but complete charge-state and boundary catalog not disclosed",
+    "TAT graph edge cutoff, inactive-node treatment, electrode contacts and reconstruction details not fully specified",
+    "Residual-filament SET initialization is not proof of fully generated RESET trajectories",
+    "No Lorentz correction transfer to ferroelectric nitride validated",
+    "MOx identity not disclosed in text"
+  ]
+}

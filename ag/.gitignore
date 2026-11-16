@@ -3,3 +3,32 @@ __pycache__/
 .venv/
 .pytest_cache/
 upload_receipt.json
+
+# Local credentials, editors and transient output
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+~$*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Large derived tables remain available locally; see docs/local_data_inventory_20261116.json.
+data/*processed_20261104/waveform_points.csv
+data/*processed_20261104/file_inventory.csv
+datasets/set_reset_ml_20261104/cycle_waveform_points.csv
+forming_data/diff/organized/all_iv_points.csv
+
+# New runs are opt-in. The named evidence sets below are intentionally versioned.
+results/*
+!results/bridge_stability_20261116/
+!results/opening_calibration_20261113/
+!results/vacancy_forming_20261108/
+!results/morphology_reproduction_20261112/
+!results/morphology_reference_zero1s_20261112/
+!results/forming_refit_20261109/
+!results/infinite_ag_restored_20261112/

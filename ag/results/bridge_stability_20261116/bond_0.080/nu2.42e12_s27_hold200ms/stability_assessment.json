@@ -1,0 +1,73 @@
+{
+  "folder": "D:\\Al4memorister\\ag\\results\\bridge_stability_20261116\\bond_0.080\\nu2.42e12_s27_hold200ms",
+  "solver": "corrected",
+  "seed": 27,
+  "attempt_Hz": 2420000000000.0,
+  "bond_eV": 0.08,
+  "source_barrier_eV": 0.68,
+  "full_protocol_complete": true,
+  "source_sha256": "0ccdd01f018d308e19b40db4af5c6422582c27ff2dae5d8e416ee17000096747",
+  "first_bridge": {
+    "command_voltage_V": 1.4400000000000002,
+    "device_voltage_V": 1.340243040376658,
+    "events": 5691144,
+    "time_s": 1.9383597336765594
+  },
+  "first_endpoint_opening_V": 1.4400000000000002,
+  "first_whole_dwell_mean_opening_V": 1.455,
+  "target_window_V": [
+    1.32,
+    1.335
+  ],
+  "inclusive_window_pass": false,
+  "exact_experimental_bin_pass": false,
+  "first_up_dropout_V": null,
+  "endpoint_up_plateau_retained": true,
+  "geometric_ruptures": 0,
+  "rupture_event_classes": {},
+  "up_ruptures": 0,
+  "zero_ruptures": 0,
+  "zero_hold_s": 0.19999999999999574,
+  "final_connected": true,
+  "final_metal": 2554,
+  "final_ions": 5,
+  "vertex_bottleneck_4": 1,
+  "continuous_last100ms": {
+    "records": 128,
+    "conductance_relative_range": 0.017699923742261287,
+    "metal_relative_range": 0.0023501762632197414,
+    "all_connected": true
+  },
+  "continuous_filament_stable": true,
+  "endpoint_stability": {
+    "assessed": true,
+    "observation_span_s": 0.09999999999999787,
+    "filament_stable": true,
+    "ions_stationary": false,
+    "conductance_relative_range": 0.014838510740175326,
+    "metal_relative_range": 0.0011748580379870766,
+    "ion_relative_range": 1.6,
+    "topology_changes": 0,
+    "criterion": "last six zero-bias observations (five intervals): connected throughout, no toggles, G range <=5%, metal range <=1%; ion range <=5% assessed separately"
+  },
+  "ag_balance_error": 0,
+  "reaction_balance_error": 0,
+  "point_1p320": {
+    "endpoint_A": 2.1269114607572807e-10,
+    "whole_dwell_mean_A": 2.1269114607572807e-10
+  },
+  "point_1p335": {
+    "endpoint_A": 2.1545525295899866e-10,
+    "whole_dwell_mean_A": 2.1545525295899866e-10
+  },
+  "electrical_threshold_A": 0.0005,
+  "stability_definition": "Last 100 ms, all metal events and endpoint observations plus interval-start state: geometrically connected; G range / record median <=5%; metal range / record median <=1%. Short observation, not long-term retention.",
+  "averaging_scope": "Average over full nominal 20 ms, without instrument settling/integration timing.",
+  "physics_hashes": {
+    "dynamic_kmc.py": "5957c7dca40832debd3585216c04c77408ed29dda81f2e113c0bd8a37cf75f58",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10"
+  }
+}

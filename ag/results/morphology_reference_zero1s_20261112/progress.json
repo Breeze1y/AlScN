@@ -1,0 +1,40 @@
+{
+  "status": "reference_return_and_zero1s_complete",
+  "events": 1211828,
+  "time_s": 1.5061000000000004,
+  "connected": true,
+  "first_bridge": {
+    "command_voltage_V": 3.0,
+    "device_voltage_V": 0.9736083787755132,
+    "events": 370978,
+    "time_s": 0.369764558311694
+  },
+  "position": {
+    "deadline_s": null,
+    "index": 50,
+    "phase": "settled",
+    "zero_start_s": 0.5060999999999997
+  },
+  "checkpoint": "checkpoint.npz",
+  "endpoint": {
+    "sample": 26460,
+    "time_s": 1.5061000000000004,
+    "morphology_time_s": 1.5061000000000004,
+    "events": 1211828,
+    "kind": "extended_zero_hold_end",
+    "connected": true,
+    "metal": 2632,
+    "ions": 12,
+    "net_source": 2644,
+    "ag_balance_error": 0,
+    "network_conductance_S": 0.0050201863351910046,
+    "network_kcl_residual_A_at_1V": 6.938893903907228e-17,
+    "command_voltage_V": 0.0,
+    "device_voltage_V": 0.0,
+    "current_A": 0.0,
+    "network_current_A": 0.0,
+    "leakage_current_A": 0.0,
+    "compliance_active": false,
+    "source_delivered_voltage_V": 0.0
+  }
+}

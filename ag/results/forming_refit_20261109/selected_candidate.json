@@ -1,0 +1,62 @@
+{
+  "chosen": {
+    "config": {
+      "attempt_Hz": 10000000000000.0,
+      "bond_eV": 0.06,
+      "disorder_eV": 0.025,
+      "disorder_seed": 811,
+      "eps_aln": 8.5,
+      "eps_alscn": 15.0,
+      "hop_aln_eV": 0.59,
+      "hop_alscn_eV": 0.61,
+      "interface_eV": 0.025,
+      "layer_cells": 20,
+      "max_events": 2000000,
+      "max_time_s": 1.01,
+      "metal_standard_eV": -0.1,
+      "migration_eV": 0.8,
+      "nx": 150,
+      "polarization_C_m2": -0.004,
+      "pt_adhesion_eV": 0.06,
+      "pt_nucleation_eV": 0.16,
+      "reaction_barrier_eV": 0.52,
+      "record_events": false,
+      "source_barrier_eV": 0.682,
+      "spacing_nm": 1.0,
+      "surface_redox_only": true,
+      "temperature_K": 300.0,
+      "vacancy_affected_fraction_by_layer": [
+        0.0,
+        0.15,
+        0.0
+      ],
+      "vacancy_ag_ion_penalty_eV": 0.05,
+      "vacancy_seed": 812,
+      "voltage": 0.0
+    },
+    "paths": [
+      "results/forming_refit_20261109/scout/final_source_refine/b0.68200_s17",
+      "results/forming_refit_20261109/scout/final_source_refine/b0.68200_s27",
+      "results/forming_refit_20261109/scout/final_source_refine/b0.68200_s7"
+    ],
+    "seed_voltages": {
+      "17": 1.3050000000000002,
+      "27": 1.335,
+      "7": 1.2750000000000001
+    },
+    "missing": 0,
+    "numerically_censored": 0,
+    "bracket_rmse_V": 0.027386127875258248,
+    "median_forming_V": 1.3050000000000002
+  },
+  "shared_network_parallel_factor": 49.25650314993054,
+  "bare_network_conductances_S": [
+    0.0005912544164141502,
+    0.00035631220790394765,
+    0.00046504185600584674
+  ],
+  "return_fit_log10_rmse": 0.08983143958729668,
+  "model_config": "configs/forming_fitted_model_20261109.json",
+  "settings_config": "configs/forming_iv_fitted_20261109.json",
+  "status": "parameters_frozen_before_reserved_seed_runs"
+}

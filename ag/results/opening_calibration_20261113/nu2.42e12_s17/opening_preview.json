@@ -1,0 +1,26 @@
+[
+  {
+    "index": 88,
+    "voltage_V": 1.32,
+    "current_A": 7.471712352383156e-09,
+    "connected": false,
+    "metal": 1708,
+    "ions": 8
+  },
+  {
+    "index": 89,
+    "voltage_V": 1.335,
+    "current_A": 0.0010000000000000002,
+    "connected": true,
+    "metal": 1726,
+    "ions": 5
+  },
+  {
+    "index": 90,
+    "voltage_V": 1.35,
+    "current_A": 0.001,
+    "connected": true,
+    "metal": 1745,
+    "ions": 5
+  }
+]

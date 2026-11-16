@@ -1,0 +1,7 @@
+﻿material,thickness_nm,device_label,cycles,first_cycle,last_cycle,sweep_blocks,data_points,points_per_sweep_min,points_per_sweep_max,voltage_min_V,voltage_max_V,negative_voltage_min_V,negative_voltage_max_V,positive_voltage_min_V,positive_voltage_max_V,source_file
+AlN,20,AlN_20nm,120,1,120,240,48480,202,202,-1.5,1.5,-1.5,0.0,0.0,1.5,D10(1-120).csv
+AlN,40,AlN_40nm,120,1,120,240,48480,202,202,-1.5,1.5,-1.5,0.0,0.0,1.5,D1-120.csv
+AlN,60,AlN_60nm,120,1,120,240,48480,202,202,-1.5,5.0,-1.5,0.0,0.0,5.0,D1-120.csv
+AlScN,20,AlScN_20nm,120,1,120,240,48480,202,202,-1.5,1.5,-1.5,0.0,0.0,1.5,D1-120(10).csv
+AlScN,40,AlScN_40nm,104,1,104,208,42016,202,202,-1.5,1.5,-1.5,0.0,0.0,1.5,D1-104.csv
+AlScN,60,AlScN_60nm,120,1,120,240,48480,202,202,-1.5,5.0,-1.5,0.0,0.0,5.0,D1-120(10).csv

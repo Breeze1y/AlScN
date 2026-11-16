@@ -1,0 +1,10 @@
+﻿role,seed,disorder_seed,vacancy_seed,status,first_bridge_command_V,first_bridge_device_V,first_bridge_time_s,first_bridge_segment,first_bridge_events,scan_points,limited_scan_points,max_current_A,max_abs_ag_balance_error,post_bridge_scan_states_frozen,trajectory_path
+new_defect_maps,67,878,879,first_bridge_frozen_readout,1.365,0.0473454882549602,0.9130499142465265,91,904934,202,107,0.0010000000000000002,0,True,results/forming_refit_20261109/coupled/map_sensitivity/seed_67
+new_defect_maps,77,888,889,first_bridge_frozen_readout,1.26,0.035159740000789544,0.845776642610687,84,873720,202,115,0.0010000000000000002,0,True,results/forming_refit_20261109/coupled/map_sensitivity/seed_77
+new_defect_maps,87,898,899,first_bridge_frozen_readout,1.47,0.036322064617210756,0.9820296131478123,98,918172,202,101,0.0010000000000000002,0,True,results/forming_refit_20261109/coupled/map_sensitivity/seed_87
+reserved_seed,37,811,812,first_bridge_frozen_readout,1.47,0.029033781799614015,0.9896899696765739,98,977149,202,102,0.0010000000000000002,0,True,results/forming_refit_20261109/coupled/reserved/seed_37
+reserved_seed,47,811,812,first_bridge_frozen_readout,1.2750000000000001,0.041851766595148485,0.8595746783247391,85,878640,202,114,0.001,0,True,results/forming_refit_20261109/coupled/reserved/seed_47
+reserved_seed,57,811,812,first_bridge_frozen_readout,1.395,0.03255119301917715,0.9329679782797402,93,965161,202,106,0.0010000000000000002,0,True,results/forming_refit_20261109/coupled/reserved/seed_57
+training,17,811,812,first_bridge_frozen_readout,1.3050000000000002,0.03433688148564609,0.876089991503657,87,905717,202,112,0.001,0,True,results/forming_refit_20261109/coupled/training/seed_17
+training,27,811,812,first_bridge_frozen_readout,1.335,0.05697753722063727,0.8920360915412814,89,874586,202,109,0.0010000000000000002,0,True,results/forming_refit_20261109/coupled/training/seed_27
+training,7,811,812,first_bridge_frozen_readout,1.2750000000000001,0.04365589130012908,0.8501729536171527,85,889395,202,114,0.001,0,True,results/forming_refit_20261109/coupled/training/seed_7

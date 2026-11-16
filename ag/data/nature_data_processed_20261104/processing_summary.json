@@ -1,0 +1,25 @@
+{
+  "source": "D:\\Al4memorister\\ai4alscn\\device_data\\nature_data",
+  "output": "D:\\Al4memorister\\ag\\data\\nature_data_processed_20261104",
+  "csv_files": 3182,
+  "source_bytes": 74226117,
+  "normalized_datavalue_rows": 418781,
+  "data_blocks": 3182,
+  "flagged_csv_files": 0,
+  "exact_duplicate_hash_groups": 0,
+  "categories": {
+    "time_sampling": 14,
+    "read": 1807,
+    "reset": 679,
+    "set": 681,
+    "forming": 1
+  },
+  "signal_columns": [
+    "column_5",
+    "I",
+    "I1",
+    "R",
+    "Time",
+    "V1"
+  ]
+}

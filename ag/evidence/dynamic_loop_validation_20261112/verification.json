@@ -1,0 +1,26 @@
+{
+  "tests_passed": 26,
+  "tests_failed": 0,
+  "command": "python -m unittest test_kmc -v",
+  "physics_hashes": {
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10",
+    "dynamic_kmc.py": "9da984308e9703dae0c2d3101d9522ca0521c2eb890ca6ad3b86c3ef6d2410c8"
+  },
+  "test_source_sha256": "de3e2eba4a7f2d6381808aa4fdaf922c14b8ad2dda90a6597b144fce685dbc78",
+  "new_checks": [
+    "same path up to first bridge",
+    "continued events and time after bridge",
+    "finite metal network voltage profile and KCL",
+    "dynamic return to zero with conserved inventory",
+    "dynamic checkpoint event path",
+    "stability rejects brief snapshots and hidden ruptures",
+    "ion stationarity distinct from metal stability"
+  ],
+  "waveform": "0 to 1.5 to 0 V, original 202 points",
+  "zero_hold_min_s": 0.1,
+  "zero_hold_max_s": 0.2,
+  "zero_hold_observation_span_s": 0.1
+}

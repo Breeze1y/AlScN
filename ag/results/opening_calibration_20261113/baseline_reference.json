@@ -1,0 +1,9 @@
+{
+  "source": "results/morphology_reference_transfer_50Hz_20261112/result.json",
+  "attempt_Hz": 10000000000000.0,
+  "first_bridge_voltage_V": 0.645,
+  "first_bridge_time_s": 0.867244441301605,
+  "events": 27015191,
+  "full_protocol_complete": true,
+  "retention_stable": false
+}

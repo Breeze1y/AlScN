@@ -1,0 +1,32 @@
+test_bridged_field_uses_finite_metal_voltage_profile (test_kmc.DynamicTests.test_bridged_field_uses_finite_metal_voltage_profile) ... ok
+test_dynamic_checkpoint_preserves_random_path (test_kmc.DynamicTests.test_dynamic_checkpoint_preserves_random_path) ... ok
+test_ion_stationarity_is_separate_from_metal_stability (test_kmc.DynamicTests.test_ion_stationarity_is_separate_from_metal_stability) ... ok
+test_network_potential_agrees_with_original_conductance (test_kmc.DynamicTests.test_network_potential_agrees_with_original_conductance) ... ok
+test_prebridge_path_matches_original_then_continues (test_kmc.DynamicTests.test_prebridge_path_matches_original_then_continues) ... ok
+test_return_to_zero_continues_time_and_keeps_inventory (test_kmc.DynamicTests.test_return_to_zero_continues_time_and_keeps_inventory) ... ok
+test_stability_requires_observed_hold_and_no_hidden_breaks (test_kmc.DynamicTests.test_stability_requires_observed_hold_and_no_hidden_breaks) ... ok
+test_finite_electrode_stage_cannot_be_imported_as_legacy_shape (test_kmc.RestorationTests.test_finite_electrode_stage_cannot_be_imported_as_legacy_shape) ... ok
+test_fresh_default_keeps_50hz_full_loop_and_no_preloaded_ag (test_kmc.RestorationTests.test_fresh_default_keeps_50hz_full_loop_and_no_preloaded_ag) ... ok
+test_frozen_source_files_restored_byte_for_byte (test_kmc.RestorationTests.test_frozen_source_files_restored_byte_for_byte) ... ok
+test_infinite_reservoir_inject_return_and_fixed_boundary (test_kmc.RestorationTests.test_infinite_reservoir_inject_return_and_fixed_boundary) ... ok
+test_reference_morphology_import_keeps_fast_protocol_timing (test_kmc.RestorationTests.test_reference_morphology_import_keeps_fast_protocol_timing) ... ok
+test_restored_current_matches_original_frozen_network (test_kmc.RestorationTests.test_restored_current_matches_original_frozen_network) ... ok
+test_saved_filament_geometry_and_inventory_recovered_exactly (test_kmc.RestorationTests.test_saved_filament_geometry_and_inventory_recovered_exactly) ... ok
+test_hop_detailed_balance (_restored_test_physics.PhysicsTests.test_hop_detailed_balance) ... ok
+test_layered_polarization_against_analytic (_restored_test_physics.PhysicsTests.test_layered_polarization_against_analytic) ... ok
+test_mass_and_no_preloaded_filament (_restored_test_physics.PhysicsTests.test_mass_and_no_preloaded_filament) ... ok
+test_short_circuit_compensation_and_reversal (_restored_test_physics.PhysicsTests.test_short_circuit_compensation_and_reversal) ... ok
+test_topology_does_not_confuse_ions_with_metal (_restored_test_physics.PhysicsTests.test_topology_does_not_confuse_ions_with_metal) ... ok
+test_vacancy_mask_reproducibility_and_zero_penalty_control (_restored_test_physics.PhysicsTests.test_vacancy_mask_reproducibility_and_zero_penalty_control) ... ok
+test_buried_redox_forbidden_in_both_directions (_restored_test_reactions.ReactionTests.test_buried_redox_forbidden_in_both_directions) ... ok
+test_exposed_redox_pair_with_distinct_adhesion (_restored_test_reactions.ReactionTests.test_exposed_redox_pair_with_distinct_adhesion) ... ok
+test_migration_preserves_contact_energy_balance (_restored_test_reactions.ReactionTests.test_migration_preserves_contact_energy_balance) ... ok
+test_vacancy_penalty_enters_all_ionic_forward_reverse_pairs (_restored_test_reactions.ReactionTests.test_vacancy_penalty_enters_all_ionic_forward_reverse_pairs) ... ok
+test_all_channels_match_on_mixed_states_and_after_ion_motion (_restored_test_fast_kmc.CacheTests.test_all_channels_match_on_mixed_states_and_after_ion_motion) ... ok
+test_changed_bias_and_moving_ions_keep_exact_path (_restored_test_fast_kmc.CacheTests.test_changed_bias_and_moving_ions_keep_exact_path) ... ok
+test_circuit_feedback_and_neutral_migration_keep_exact_path (_restored_test_fast_kmc.CacheTests.test_circuit_feedback_and_neutral_migration_keep_exact_path) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 5.249s
+
+OK

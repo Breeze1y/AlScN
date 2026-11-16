@@ -1,0 +1,32 @@
+{
+  "scope": "Same saved 160 ms zero-bias geometry; candidate site identified by conductance replay; no new forming trajectory or fitted material energy",
+  "cases": [
+    {
+      "bond_eV": 0.06,
+      "attempt_Hz": 2650000000000.0,
+      "row": 43,
+      "x": 98,
+      "coord": 3,
+      "site_energy_eV": -0.021224246454576663,
+      "oxidize_Hz": 0.21897222287736257
+    },
+    {
+      "bond_eV": 0.08,
+      "attempt_Hz": 2650000000000.0,
+      "row": 43,
+      "x": 98,
+      "coord": 3,
+      "site_energy_eV": -0.021224246454576663,
+      "oxidize_Hz": 0.021499749012893452
+    },
+    {
+      "bond_eV": 0.1,
+      "attempt_Hz": 2650000000000.0,
+      "row": 43,
+      "x": 98,
+      "coord": 3,
+      "site_energy_eV": -0.021224246454576663,
+      "oxidize_Hz": 0.00211094905802868
+    }
+  ]
+}

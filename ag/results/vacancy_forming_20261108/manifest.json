@@ -1,0 +1,12 @@
+{
+  "scripts/compare_vacancy_forming.py": "3340f26a2b7e6e44c39d46f1e571c9326065203cfab4cebe61328c4bdd318217",
+  "configs/baseline.json": "c251cbdd347fe70cfcbac4bfd9f98192abddda1a28d1df781f42e2df3beaab72",
+  "configs/forming_iv_fast_ramp.json": "e86d71ac67a3049968fa5087582a9c9e0c7acdb798f9e93cc335f7120ae47c5f",
+  "kmc_model.py": "1ec0c5f3c913b8ce273882035ada700679338a90a127831659b9f33e08dcd8a3",
+  "fast_kmc.py": "fd04ecf223ee5eb24cdd2563623b963b7d1ea2c68f1e4f2b81aab7eb5b5f9c1c",
+  "forming_iv.py": "e3a60a277bc786414acff7b48486795d817c512080c5c9a0bc97d9d0be297470",
+  "run_forming.py": "9a9743d63a52b717df1312d617dc1c383125ca7fb961e4de57d97840c4982ad7",
+  "run.py": "2a9dabf9625e67f568d2041f0b4fd24bf2ded2395b96dfe5fbdb87c8ac1b8ef1",
+  "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10",
+  "requirements.txt": "25412683eb8f0b0049e66b26009838e23bc6cb4d4979f9da0f289599b0dab630"
+}

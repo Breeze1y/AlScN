@@ -1,0 +1,23 @@
+{
+  "calibration_seeds": [
+    7,
+    17,
+    27
+  ],
+  "reserved_event_seeds": [
+    37,
+    47,
+    57
+  ],
+  "vacancy_fraction_by_layer": [
+    0,
+    0.15,
+    0
+  ],
+  "vacancy_penalty_eV": 0.05,
+  "fixed_polarization_C_m2": -0.004,
+  "point_duration_s": 0.01,
+  "rationale": "Fit kinetics conditional on fixed exploratory vacancy coupling; one current record does not identify vacancy density and coupling separately.",
+  "objective": "Equal weight by seed for distance of forming voltage to measured bracket; report spread, non-forming and numerical censoring separately.",
+  "status": "design_before_new_simulations"
+}

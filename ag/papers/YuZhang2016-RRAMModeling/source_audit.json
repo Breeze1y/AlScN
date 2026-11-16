@@ -1,0 +1,25 @@
+{
+  "source": "D:\\Al4memorister\\ai4alscn\\ref-paper\\MC仿真\\Device Simulation and Modeling of RRAM Switching Processes.pdf",
+  "sha256": "84e7bca073cd2a84090d6b402b7a83172405f62d10c8a9b119989aac511ccb09",
+  "pdf_pages": 2,
+  "method": "All local PDF pages extracted and visually reviewed; figures and tables inspected; current project event, state, model and diagnostics code checked",
+  "code_changes": false,
+  "new_simulations": false,
+  "title": "Device Simulation and Modeling of RRAM Switching Processes",
+  "authors": [
+    "Zhiping Yu",
+    "Jinyu Zhang"
+  ],
+  "year": 2016,
+  "venue": "IEEE International Nanoelectronics Conference (INEC)",
+  "publisher_record_url": "https://ieeexplore.ieee.org/document/7589452",
+  "external_verification": "Publisher record title accessible; record body lacks metadata. DOI10.1109/INEC.2016.7589452 only appeared in secondary search and could not be verified via DOI/Crossref, so omitted from confirmed bibliography",
+  "limitations": [
+    "Two-page review/talk summary, not reproducible complete3D KMC paper",
+    "Reference4 is private communication; not obtained and no public parameter catalog",
+    "No explicit event-rate, solver, heat, geometry or compact equations",
+    "All-RRAM filament statement is over-broad for general RRAM",
+    "LFG/HFG abbreviations in Fig2 not explicitly expanded in this paper",
+    "No quantitative multi-slope fit or range provided"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "checkpoint_checksum_and_source_hashes": true,
+    "first_bridge_exact": true,
+    "all_waveform_points_completed": true,
+    "commanded_voltage_zero": true,
+    "zero_observation_1s": true,
+    "fixed_electrodes": true,
+    "source_balance": true,
+    "reaction_balance": true,
+    "total_events": true,
+    "retained_connected_at_all_zero_samples": true,
+    "no_hidden_geometric_breaks_at_zero": true,
+    "final_metrics_agree": true
+  },
+  "all_passed": true,
+  "zero_sample_count": 51,
+  "network_resistance_ohm": 199.1957933892015,
+  "last100ms_metal_event_classification": {
+    "reduce": {
+      "events": 755,
+      "max_single_event_relative_G_jump": 0.0874092740873483
+    },
+    "oxidize": {
+      "events": 758,
+      "max_single_event_relative_G_jump": 0.08038305003487306
+    },
+    "migrate": {
+      "events": 25,
+      "max_single_event_relative_G_jump": 0.0024635304768978444
+    }
+  },
+  "sample_stability": {
+    "assessed": true,
+    "observation_span_s": 0.10000000000000009,
+    "filament_stable": false,
+    "ions_stationary": false,
+    "conductance_relative_range": 0.09738464651298788,
+    "metal_relative_range": 0.003420102603078092,
+    "ion_relative_range": 0.72,
+    "topology_changes": 0,
+    "criterion": "last six zero-bias observations (five intervals): connected throughout, no toggles, G range <=5%, metal range <=1%; ion range <=5% assessed separately"
+  },
+  "continuous_last100ms": {
+    "all_connected": true,
+    "network_conductance_relative_range": 0.16879922081005438,
+    "metal_relative_range": 0.005701254275940707,
+    "records": 1544,
+    "span_s": 0.10000000000000009
+  },
+  "interpretation": "Geometric retention for the full one-second zero hold verified; 5% conductance stability criterion NOT passed. Historical 3 V fast protocol, not the current 20 ms/point experiment."
+}

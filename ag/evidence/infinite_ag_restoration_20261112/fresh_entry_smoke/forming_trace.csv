@@ -1,0 +1,2 @@
+﻿segment,scheduled_end_s,sample,time_s,morphology_time_s,events,kind,connected,metal,ions,net_source,ag_balance_error,network_conductance_S,network_kcl_residual_A_at_1V,command_voltage_V,device_voltage_V,current_A,network_current_A,leakage_current_A,compliance_active,source_delivered_voltage_V
+0,0.02,2,0.019992389244099452,0.019992389244099452,1000,segment_end,False,0,48,48,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,0.0

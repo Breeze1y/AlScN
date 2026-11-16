@@ -1,0 +1,13 @@
+{
+  "stop_and_resume_exact_state": true,
+  "stop_and_resume_exact_counts": true,
+  "stop_and_resume_exact_rng_and_pending": true,
+  "uniform_prefactor_preserves_all_local_rate_ratios": true,
+  "physics_hashes": {
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10",
+    "dynamic_kmc.py": "9da984308e9703dae0c2d3101d9522ca0521c2eb890ca6ad3b86c3ef6d2410c8"
+  }
+}

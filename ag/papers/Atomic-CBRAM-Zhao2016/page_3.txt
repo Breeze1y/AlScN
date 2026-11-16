@@ -1,0 +1,70 @@
+Simulation                 of                 Semiconductor                 Processes                 and                 Devices                 2016                                                                  155
+Edited                 by                 E.                 Bär,                 J.                 Lorenz,                 and                 P.                 Pichler
+
+                         10-4              RESET
+
+                         10-6
+                         10-8                                     SET
+
+
+                        10-10
+
+                        10-12                                 Symbo: Exp.[1]
+                                                              Line: Sim.
+                        10-14     -2                                       -1                                            0                                                 1                                                 2                                                 3                                                 4
+                                                  Voltage(V)
+
+Fig. 4 Measured and simulated I-V curves during SET and RESET in
+Cu/Al2O3/TiN device.
+        Conical CF with bottom wide is simulated as shown in
+Fig. 5, where the material parameters are listed in Fig. 5(d).
+The evolution and dissolution of CF are shown in Fig. 5(a) and
+(b), which are in accordance with the observed TEM images in
+Ref.[2]. In this case, the dissolution region during RESET
+locates near the active electrode, which is the thinnest part of
+CF. The potential and temperature distributions during RESET                                                             (d)       parameter                                                                               value (eV)Ag
+are shown in Fig. 5(c). Based on the simulations, the critical                                                                   ܧ୭୶(1), (2), (3)                                                           1.0, 1.2, 1.3EAgEC,,u
+                                                                                                                                                                                                    ox                                                                          ox
+parameters Eox, Eh and Ered are identified to influence CF                                                                       ܧ     (1), (2), (3)                                                     0.7, 0.9, 1.2SiO2
+geometry and the proper parameters are selected to reproduce                                                                      ୰ୣୢ                                                             ECuEAg,,
+                                                                                                                                                                                   Pt               red                                                                         red
+the targeted CF geometry. When Eox is small compared to Eh,                                                                          ܧ௛(1), (2)                                                                                                                       1.2, 1.2
+conical CF with top wide is reproduced. When Eh is small
+compared to Eox and Ered, conical CF with bottom wide is                                                           Fig.   6 Comparison of simulated CF with TEM images of Ag-SiO 2-Pt [3]
+developed. As shown in Fig. 5, the high cation mobility in Cu-                                                     after SET (a) and RESET (b). (c) The simulated potential (under 2V) and
+doping electrolyte (low Eh) leads to CF geometry with bottom                                                       temperature distributions during RESET. (d) The parameters used in this
+                                                                                                                   simulation.
+wide.                                                                                                                      The balance of Eox, Eh and Ered bring in a uniform CF as
+                                                                                                                   shown in Fig. 6, which corresponds to dendrite CF observed in
+                                                                                                                   TEM images from Ref.[3]. The evolution and dissolution of the
+                                                                                                                   uniform CF are shown in Fig. 6(a) and (b), and the potential
+                                                                                                                   and temperature distributions during RESET are shown in Fig.
+                                                                                                                   6(c). As shown in Fig. 6(d), devices composed of Ag electrode
+                                                                                                                   and electrolyte with low cation mobility tend to generate
+                                                                                                                   uniform CFs. Likewise, devices composed of Cu electrode and
+                                                                                                                   electrolyte with high cation mobility are likely to generate
+                                                                                                                   uniform CFs.
+
+
+
+
+
+
+
+
+                                                                                                                   Fig. 7    Simulated CF geometry correlated with material parameters (a) for
+                                                                                                                   Eaa>Esa, isolated island growth. (b) for E aa<Esa, nucleation by coalescence of
+                                                                                                                   islands.
+       (d)        parameter                                                                              value (eV)Cu      As has been demonstrated in part II, the bond energy can
+                ܧ   (1), (2), (3)                                                          1.1, 1.3, 1.5Cu-doping
+                 ୭୶                                                                                                influence the migration of metal atoms. During Forming
+                                                            Cu-GeTe           electrolyte:                         process, the growth of atom clusters depends on the bond
+               ܧ୰ୣୢ(1), (2), (3)                                                    0.7, 0.9, 1.3
+                                                               Pt-Ir              ܧ௛љ                              energy between substrate and atom as shown in Fig. 7. When
+                   ܧ௛(1), (2)                                                                                                                     1.1, 1.1Eaa>Esa, the CFs grow in isolated islands. When Eaa<Esa, the
+
+                                                                                                                   CFs grow by coalescence of islands. The Forming voltage is
+Fig. 5 Comparison of simulated CF with TEM images of Cu/Cu-GeTe/Pt-Ir                                              related with the thickness and thermal conductivity of
+[2] after SET (a) and RESET (b). (c) The simulated potential (under 2V) and
+temperature distributions during RESET. (d) The parameters used in this                                            electrolyte material as shown in Fig. 8. Fig. 9 shows the
+simulation.                                                                                                        impacts of Eox, Eh and Ered on the Forming voltage.

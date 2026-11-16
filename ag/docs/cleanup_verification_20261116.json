@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-16",
+  "tests_passed": 30,
+  "tests_command": "python -m unittest test_kmc -v",
+  "physical_core_sha256": {
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10",
+    "dynamic_kmc.py": "5957c7dca40832debd3585216c04c77408ed29dda81f2e113c0bd8a37cf75f58"
+  },
+  "current_checkpoint_load_verified": true,
+  "default_shape_restore_verified": true,
+  "complete_loops_checked": [
+    {
+      "folder": "results/opening_calibration_20261113/nu2.42e12_s17",
+      "solver": "baseline",
+      "checkpoint_sha256": "363f4948056094811815482663f275d86584bb453e32b06fe42b30d770341e9b",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2863,
+      "final_ions": 6
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.080/nu2.42e12_s17",
+      "solver": "corrected",
+      "checkpoint_sha256": "800f73ab2d0143492246b5fa0fd67de7170c69c34ee715b75ffd2682525c3303",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2484,
+      "final_ions": 19
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.080/nu2.42e12_s27_hold200ms",
+      "solver": "corrected",
+      "checkpoint_sha256": "8b81e2028717fc6b7214421284abf26f5b4c737a48912b9c14f9366c610e1977",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2554,
+      "final_ions": 5
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.080/nu2.42e12_s7_hold200ms",
+      "solver": "corrected",
+      "checkpoint_sha256": "5d9705374e0536b6cff52f90597cd3222ddd0e3b952effab1e137de801bfa473",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2289,
+      "final_ions": 5
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.080/nu2.65e12_s17",
+      "solver": "corrected",
+      "checkpoint_sha256": "7c5441bd16f095fb80f4a6b62cda08c9986adb33ff613cd40bd57672253115f2",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2460,
+      "final_ions": 3
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.080/nu2.65e12_s27",
+      "solver": "corrected",
+      "checkpoint_sha256": "b2c931d8ee6afa4697c0e72a97a9ceb9733b76064769393fa7b6ef3b1c1ed915",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2287,
+      "final_ions": 2
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.080/nu2.65e12_s7",
+      "solver": "corrected",
+      "checkpoint_sha256": "63338fd00bab91b9671c656b864a88c461e82c17922317e46c4e2a508c4fa787",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2339,
+      "final_ions": 1
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.080/nu2.9e12_s17",
+      "solver": "corrected",
+      "checkpoint_sha256": "2e74f490e36a55f78a0d6641876cb57c3c472d05bfdf1fd99344c4ddbb571b83",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2467,
+      "final_ions": 3
+    },
+    {
+      "folder": "results/bridge_stability_20261116/bond_0.100/nu2.65e12_s17",
+      "solver": "corrected",
+      "checkpoint_sha256": "e05e5057a239adea705e0b5de2e089604ddaf186838cc1a8d1944f282410fc7a",
+      "full_points": 202,
+      "total_time_s": 4.239999999999997,
+      "final_metal": 2445,
+      "final_ions": 5
+    },
+    {
+      "folder": "results/bridge_stability_20261116/corrected_s17",
+      "solver": "corrected",
+      "checkpoint_sha256": "68fea01888f068024bff9c427d8e546f66d83da40637276d3f4683a43445927d",
+      "full_points": 202,
+      "total_time_s": 4.2399999999999975,
+      "final_metal": 3073,
+      "final_ions": 8
+    }
+  ],
+  "independent_new_complete_loops": 9,
+  "historical_complete_loops": 1,
+  "joint_fit_accepted": false
+}

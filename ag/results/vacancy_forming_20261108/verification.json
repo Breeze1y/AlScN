@@ -1,0 +1,78 @@
+{
+  "source_snapshot_verified": true,
+  "runs": [
+    {
+      "variant": "uncoupled",
+      "seed": 7,
+      "rows": 3328,
+      "snapshots": 42,
+      "status": "first_bridge_frozen_readout",
+      "peak_current_A": 0.0010000000000000002,
+      "limited_samples": 7,
+      "mass_balance_verified": true,
+      "load_line_verified": true,
+      "post_bridge_frozen_verified": true
+    },
+    {
+      "variant": "uncoupled",
+      "seed": 17,
+      "rows": 3700,
+      "snapshots": 42,
+      "status": "first_bridge_frozen_readout",
+      "peak_current_A": 0.001,
+      "limited_samples": 7,
+      "mass_balance_verified": true,
+      "load_line_verified": true,
+      "post_bridge_frozen_verified": true
+    },
+    {
+      "variant": "uncoupled",
+      "seed": 27,
+      "rows": 4332,
+      "snapshots": 42,
+      "status": "first_bridge_frozen_readout",
+      "peak_current_A": 0.0010000000000000002,
+      "limited_samples": 7,
+      "mass_balance_verified": true,
+      "load_line_verified": true,
+      "post_bridge_frozen_verified": true
+    },
+    {
+      "variant": "vacancy_penalty",
+      "seed": 7,
+      "rows": 4870,
+      "snapshots": 44,
+      "status": "first_bridge_frozen_readout",
+      "peak_current_A": 0.0010000000000000002,
+      "limited_samples": 5,
+      "mass_balance_verified": true,
+      "load_line_verified": true,
+      "post_bridge_frozen_verified": true
+    },
+    {
+      "variant": "vacancy_penalty",
+      "seed": 17,
+      "rows": 6400,
+      "snapshots": 44,
+      "status": "first_bridge_frozen_readout",
+      "peak_current_A": 0.001,
+      "limited_samples": 5,
+      "mass_balance_verified": true,
+      "load_line_verified": true,
+      "post_bridge_frozen_verified": true
+    },
+    {
+      "variant": "vacancy_penalty",
+      "seed": 27,
+      "rows": 3984,
+      "snapshots": 42,
+      "status": "first_bridge_frozen_readout",
+      "peak_current_A": 0.001,
+      "limited_samples": 7,
+      "mass_balance_verified": true,
+      "load_line_verified": true,
+      "post_bridge_frozen_verified": true
+    }
+  ],
+  "scope": "Numerical integrity, not experimental calibration"
+}

@@ -1,0 +1,2554 @@
+{
+  "status": "first_bridge_frozen_readout",
+  "first_bridge": {
+    "time_s": 0.31548759417026323,
+    "events": 324835,
+    "command_voltage_V": 3.0,
+    "device_voltage_V": 0.9716767279261695
+  },
+  "events": 324835,
+  "morphology_time_s": 0.31548759417026323,
+  "scan_end_time_s": 0.5031,
+  "ag_balance_error": 0,
+  "electronic_updates": 4797,
+  "config": {
+    "nx": 150,
+    "layer_cells": 20,
+    "spacing_nm": 1.0,
+    "voltage": 3.0,
+    "temperature_K": 300.0,
+    "attempt_Hz": 10000000000000.0,
+    "eps_aln": 8.5,
+    "eps_alscn": 15.0,
+    "polarization_C_m2": -0.004,
+    "hop_aln_eV": 0.48,
+    "hop_alscn_eV": 0.5,
+    "interface_eV": 0.025,
+    "source_barrier_eV": 0.68,
+    "reaction_barrier_eV": 0.52,
+    "pt_nucleation_eV": 0.08,
+    "metal_standard_eV": -0.1,
+    "bond_eV": 0.06,
+    "pt_adhesion_eV": 0.06,
+    "surface_redox_only": true,
+    "migration_eV": 0.8,
+    "disorder_eV": 0.025,
+    "max_events": 500000,
+    "max_time_s": 2.0,
+    "seed": 7,
+    "disorder_seed": 811,
+    "record_events": false,
+    "vacancy_affected_fraction_by_layer": [
+      0.0,
+      0.15,
+      0.0
+    ],
+    "vacancy_ag_ion_penalty_eV": 0.05,
+    "vacancy_seed": 812
+  },
+  "electronics": {
+    "metal_resistivity_ohm_m": 1.6e-08,
+    "effective_depth_nm": 1.0,
+    "contact_resistance_ohm": 500.0,
+    "tunnel_prefactor_S": 7.748091729e-05,
+    "tunnel_barrier_eV": 1.0,
+    "tunnel_effective_mass_ratio": 1.0,
+    "max_tunnel_gap_nm": 2.0,
+    "min_tunnel_conductance_S": 1e-15,
+    "leakage_per_column_S": 1e-12,
+    "leakage_voltage_scale_V": 2.0,
+    "series_resistance_ohm": 100.0,
+    "compliance_A": 0.001,
+    "leakage_model": "sinh",
+    "leakage_saturation_A": 1e-06,
+    "leakage_half_voltage_V": 1.0,
+    "leakage_exponent": 2.0,
+    "leakage_reference_columns": 150.0,
+    "network_parallel_factor": 1.0
+  },
+  "protocol": [
+    {
+      "voltage_V": 0.0,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.1,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.2,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.30000000000000004,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.4,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.5,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.6000000000000001,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.7000000000000001,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.8,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 0.9,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.0,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.1,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.2000000000000002,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.3,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.4000000000000001,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.5,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.6,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.7000000000000002,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.8,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 1.9000000000000001,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.0,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.1,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.2,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.3000000000000003,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.4000000000000004,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.5,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.6,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.7,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.8000000000000003,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 2.9000000000000004,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 3.0,
+      "duration_s": 0.0001
+    },
+    {
+      "voltage_V": 3.0,
+      "duration_s": 0.1
+    },
+    {
+      "voltage_V": 3.0,
+      "duration_s": 0.1
+    },
+    {
+      "voltage_V": 3.0,
+      "duration_s": 0.1
+    },
+    {
+      "voltage_V": 3.0,
+      "duration_s": 0.1
+    },
+    {
+      "voltage_V": 3.0,
+      "duration_s": 0.1
+    }
+  ],
+  "post_bridge_mode": "frozen_morphology_readout",
+  "allow_frozen_return": false,
+  "calibration_status": "exploratory_not_fitted_to_experiment",
+  "field_scope": "prebridge_ideal_electrode_connected_metal_no_ionic_space_charge",
+  "vacancy_affected_sites_by_layer": [
+    0,
+    420,
+    0
+  ],
+  "ion_residence_s": [
+    0.7682074707204136,
+    1.851734794454547,
+    0.6896826638195346
+  ],
+  "vacancy_ion_residence_s": [
+    0.0,
+    0.10826087456423258,
+    0.0
+  ],
+  "counts": {
+    "inject": 1711,
+    "absorb": 0,
+    "hop": 318328,
+    "reduce": 3232,
+    "oxidize": 1536,
+    "migrate": 28
+  },
+  "variant": "vacancy_penalty",
+  "morphology": {
+    "metal": 1696,
+    "ions": 15,
+    "connected_4": true,
+    "cathode_connected_metal": 1514,
+    "minimum_missing_cells_4": 0,
+    "vertex_bottleneck_4": 1,
+    "shortest_path_nm": 70.0,
+    "path_tortuosity": 1.1666666666666667,
+    "skeleton_pixels_8": 797,
+    "skeleton_endpoints_8": 55,
+    "skeleton_junction_clusters_8": 40,
+    "width_by_depth_nm": [
+      1.0,
+      1.0,
+      1.0,
+      3.0,
+      2.0,
+      4.0,
+      5.0,
+      6.0,
+      6.0,
+      7.0,
+      6.0,
+      10.0,
+      11.0,
+      15.0,
+      16.0,
+      12.0,
+      23.0,
+      25.0,
+      31.0,
+      22.0,
+      13.0,
+      15.0,
+      12.0,
+      13.0,
+      14.0,
+      16.0,
+      15.0,
+      18.0,
+      19.0,
+      20.0,
+      25.0,
+      19.0,
+      18.0,
+      19.0,
+      18.0,
+      18.0,
+      20.0,
+      17.0,
+      22.0,
+      29.0,
+      29.0,
+      42.0,
+      43.0,
+      42.0,
+      38.0,
+      43.0,
+      37.0,
+      44.0,
+      45.0,
+      46.0,
+      50.0,
+      53.0,
+      61.0,
+      62.0,
+      60.0,
+      62.0,
+      76.0,
+      85.0,
+      95.0,
+      116.0
+    ],
+    "layer_metals": [
+      207,
+      360,
+      1129
+    ],
+    "layer_ions": [
+      8,
+      6,
+      1
+    ]
+  },
+  "trace": [
+    {
+      "time_s": 0.0,
+      "events": 0,
+      "metal": 0,
+      "ions": 0,
+      "connected": false,
+      "net_source": 0,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        0,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0001,
+      "events": 0,
+      "metal": 0,
+      "ions": 0,
+      "connected": false,
+      "net_source": 0,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        0,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0002,
+      "events": 2,
+      "metal": 0,
+      "ions": 1,
+      "connected": false,
+      "net_source": 1,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        1,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        3.374729137856135e-05,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.00030000000000000003,
+      "events": 18,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          16,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.00013936473927176477,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0004,
+      "events": 46,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          44,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0003393647392717648,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0005,
+      "events": 67,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          65,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0005393647392717648,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0006000000000000001,
+      "events": 93,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          91,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0007393647392717648,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0007000000000000001,
+      "events": 120,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          118,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0009393647392717649,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0008000000000000001,
+      "events": 147,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          145,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.001139364739271765,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0009000000000000002,
+      "events": 182,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          180,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0013393647392717651,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0010000000000000002,
+      "events": 225,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          223,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0015393647392717652,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0011000000000000003,
+      "events": 256,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          254,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0017393647392717653,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0012000000000000003,
+      "events": 296,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          294,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0019393647392717654,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0013000000000000004,
+      "events": 339,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          337,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0021393647392717653,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0014000000000000004,
+      "events": 378,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        0,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          376,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0023393647392717654,
+        0.0,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0015000000000000005,
+      "events": 409,
+      "metal": 0,
+      "ions": 2,
+      "connected": false,
+      "net_source": 2,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        0,
+        2,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          397,
+          2,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0024418630113348027,
+        9.750172793696272e-05,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        4.005398996896354e-06,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0016000000000000005,
+      "events": 439,
+      "metal": 0,
+      "ions": 4,
+      "connected": false,
+      "net_source": 4,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        2,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          410,
+          2,
+          0
+        ],
+        [
+          0,
+          23,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.002560278394700714,
+        0.0002975017279369628,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        1.553930646857899e-05,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0017000000000000006,
+      "events": 502,
+      "metal": 0,
+      "ions": 5,
+      "connected": false,
+      "net_source": 5,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        3,
+        2,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          455,
+          2,
+          0
+        ],
+        [
+          0,
+          40,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0028232818250276755,
+        0.0004975017279369629,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        2.3061776207875537e-05,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0018000000000000006,
+      "events": 576,
+      "metal": 0,
+      "ions": 5,
+      "connected": false,
+      "net_source": 5,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        3,
+        2,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          517,
+          2,
+          0
+        ],
+        [
+          0,
+          52,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.003123281825027676,
+        0.000697501727936963,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        2.3061776207875537e-05,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0019000000000000006,
+      "events": 680,
+      "metal": 0,
+      "ions": 6,
+      "connected": false,
+      "net_source": 6,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        4,
+        2,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          599,
+          2,
+          0
+        ],
+        [
+          0,
+          73,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0035067476803800736,
+        0.0008975017279369631,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        3.341534542342919e-05,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0020000000000000005,
+      "events": 776,
+      "metal": 0,
+      "ions": 7,
+      "connected": false,
+      "net_source": 7,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        4,
+        3,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          676,
+          3,
+          0
+        ],
+        [
+          0,
+          90,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.003905125674254771,
+        0.0011022416152922233,
+        0.0
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        3.521737028096619e-05,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0021000000000000003,
+      "events": 857,
+      "metal": 0,
+      "ions": 7,
+      "connected": false,
+      "net_source": 7,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        3,
+        3,
+        1
+      ],
+      "hop_layer_counts": [
+        [
+          736,
+          4,
+          0
+        ],
+        [
+          0,
+          109,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.004239776037960018,
+        0.0014662197708670047,
+        1.371480719972954e-06
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        6.339506046759702e-05,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0022,
+      "events": 979,
+      "metal": 0,
+      "ions": 8,
+      "connected": false,
+      "net_source": 8,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        4,
+        3,
+        1
+      ],
+      "hop_layer_counts": [
+        [
+          802,
+          4,
+          0
+        ],
+        [
+          0,
+          136,
+          1
+        ],
+        [
+          0,
+          0,
+          28
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.004584295882072393,
+        0.0017662197708670042,
+        0.00010137148071997278
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.00010095625520479884,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0023,
+      "events": 1086,
+      "metal": 0,
+      "ions": 9,
+      "connected": false,
+      "net_source": 9,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        4,
+        4,
+        1
+      ],
+      "hop_layer_counts": [
+        [
+          862,
+          5,
+          0
+        ],
+        [
+          0,
+          155,
+          1
+        ],
+        [
+          0,
+          0,
+          54
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.005037900677748276,
+        0.002083863625935626,
+        0.0002013714807199726
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0001030810402016121,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0024,
+      "events": 1237,
+      "metal": 0,
+      "ions": 9,
+      "connected": false,
+      "net_source": 9,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        3,
+        4,
+        2
+      ],
+      "hop_layer_counts": [
+        [
+          937,
+          6,
+          0
+        ],
+        [
+          0,
+          193,
+          2
+        ],
+        [
+          0,
+          0,
+          90
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.005381070620520006,
+        0.002487471437746484,
+        0.0003545937261373801
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.00011319025081198966,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0024999999999999996,
+      "events": 1350,
+      "metal": 0,
+      "ions": 9,
+      "connected": false,
+      "net_source": 9,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        3,
+        4,
+        2
+      ],
+      "hop_layer_counts": [
+        [
+          978,
+          7,
+          0
+        ],
+        [
+          1,
+          225,
+          2
+        ],
+        [
+          0,
+          0,
+          128
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.005691448212846497,
+        0.0028770938454199943,
+        0.0005545937261373798
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.00014009740665571133,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0025999999999999994,
+      "events": 1474,
+      "metal": 0,
+      "ions": 10,
+      "connected": false,
+      "net_source": 10,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        3,
+        5,
+        2
+      ],
+      "hop_layer_counts": [
+        [
+          1019,
+          8,
+          0
+        ],
+        [
+          1,
+          272,
+          2
+        ],
+        [
+          0,
+          0,
+          162
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0059838395682429695,
+        0.0033692793059630186,
+        0.0007545937261373794
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.00016755496485939885,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0026999999999999993,
+      "events": 1590,
+      "metal": 0,
+      "ions": 10,
+      "connected": false,
+      "net_source": 10,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        5,
+        3
+      ],
+      "hop_layer_counts": [
+        [
+          1057,
+          9,
+          0
+        ],
+        [
+          1,
+          311,
+          3
+        ],
+        [
+          0,
+          0,
+          199
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.0062289093960230975,
+        0.003914732216384449,
+        0.0009640709879358196
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.00019590524317264447,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.002799999999999999,
+      "events": 1713,
+      "metal": 0,
+      "ions": 11,
+      "connected": false,
+      "net_source": 11,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        2,
+        5,
+        4
+      ],
+      "hop_layer_counts": [
+        [
+          1073,
+          10,
+          0
+        ],
+        [
+          1,
+          341,
+          4
+        ],
+        [
+          0,
+          0,
+          273
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.006401134773301062,
+        0.0043989406754657715,
+        0.0013390821323911598
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0002443778531370051,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.002899999999999999,
+      "events": 1877,
+      "metal": 0,
+      "ions": 11,
+      "connected": false,
+      "net_source": 11,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        1,
+        6,
+        4
+      ],
+      "hop_layer_counts": [
+        [
+          1117,
+          11,
+          0
+        ],
+        [
+          1,
+          393,
+          4
+        ],
+        [
+          0,
+          0,
+          340
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.006579517862859514,
+        0.004920557585907314,
+        0.001739082132391159
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.00026900739947374004,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0029999999999999988,
+      "events": 1978,
+      "metal": 0,
+      "ions": 11,
+      "connected": false,
+      "net_source": 11,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        1,
+        6,
+        4
+      ],
+      "hop_layer_counts": [
+        [
+          1131,
+          11,
+          0
+        ],
+        [
+          1,
+          433,
+          4
+        ],
+        [
+          0,
+          0,
+          387
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.006679517862859514,
+        0.005520557585907313,
+        0.0021390821323911584
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.00026900739947374004,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.0030999999999999986,
+      "events": 2092,
+      "metal": 0,
+      "ions": 11,
+      "connected": false,
+      "net_source": 11,
+      "layer_metals": [
+        0,
+        0,
+        0
+      ],
+      "layer_ions": [
+        1,
+        6,
+        4
+      ],
+      "hop_layer_counts": [
+        [
+          1154,
+          11,
+          0
+        ],
+        [
+          1,
+          480,
+          4
+        ],
+        [
+          0,
+          0,
+          431
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        0
+      ],
+      "ion_residence_s": [
+        0.00677951786285951,
+        0.006120557585907312,
+        0.0025390821323911577
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0002812258881882573,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.00922624181422781,
+      "events": 8561,
+      "metal": 25,
+      "ions": 12,
+      "connected": false,
+      "net_source": 37,
+      "layer_metals": [
+        0,
+        0,
+        25
+      ],
+      "layer_ions": [
+        2,
+        6,
+        4
+      ],
+      "hop_layer_counts": [
+        [
+          2847,
+          38,
+          0
+        ],
+        [
+          3,
+          1917,
+          30
+        ],
+        [
+          0,
+          1,
+          3659
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        25
+      ],
+      "ion_residence_s": [
+        0.015751031761042925,
+        0.02463178179187189,
+        0.025348650695043638
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.001301097575948856,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.01866266782601306,
+      "events": 18997,
+      "metal": 75,
+      "ions": 7,
+      "connected": false,
+      "net_source": 82,
+      "layer_metals": [
+        0,
+        0,
+        75
+      ],
+      "layer_ions": [
+        3,
+        2,
+        2
+      ],
+      "hop_layer_counts": [
+        [
+          6141,
+          88,
+          0
+        ],
+        [
+          9,
+          4700,
+          78
+        ],
+        [
+          0,
+          1,
+          7805
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        75
+      ],
+      "ion_residence_s": [
+        0.034594301571845884,
+        0.05863264082718351,
+        0.051352051561051534
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0033016838212584173,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.03101871497258384,
+      "events": 35151,
+      "metal": 150,
+      "ions": 10,
+      "connected": false,
+      "net_source": 160,
+      "layer_metals": [
+        0,
+        0,
+        150
+      ],
+      "layer_ions": [
+        1,
+        6,
+        3
+      ],
+      "hop_layer_counts": [
+        [
+          11620,
+          175,
+          0
+        ],
+        [
+          16,
+          9081,
+          157
+        ],
+        [
+          0,
+          4,
+          13746
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        150
+      ],
+      "ion_residence_s": [
+        0.06519343673745184,
+        0.11395308352757094,
+        0.08825662386569168
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.0062049467554655905,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.05818430394944566,
+      "events": 64452,
+      "metal": 300,
+      "ions": 3,
+      "connected": false,
+      "net_source": 303,
+      "layer_metals": [
+        0,
+        0,
+        300
+      ],
+      "layer_ions": [
+        0,
+        2,
+        1
+      ],
+      "hop_layer_counts": [
+        [
+          21387,
+          339,
+          0
+        ],
+        [
+          36,
+          17776,
+          311
+        ],
+        [
+          0,
+          10,
+          23836
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        300
+      ],
+      "ion_residence_s": [
+        0.11987890691249904,
+        0.22455334299301447,
+        0.14816730039124967
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.012493134802686786,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.09721956302214985,
+      "events": 102890,
+      "metal": 500,
+      "ions": 5,
+      "connected": false,
+      "net_source": 505,
+      "layer_metals": [
+        0,
+        0,
+        500
+      ],
+      "layer_ions": [
+        1,
+        3,
+        1
+      ],
+      "hop_layer_counts": [
+        [
+          35067,
+          569,
+          0
+        ],
+        [
+          65,
+          29444,
+          519
+        ],
+        [
+          0,
+          18,
+          35783
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        500
+      ],
+      "ion_residence_s": [
+        0.19616304637513202,
+        0.37397254110054806,
+        0.22203727784213842
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.02136412712610617,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.1031,
+      "events": 108591,
+      "metal": 533,
+      "ions": 7,
+      "connected": false,
+      "net_source": 540,
+      "layer_metals": [
+        0,
+        0,
+        533
+      ],
+      "layer_ions": [
+        2,
+        3,
+        2
+      ],
+      "hop_layer_counts": [
+        [
+          37299,
+          607,
+          0
+        ],
+        [
+          69,
+          31318,
+          554
+        ],
+        [
+          0,
+          19,
+          37203
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        533
+      ],
+      "ion_residence_s": [
+        0.20863143560522976,
+        0.39820694577581023,
+        0.23122857129152052
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.022629320634338763,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.14316210101121937,
+      "events": 145771,
+      "metal": 750,
+      "ions": 8,
+      "connected": false,
+      "net_source": 758,
+      "layer_metals": [
+        0,
+        0,
+        750
+      ],
+      "layer_ions": [
+        2,
+        5,
+        1
+      ],
+      "hop_layer_counts": [
+        [
+          50642,
+          848,
+          0
+        ],
+        [
+          92,
+          43549,
+          776
+        ],
+        [
+          0,
+          25,
+          47562
+        ]
+      ],
+      "net_deposition": [
+        0,
+        0,
+        750
+      ],
+      "ion_residence_s": [
+        0.2826060610105983,
+        0.5523772785180872,
+        0.29858337612723906
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.031216621398441398,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.20115116054057025,
+      "events": 199880,
+      "metal": 1100,
+      "ions": 7,
+      "connected": false,
+      "net_source": 1107,
+      "layer_metals": [
+        0,
+        132,
+        968
+      ],
+      "layer_ions": [
+        3,
+        4,
+        0
+      ],
+      "hop_layer_counts": [
+        [
+          70202,
+          1224,
+          0
+        ],
+        [
+          120,
+          60900,
+          1043
+        ],
+        [
+          0,
+          75,
+          62756
+        ]
+      ],
+      "net_deposition": [
+        0,
+        132,
+        968
+      ],
+      "ion_residence_s": [
+        0.39214292760321523,
+        0.7698743855373649,
+        0.40102781151155587
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.04515962990380685,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.2031,
+      "events": 201690,
+      "metal": 1112,
+      "ions": 9,
+      "connected": false,
+      "net_source": 1121,
+      "layer_metals": [
+        0,
+        142,
+        970
+      ],
+      "layer_ions": [
+        1,
+        4,
+        4
+      ],
+      "hop_layer_counts": [
+        [
+          71075,
+          1241,
+          0
+        ],
+        [
+          121,
+          61422,
+          1053
+        ],
+        [
+          0,
+          79,
+          63089
+        ]
+      ],
+      "net_deposition": [
+        0,
+        142,
+        970
+      ],
+      "ion_residence_s": [
+        0.3970767267525851,
+        0.7768537145105322,
+        0.40332209692537907
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.04564056416218954,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.29928693406507473,
+      "events": 305586,
+      "metal": 1600,
+      "ions": 20,
+      "connected": false,
+      "net_source": 1620,
+      "layer_metals": [
+        137,
+        354,
+        1109
+      ],
+      "layer_ions": [
+        6,
+        9,
+        5
+      ],
+      "hop_layer_counts": [
+        [
+          96823,
+          2118,
+          0
+        ],
+        [
+          642,
+          101738,
+          1541
+        ],
+        [
+          0,
+          427,
+          96249
+        ]
+      ],
+      "net_deposition": [
+        138,
+        353,
+        1109
+      ],
+      "ion_residence_s": [
+        0.7259329980684655,
+        1.7290347221312639,
+        0.6298950448143592
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.10226110254828033,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.30310000000000004,
+      "events": 310979,
+      "metal": 1625,
+      "ions": 13,
+      "connected": false,
+      "net_source": 1638,
+      "layer_metals": [
+        156,
+        357,
+        1112
+      ],
+      "layer_ions": [
+        2,
+        6,
+        5
+      ],
+      "hop_layer_counts": [
+        [
+          97506,
+          2135,
+          0
+        ],
+        [
+          656,
+          103679,
+          1592
+        ],
+        [
+          0,
+          475,
+          98775
+        ]
+      ],
+      "net_deposition": [
+        157,
+        356,
+        1112
+      ],
+      "ion_residence_s": [
+        0.7330286934334794,
+        1.7678590841604565,
+        0.6473324118490533
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.10448300076919678,
+        0.0
+      ]
+    },
+    {
+      "time_s": 0.31548759417026323,
+      "events": 324835,
+      "metal": 1696,
+      "ions": 15,
+      "connected": true,
+      "net_source": 1711,
+      "layer_metals": [
+        207,
+        360,
+        1129
+      ],
+      "layer_ions": [
+        8,
+        6,
+        1
+      ],
+      "hop_layer_counts": [
+        [
+          100415,
+          2204,
+          0
+        ],
+        [
+          709,
+          107740,
+          1703
+        ],
+        [
+          0,
+          573,
+          104984
+        ]
+      ],
+      "net_deposition": [
+        208,
+        359,
+        1129
+      ],
+      "ion_residence_s": [
+        0.7682074707204136,
+        1.851734794454547,
+        0.6896826638195346
+      ],
+      "vacancy_ion_residence_s": [
+        0.0,
+        0.10826087456423258,
+        0.0
+      ]
+    }
+  ],
+  "hop_layer_counts": [
+    [
+      100415,
+      2204,
+      0
+    ],
+    [
+      709,
+      107740,
+      1703
+    ],
+    [
+      0,
+      573,
+      104984
+    ]
+  ],
+  "wall_s": 205.25881469999877,
+  "bridge_readout": {
+    "current_A": 0.0010000000000000002,
+    "metal_only_current_A": 0.0009999997759926637,
+    "metal_only_fraction": 0.9999997759926634,
+    "compliance_active": true
+  }
+}

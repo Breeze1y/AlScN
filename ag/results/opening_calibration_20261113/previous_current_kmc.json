@@ -1,0 +1,79 @@
+{
+  "backend": "infinite_ag_v1_restored",
+  "parameter_status": "Infinite Ag source 0.620 eV; continuous post-bridge dynamics, full forming return and finite zero-bias stability observation",
+  "model": {
+    "nx": 150,
+    "layer_cells": 20,
+    "spacing_nm": 1.0,
+    "voltage": 0.0,
+    "temperature_K": 300.0,
+    "attempt_Hz": 10000000000000.0,
+    "eps_aln": 8.5,
+    "eps_alscn": 15.0,
+    "polarization_C_m2": -0.004,
+    "hop_aln_eV": 0.59,
+    "hop_alscn_eV": 0.61,
+    "interface_eV": 0.025,
+    "source_barrier_eV": 0.62,
+    "reaction_barrier_eV": 0.52,
+    "pt_nucleation_eV": 0.16,
+    "metal_standard_eV": -0.1,
+    "bond_eV": 0.06,
+    "pt_adhesion_eV": 0.06,
+    "surface_redox_only": true,
+    "migration_eV": 0.8,
+    "disorder_eV": 0.025,
+    "max_events": 2000000,
+    "max_time_s": 2.02,
+    "seed": 17,
+    "disorder_seed": 811,
+    "record_events": false,
+    "vacancy_affected_fraction_by_layer": [
+      0.0,
+      0.15,
+      0.0
+    ],
+    "vacancy_ag_ion_penalty_eV": 0.05,
+    "vacancy_seed": 812
+  },
+  "electronics": {
+    "metal_resistivity_ohm_m": 1.6e-08,
+    "effective_depth_nm": 1.0,
+    "contact_resistance_ohm": 500.0,
+    "tunnel_prefactor_S": 7.748091729e-05,
+    "tunnel_barrier_eV": 1.0,
+    "tunnel_effective_mass_ratio": 1.0,
+    "max_tunnel_gap_nm": 2.0,
+    "min_tunnel_conductance_S": 1e-15,
+    "leakage_per_column_S": 5.120385603218799e-10,
+    "leakage_voltage_scale_V": 2.0,
+    "series_resistance_ohm": 0.0,
+    "compliance_A": 0.001,
+    "leakage_model": "ohmic_saturating_power",
+    "leakage_saturation_A": 5.394207076467205e-07,
+    "leakage_half_voltage_V": 0.6142655781905964,
+    "leakage_exponent": 3.101638538129987,
+    "leakage_reference_columns": 150.0,
+    "network_parallel_factor": 49.25650314993054
+  },
+  "protocol": {
+    "source": "forming_data/SET [(1) _forming_; 1_9_2025 9_44_22 PM].csv",
+    "sweep": "full",
+    "dwell_s": 0.02,
+    "evolution": "dynamic",
+    "settling": {
+      "min_s": 0.1,
+      "max_s": 0.2,
+      "window_s": 0.02
+    }
+  },
+  "restore_reference": "evidence/F03_cycle_initial_states_20261109/forming_seed_17.npz",
+  "historical_reference_dwell_s": 0.01,
+  "last_parameter_change": {
+    "parameter": "source_barrier_eV",
+    "before_eV": 0.682,
+    "after_eV": 0.62,
+    "delta_eV": -0.062,
+    "scope": "Shared inject/absorb barrier; all other physical parameters unchanged"
+  }
+}

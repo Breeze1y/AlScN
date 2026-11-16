@@ -1,0 +1,259 @@
+﻿batch_id,dataset_branch,inferred_run_segment,filename_test_index,set_file_count,reset_file_count,pairing_status,cycle_identity_verified,set_source_relpath,reset_source_relpath,set_point_count,reset_point_count,set_V1_min_V,set_V1_max_V,reset_V1_min_V,reset_V1_max_V,set_I1_abs_peak_A,reset_I1_abs_peak_A,set_near_1mA_heuristic_flag,reset_near_1mA_heuristic_flag,set_datetime_local_no_timezone,reset_datetime_local_no_timezone,reset_after_set_timestamp_by_filename,review_reason
+nature_data_batch,Ag-three/1.9/100circle,2,1,2,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18,1,1,0,3,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18,1,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18,2,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18,2,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18,2,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18,3,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18,3,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,10,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,11,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,12,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,13,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,14,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,15,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,17,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,18,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,19,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,22,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,24,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,25,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,34,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,35,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,37,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,38,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,40,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,41,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,43,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,44,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,45,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,46,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,47,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/20,2,48,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,9,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,1,10,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,2,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,2,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,2,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,2,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,2,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,2,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,2,0,2,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,9,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,11,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,12,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,13,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,15,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,16,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,17,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,18,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,3,20,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,4,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,5,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,5,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,6,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,6,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/New folder,7,1,0,2,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.18/set,1,1,2,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,1,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,2,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,2,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,2,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,3,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,3,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,5,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,7,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,8,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,9,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,4,10,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,5,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,5,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,5,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,5,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,5,5,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,6,1,4,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,6,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,5,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,7,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,8,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,9,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,10,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,11,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,12,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,13,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,14,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,15,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,16,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,17,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,7,18,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,8,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,8,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,9,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,10,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,10,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.18/set,11,1,2,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.26,1,1,0,2,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.26,1,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.26,1,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.26,2,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/1.5V,1,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/1.5V,2,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/1.5V,2,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/1.5V,2,13,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/reset,1,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,1,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,2,1,0,10,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,2,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,2,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,9,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,3,10,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,4,9,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,5,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,6,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,6,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,9,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,7,10,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,1,0,2,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,9,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,8,10,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,9,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,9,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,9,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,9,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,9,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,9,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,10,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,10,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,10,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,2,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,3,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,4,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,5,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,6,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,7,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,11,8,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/reset,12,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,11.4/set,1,1,9,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,1,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,1,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,5,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,7,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,8,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,9,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,2,10,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,5,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,7,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,8,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,9,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,3,10,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,4,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,5,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,5,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,5,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,5,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,8,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,9,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,6,10,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,1,2,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,5,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,7,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,8,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,9,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,7,10,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,8,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,8,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,8,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,8,7,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,9,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,9,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,9,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,2,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,4,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,6,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,7,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,8,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,9,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,10,10,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,11.4/set,11,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,12-10,2,1,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,2.27/2,1,3,1,0,set_only,no,,,,,,,,,,,,,,,,set_only
+A_batch,2.27/2,2,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,2.27/2,3,1,2,1,both_present_ambiguous_duplicate,no,,,,,,,,,,,,,,,,both_present_ambiguous_duplicate
+A_batch,3.18/1,1,1,0,1,reset_only,no,,,,,,,,,,,,,,,,reset_only
+A_batch,7.1/1,1,1,2,1,both_present_ambiguous_duplicate,no,,,,,,,,,,,,,,,,both_present_ambiguous_duplicate

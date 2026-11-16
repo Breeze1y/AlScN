@@ -1,0 +1,55 @@
+{
+  "status": "partial_resolution_no_jointly_accepted_fit",
+  "default_numerical_physics_retained": true,
+  "default_solver_corrected": true,
+  "zero_hold_now_fixed_s": 0.2,
+  "scout_cases": 20,
+  "new_independent_full_loops": 9,
+  "conditional_shared_geometry_assays": 18,
+  "opening_candidate": "D:\\Al4memorister\\ag\\results\\bridge_stability_20261116\\bond_0.080\\nu2.65e12_s17",
+  "stability_control": "D:\\Al4memorister\\ag\\results\\bridge_stability_20261116\\bond_0.100\\nu2.65e12_s17",
+  "jointly_passing_cases": 0,
+  "all_failed_cases_retained": true,
+  "source_scans": [
+    {
+      "folder": "D:\\Al4memorister\\ag\\results\\bridge_stability_20261116\\source_0.677_J0.100\\nu2.65e12_s17",
+      "seed": 17,
+      "bond_eV": 0.1,
+      "attempt_Hz": 2650000000000.0,
+      "source_barrier_eV": 0.677,
+      "first_bridge_voltage_V": 1.125,
+      "inside_target": false,
+      "status": "first_bridge_scout_complete",
+      "events": 6860536
+    },
+    {
+      "folder": "D:\\Al4memorister\\ag\\results\\bridge_stability_20261116\\source_0.678_J0.100\\nu2.65e12_s17",
+      "seed": 17,
+      "bond_eV": 0.1,
+      "attempt_Hz": 2650000000000.0,
+      "source_barrier_eV": 0.678,
+      "first_bridge_voltage_V": 1.095,
+      "inside_target": false,
+      "status": "first_bridge_scout_complete",
+      "events": 6558448
+    },
+    {
+      "folder": "D:\\Al4memorister\\ag\\results\\bridge_stability_20261116\\source_0.679_J0.100\\nu2.65e12_s17",
+      "seed": 17,
+      "bond_eV": 0.1,
+      "attempt_Hz": 2650000000000.0,
+      "source_barrier_eV": 0.679,
+      "first_bridge_voltage_V": 1.395,
+      "inside_target": false,
+      "status": "first_bridge_scout_complete",
+      "events": 6558582
+    }
+  ],
+  "physics_hashes": {
+    "kmc_model.py": "eace1bebe90e5231b379bf8a6b40798981f5d222d8fb2cf37ee37c278734651c",
+    "forming_iv.py": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+    "fast_kmc.py": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+    "morphology_metrics.py": "74f7f4efcc81f48f73c2ef3f2bb5d0b147d3899fe1d69610652d55cca0460b10",
+    "dynamic_kmc.py": "5957c7dca40832debd3585216c04c77408ed29dda81f2e113c0bd8a37cf75f58"
+  }
+}

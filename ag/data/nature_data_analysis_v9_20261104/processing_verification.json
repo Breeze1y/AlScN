@@ -1,0 +1,28 @@
+{
+  "source": "D:\\Al4memorister\\ai4alscn\\device_data\\nature_data",
+  "processed": "D:\\Al4memorister\\ag\\data\\nature_data_processed_20261104",
+  "analysis": "D:\\Al4memorister\\ag\\data\\nature_data_analysis_v9_20261104",
+  "raw_csv_count": 3182,
+  "normalized_point_rows": 418781,
+  "exact_duplicate_hash_groups": 0,
+  "candidate_paired_set_reset": 679,
+  "set_only_groups": 1,
+  "reset_only_groups": 0,
+  "ambiguous_pair_groups": 0,
+  "individual_time_traces_requiring_review": 4,
+  "set_events_reaching_instrument_primary_compliance": 681,
+  "set_event_count": 681,
+  "changed_or_missing_sources": [],
+  "missing_compliance_observations": [],
+  "checks": {
+    "all_source_sha256_match_inventory": true,
+    "all_normalized_point_counts_match_inventory": true,
+    "quality_flags_empty": true,
+    "duplicate_hash_inventory_matches_source": true,
+    "one_feature_row_per_source_csv": true,
+    "primary_compliance_present_for_all_set_reset": true,
+    "compliance_observation_present_for_all_set_reset": true,
+    "all_pairing_records_accounted_for": true
+  },
+  "all_checks_pass": true
+}

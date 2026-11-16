@@ -1,0 +1,17 @@
+test_adsorption_is_separate_reversible_and_not_injection (test_kmc.CurrentKMCTests.test_adsorption_is_separate_reversible_and_not_injection) ... ok
+test_ag_on_both_sides_can_oxidize_and_pt_is_inert (test_kmc.CurrentKMCTests.test_ag_on_both_sides_can_oxidize_and_pt_is_inert) ... ok
+test_anodic_oxidation_strongly_favored (test_kmc.CurrentKMCTests.test_anodic_oxidation_strongly_favored) ... ok
+test_blank_geometry_closed_inventory_and_fixed_pt (test_kmc.CurrentKMCTests.test_blank_geometry_closed_inventory_and_fixed_pt) ... ok
+test_bulk_surface_and_neutral_channels_not_duplicated (test_kmc.CurrentKMCTests.test_bulk_surface_and_neutral_channels_not_duplicated) ... ok
+test_cathode_distance_and_polarity_exchange (test_kmc.CurrentKMCTests.test_cathode_distance_and_polarity_exchange) ... ok
+test_forming_selects_first_peak_only_and_preserves_raw_rows (test_kmc.CurrentKMCTests.test_forming_selects_first_peak_only_and_preserves_raw_rows) ... ok
+test_neutral_surface_motion_reversible_binding_energy (test_kmc.CurrentKMCTests.test_neutral_surface_motion_reversible_binding_energy) ... ok
+test_polarization_contribution_stays_aligned (test_kmc.CurrentKMCTests.test_polarization_contribution_stays_aligned) ... ok
+test_self_field_removed_once_and_green_update_matches_solve (test_kmc.CurrentKMCTests.test_self_field_removed_once_and_green_update_matches_solve) ... ok
+test_shared_forward_reverse_rate_ratio (test_kmc.CurrentKMCTests.test_shared_forward_reverse_rate_ratio) ... ok
+test_split_observation_and_checkpoint_keep_random_path (test_kmc.CurrentKMCTests.test_split_observation_and_checkpoint_keep_random_path) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.827s
+
+OK

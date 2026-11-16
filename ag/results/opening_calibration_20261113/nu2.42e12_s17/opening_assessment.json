@@ -1,0 +1,106 @@
+{
+  "seed": 17,
+  "attempt_Hz": 2420000000000.0,
+  "full_protocol_complete": true,
+  "target_window_V": [
+    1.32,
+    1.335
+  ],
+  "first_bridge": {
+    "command_voltage_V": 1.32,
+    "device_voltage_V": 1.197624313556636,
+    "events": 5937023,
+    "time_s": 1.769833345943333
+  },
+  "first_bridge_inside_window": true,
+  "sampled_current_thresholds": [
+    {
+      "threshold_A": 0.0001,
+      "first_point_index": 89,
+      "first_voltage_V": 1.335
+    },
+    {
+      "threshold_A": 0.0005,
+      "first_point_index": 89,
+      "first_voltage_V": 1.335
+    },
+    {
+      "threshold_A": 0.0009,
+      "first_point_index": 89,
+      "first_voltage_V": 1.335
+    }
+  ],
+  "current_at_1_320V_A": 7.471712352383156e-09,
+  "current_at_1_335V_A": 0.0010000000000000002,
+  "current_at_1_350V_A": 0.001,
+  "electrical_window_matches_experiment": true,
+  "complete_dwell_mean_thresholds": [
+    {
+      "threshold_A": 0.0001,
+      "first_point_index": 88,
+      "first_voltage_V": 1.32
+    },
+    {
+      "threshold_A": 0.0005,
+      "first_point_index": 89,
+      "first_voltage_V": 1.335
+    },
+    {
+      "threshold_A": 0.0009,
+      "first_point_index": 90,
+      "first_voltage_V": 1.35
+    }
+  ],
+  "complete_dwell_mean_current_at_1_320V_A": 0.0002621312627482464,
+  "complete_dwell_mean_current_at_1_335V_A": 0.0008875392759540138,
+  "complete_dwell_mean_opening_inside_window": true,
+  "complete_dwell_mean_scope": "Time average over the entire nominal 20 ms voltage step, no settling delay. Instrument integration schedule is unavailable.",
+  "opening_acceptance": true,
+  "first_up_dropout_after_opening_V": 1.395,
+  "up_on_plateau_retained": false,
+  "continuous_last100ms": {
+    "records": 406,
+    "all_connected": true,
+    "conductance_relative_range": 0.07508530395159381,
+    "metal_relative_range": 0.0024441340782122905
+  },
+  "continuous_filament_stable": false,
+  "acceptance_definition": "First bridge in [1.320,1.335] V; first endpoint |I|>=0.5 mA at 1.335 V and next point still on; whole-dwell-mean 0.5 mA crossing also inside [1.320,1.335] V.",
+  "endpoint": {
+    "sample": 18045,
+    "time_s": 4.239999999999997,
+    "morphology_time_s": 4.239999999999997,
+    "events": 6287259,
+    "kind": "zero_hold_end",
+    "connected": true,
+    "metal": 2863,
+    "ions": 6,
+    "net_source": 2869,
+    "ag_balance_error": 0,
+    "network_conductance_S": 0.002695458453359342,
+    "network_kcl_residual_A_at_1V": 1.0408340855860843e-16,
+    "command_voltage_V": 0.0,
+    "device_voltage_V": 0.0,
+    "current_A": 0.0,
+    "network_current_A": 0.0,
+    "leakage_current_A": 0.0,
+    "compliance_active": false,
+    "source_delivered_voltage_V": 0.0
+  },
+  "zero_hold_s": 0.19999999999999574,
+  "stability": {
+    "assessed": true,
+    "observation_span_s": 0.09999999999999787,
+    "filament_stable": true,
+    "ions_stationary": false,
+    "conductance_relative_range": 0.0037040974113497177,
+    "metal_relative_range": 0.001047851903597625,
+    "ion_relative_range": 0.6,
+    "topology_changes": 0,
+    "criterion": "last six zero-bias observations (five intervals): connected throughout, no toggles, G range <=5%, metal range <=1%; ion range <=5% assessed separately"
+  },
+  "ag_balance_error": 0,
+  "reaction_balance_error": 0,
+  "scope": "Opening calibration only. Full I-V amplitude, seed dispersion and retention are assessed separately.",
+  "measurement_sha256": "0ccdd01f018d308e19b40db4af5c6422582c27ff2dae5d8e416ee17000096747"
+}

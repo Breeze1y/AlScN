@@ -1,0 +1,13 @@
+﻿id,claim,pdf_pages,anchor,evidence_type,limitation
+N01,Paper type is electrical characterization + DFT/NEB,1–6,Abstract;§IV–VI,原文,Not an eight-event KMC specification
+N02,Programming optimum and over-stress degrade window,2,Fig3–4,原文,"100uA optimum is sample-specific, not target1mA recommendation"
+N03,Endurance/retention/window relation is conditional,3,Fig5–6,原文,Same WM comparison separate from independently optimized examples
+N04,Formation energy differs from migration barrier,4–5,Eq1–2;TableI–III;Fig9,原文,Do not put formation enthalpy directly into HOP barrier
+N05,Cu migration2.5 to1.28eV near VO in HfO2,4,Fig9;§V,原文,Path/material-specific; not universal defect acceleration
+N06,GdOx complex barrier3.44eV vs isolatedCu2eV,5,TableIII,原图,Defect presence need not always lower barrier
+N07,Hybrid filament is an authors model interpretation,5,§VI;TableIII,原文解释,Similar barriers not unique proof of hybrid conducting chemistry
+N08,Barrier arithmetic mean is used for HfO2 plot,5,§VI,原文近似,Not a general rate coarse-graining rule
+N09,Fig11 apparent activation0.27eV,6,Fig11 inset,原图核查,Does not establish equality of apparent and microscopic activation
+N10,Energy budget and alpha are phenomenological,5–6,Eq3–4,原文与核查,Barriers times event counts are not heat or strict work
+N11,VAC and TRAPPED current states are not VN,code,kmc/lattice.py;event_rules.py;model.py,代码核查,No explicit nitrogen-vacancy creation/recombination
+N12,Joint inference and nested defect-assisted hypotheses,not applicable,Report sections8–11,本课题建议,Cannot infer temperature activation or endurance lifetime from unavailable data

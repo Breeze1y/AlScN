@@ -1,0 +1,7 @@
+{
+  "source": "papers/Experimental-and-Simulation-Study-of-Resistive-Switches-for-Memory-Applications/KMC建模提炼/source/original-extracted.txt",
+  "location": "Figure 2.10, thesis pp.56-57, extracted text around lines 2305-2360",
+  "finding": "Discusses forming-voltage dependence on voltage sweep rate, including a high-rate logarithmic trend and limitations of interface-only interpretations.",
+  "project_inference": "At fixed 20 ms drive steps, fitting a common kinetic clock changes the relative drive-to-event time scale; this is model calibration rather than a measured atomic frequency.",
+  "transfer_limit": "Does not establish a 1.320-1.335 V paper window or attempt_Hz for Ag/AlN/AlScN/AlN/Pt; numerical target here comes from project forming CSV."
+}

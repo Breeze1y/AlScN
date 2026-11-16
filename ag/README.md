@@ -1,65 +1,86 @@
-# Ag/AlN/AlScN/AlN/Pt：形貌优先基础 KMC
+# Ag/AlN/AlScN/AlN/Pt 导电细丝 KMC
 
-本目录是独立重建版本，不依赖 `ai4alscn/kmc`。参考该目录的 Zhao 2016 提炼、器件资料和静电推导；保留这里原有的 `papers/`。
+本项目研究 Ag 离子迁移、还原成丝和回零后的结构保持。当前采用无限 Ag 顶电极、三态六事件、分层极化场和带限流的电阻网络；氮空位以静态位点能影响表示。唯一运行入口为 `run_kmc.py`，详细事件、公式和验证边界见 [当前 KMC 方法说明](docs/当前KMC过程详述与论文方法底稿-20261109.md)。
 
-GitHub副本包含本目录代码、配置与仿真输出；参考论文资料仍保留在本地。可从仓库根目录独立运行：
+## 当前进度（2026-11-16）
+
+Forming 的形成、桥后连续演化和回零观察已实现，**开启窗口与稳定性尚未同时拟合通过**。默认使用原始 202 点 0→1.5→0 V、名义 20 ms/点、1 mA 限流，再观察 200 ms 零偏压。20 ms 来自 50 Hz、PLC=1 的假设，原始记录没有完整积分时序。
+
+| 配置 / seed 17 | 点末开启 | 全程几何断连 | 末 100 ms 逐事件 G 极差 | 结论 |
+|---|---:|---:|---:|---|
+| [当前诊断基线](configs/current_kmc.json) | 1.320 V | 5 | 7.1080% | 仍有断连，精确实验采样格未匹配 |
+| [开启窗口候选](results/bridge_stability_20261116/opening_candidate_config.json) | 1.335 V | 0 | 55.1860% | 开启匹配，回零支路电导不稳定 |
+| [稳定性对照](results/bridge_stability_20261116/stability_control_config.json) | 1.395 V | 0 | 0.03892% | 短时稳定，开启偏晚 |
+
+完整证据：[运行结果与参数选择](results/bridge_stability_20261116/运行结果与参数选择.txt)、[全部完整回环对照](results/bridge_stability_20261116/full_loop_comparison.json)、[全部 20 组首桥筛选](results/bridge_stability_20261116/all_scouts.json)。失败对照和不同种子记录均保留，不能把不同参数的首桥和末态拼成成功轨迹。
+
+![开启与回零稳定性对照](results/bridge_stability_20261116/control_comparison.png)
+
+下一阶段先解决 forming 的联合验收，再从 forming 回零末态执行一次 RESET，随后验证已有 Ag 残留上的 SET/RESET 重建。当前尚未完成负压循环拟合，PINN 暂缓。`docs/` 中的任务 CSV 是历史规划资料，进度以本文和当前方法说明为准。
+
+## 安装与运行
+
+建议 Python 3.10 或更高版本，在本目录执行：
 
 ```powershell
-python -m pip install -r ag/requirements.txt
-python -m unittest discover -s ag -p test_physics.py -v
-python ag/run.py --controls --output results/new_run
+python -m pip install -r requirements.txt
+python -m unittest test_kmc -v
+
+# 从空白介质开始；输出目录必须尚不存在
+python run_kmc.py --config configs/current_kmc.json --max-events 20000000 --max-wall-s 1800 --output results/new_forming
+
+# 达到单次时间预算后，读取同一目录继续
+python run_kmc.py --resume results/new_forming --max-events 20000000 --max-wall-s 1800
+
+# 仅导入已登记的首桥形貌，进行冻结网络诊断
+python run_kmc.py --restore-filament --output results/new_shape_check
 ```
 
-![60nm自然生长细丝](results/study/filament.png)
+本机也可用 `D:\Al4memorister\ai4alscn\.venv\Scripts\python.exe` 替代 `python`。单次时间预算不是完成整条曲线的保证；应查看输出状态，必要时续算。完整回环检查点包含 RNG 与待事件，首桥形貌归档不包含可续算的原 RNG。物理代码哈希不一致的旧检查点不能直接用新版续算。
 
-## 使用
+## 项目结构
 
-从 `D:\Al4memorister` 运行（可复用已有环境）：
+| 位置 | 内容 |
+|---|---|
+| `kmc_model.py` | 格点、六类事件、分层静电场、源库账本与首桥 |
+| `forming_iv.py` | 金属与隧穿网络、背景漏电、串联电阻和限流 |
+| `fast_kmc.py` | 保持随机轨迹一致的事件率缓存 |
+| `dynamic_kmc.py` | 桥后局部金属电势、持续演化和回零稳定性 |
+| `morphology_metrics.py` | 四邻连通、缺格、最小顶点割等指标 |
+| `run_kmc.py` / `test_kmc.py` | 唯一运行入口 / 30 项维护中的回归检查 |
+| `configs/` | 当前默认、形貌参考及标注日期的历史配置 |
+| `forming_data/` | forming、用户指定 SET/RESET 和厚度系列原始实验；当前循环拟合源为 `set-reset-data.csv` |
+| `results/` | 当前完整回环、关键形貌参考、历史拟合汇总和必要版本证据 |
+| `evidence/` | 冻结哈希、恢复样例、保留的关键验证与旧循环反例 |
+| `docs/` | 唯一当前 KMC 方法说明、历史任务 CSV、清理与验证记录 |
+| `papers/` / `reports/literature/` | 论文原文、图与摘录 / 已有文献调研 |
+| `reports/` / `deliverables/` | 已交付的阶段报告和汇报文件 |
+| `data/` / `datasets/` | 最新实验整理及暂停阶段的 ML 特征、标签和来源清单 |
+| `.agents/skills/` | 项目文献调研说明 |
 
-```powershell
-.\ai4alscn\.venv\Scripts\python.exe ag/run.py --controls
-.\ai4alscn\.venv\Scripts\python.exe -m unittest discover -s ag -p test_physics.py -v
-```
+## 保留结果的用途
 
-独立环境安装 `ag/requirements.txt` 后也可运行。默认输出 `ag/results/baseline/`；目录已存在会停止，请用 `--output results/new_name` 指定新目录。`--seeds 7,17,27` 指定所有独立种子。配置在 `configs/baseline.json`，其余默认值见 `kmc_model.py` 的 `Config`，每条运行 JSON 会展开保存全部参数。
+- `bridge_stability_20261116/`：当前主结果，9 条独立完整轨迹、18 组同构型条件保持及 20 组筛选摘要。`evaluate.py` 可对保留的完整检查点作只读复核；`baseline_sources/` 仅供旧模型哈希与结果审计。
+- `opening_calibration_20261113/`：旧桥后实现的开启标定，保留选定完整回环、参考首桥与所有筛选指标；不能视作新版拟合结果。
+- `vacancy_forming_20261108/`、`morphology_reproduction_20261112/`：用户指定的形貌与六组精确重算，用于区分缺陷影响和协议差异。
+- `morphology_reference_zero1s_20261112/`：参考快扫后 1 s 零偏压反例；保持贯通仍不等于电导稳定。
+- `forming_refit_20261109/`：早期冻结形貌拟合的汇总、参数和来源；已删除大批搜索中间态。
+- `infinite_ag_restored_20261112/`：历史首桥导入诊断。
 
-输出：`morphology.png/svg` 为末态对照，`evolution.png/svg` 为第一条轨迹的真实演化；每条 `npz` 保存逐帧占据状态、时刻、位点能和电势；JSON/CSV 保存停止原因、种子、事件数、计数与守恒。金色是中性 Ag，青色是 Ag⁺，虚线为材料界面。只有中性 Ag 四邻接贯通才算几何导电桥，青色离子不算。
+未选中的首桥扫描检查点、弃用有限电极/Pan 模型试跑、过期扫描脚本、重复分析版本与渲染缓存已清理，详见 [清理清单](docs/cleanup_20261116.json)。保留的旧清单是当时的记录，其中指向已清理中间态的路径不再表示可用检查点。历史源码 ZIP 仅用于追溯已保留结果，不是另一套日常运行入口。
 
-## 文献和移植边界
+## GitHub 与大文件范围
 
-优先来源：Zhao et al., *Atomic Monte-Carlo Simulation for CBRAM with Various Filament Geometries*, SISPAD 2016, pp.153–156，[会议原文](https://in4.iue.tuwien.ac.at/pdfs/sispad2016/SISPAD_2016_153-156.pdf)。图6明确比较 Ag/SiO₂/Pt 的模拟与 TEM 枝状细丝。原文提供氧化、离子输运、还原、金属迁移四类事件及相对速率影响形貌的依据；**本代码是面向氮化物的基础重建，不是原作者算法或图6参数的逐项复现。**
+仓库位置为 [Breeze1y/AlScN 的 ag 目录](https://github.com/Breeze1y/AlScN/tree/main/ag)。代码、当前说明、原始 forming/SET/RESET/厚度系列数据、文献、紧凑特征表和上述关键结果随项目提交。
 
-器件几何沿用 `ai4alscn/硕士课题完整执行方案-KMC主线-20261102.md`：Ag/AlN(20 nm)/AlScN(20 nm)/AlN(20 nm)/Pt。计算宽80 nm仅是局部截面窗口，不等于实验150 μm电极直径；横向绝缘边界。介电常数8.5/15来自既有静电工作假设，未作为本器件实测参数。
+以下可再整理的大型长表保留在本机，正常 Git 提交排除：
 
-## 状态、事件和电场
+- `data/*processed_20261104/waveform_points.csv` 与 `file_inventory.csv`；
+- `datasets/set_reset_ml_20261104/cycle_waveform_points.csv`；
+- `forming_data/diff/organized/all_iv_points.csv`。
 
-二维有限体积格点，默认1 nm有效单元；三层各20行介质，额外两行作电极。每格为宿主、Ag⁺或Ag。粒子是有效占据单元，不是声称1 nm银单元只有一个原子。初始介质全空，无预置种子、定向模板或人为补桥。
+其精确路径、字节数与 SHA-256 记录在 [本地大数据清单](docs/local_data_inventory_20261116.json)。ML 目录保留一份完整波形长表，本次删除了经哈希确认完全相同的旧副本。远程克隆可直接运行 KMC 与 30 项检查，但不会自动获得这些大型预处理长表；重做完整 ML 数据整理需另行取得长表或源数据。
 
-1. 顶Ag库在第一层空格氧化供给Ag⁺；离子可返回库。入/出账本显式累计。
-2. Ag⁺向四邻空格跳跃。AlN/AlScN体势垒分开，界面用两侧基准均值加对称跨界面屏障，离子能量为 `site + phi`（Ag⁺，eV和V数值对应）。
-3. 仅有Pt或Pt连通Ag直接邻接的位置可还原，电子库电势0 V；裸Pt另加成核势垒。Ag可逆氧化回离子，配位键能稳定已有Ag。多个邻接金属构成同一个局部电子库，不重复计反应通道。
-4. 表面Ag可中性迁移，按前后Ag–Ag配位能差计算聚集/等配位/脱离的不同率；不把Zhao的四个示例势垒硬套为氮化物实测值。此版宿主差异体现在输运和介电中，尚未单列Ag–宿主键能。
+更大批次的原始实验位于项目外 `D:\Al4memorister\ai4alscn\device_data\nature_data` 及其 `A/` 子目录，本次未移动、删除或上传该外部目录。`data/` 与 `datasets/` 中的来源清单记录其相对文件信息；这些历史标签、配对与分组尚未等同于经过验证的器件循环真值。
 
-率采用 `ν exp[-(B + max(ΔG,0))/kT]`，正逆共享B；跳跃和中性迁移在冻结场下满足局部详细平衡。电极是开放库，阴极标准金属化能是可调工作假设。每次金属构型变化都重新识别连通团簇、求解电场；离子跳跃不更新电势（忽略离子空间电荷，假定背景屏蔽）。这不是已包含所有反应自由能和金属电荷的热力学完整模型，尤其不以局部速率比检查代替全体系闭合证明。
-
-总率 `R=ΣΓ`；等待时间 `-ln(u1)/R`，独立均匀随机数u2选择事件。事件超过脉冲结束时间则不执行该事件。固定3 V、300 K，默认2 s或350000事件预算，到首次金属桥即停止。`event_budget` 表示轨迹截断，不算有效成桥或物理失败；`time_limit` 表示给定脉冲内未成桥。此时钟依赖未标定的有效势垒/前因子，不可拿来预测实验成丝秒数。
-
-电势满足 `∇·(ε∇φ)=∇·P`，即 `D=−ε∇φ+P`。AlScN之外P=0；Ag源φ=V，Pt及Pt连通金属φ=0，孤立金属以高介电常数近似浮置包含物。面介电系数取调和平均，面极化取与两侧介电匹配的加权值；端电压和极化界面电荷在同一方程求解，因此外侧AlN自动出现补偿场。金属体内P=0，电极连通Ag对局部场有屏蔽和尖端增强。
-
-默认 `P_eff=-0.004 C/m²` 是**屏蔽后的净有效极化**，既不是已测Pr，也不是从宏观开关电压唯一反演的场。z从Ag指向Pt；负P让AlScN退极化场朝+z，故称中层assist，对外层则可能减弱场。零偏、无细丝时，中层约+0.235 MV/cm，外层约−0.117 MV/cm，总压降为0。`--controls` 对比相同种子和无序场下的P、0、−P；比较的是整条随机过程，不能保证不同参数下事件一一配对，也不能假定assist必定缩短整体成桥时间。
-
-## 当前范围
-
-这是等温、首次forming的形貌模型。尚无电流连续网络、接触二极管、焦耳热、1 mA限流反馈、RESET/保持、极化翻转、氮空位或陷阱动力学。几何金属桥意味着模型中存在金属通路，尚未计算其电导，也不代表完整实验开关验证。停止于第一桥可以避免在尚无电流/限流闭环时继续非物理加厚。
-
-本版所有有效动力学势垒（默认0.48/0.50 eV输运、0.68 eV源反应、0.52 eV还原/氧化基准、0.08 eV裸Pt成核附加、0.80 eV中性迁移）、0.06 eV键能、0.025 eV固定无序宽度都是探索参数。原文Ag/SiO₂参数不适用于直接预测AlN/AlScN。先看真实生长形貌和多种子稳定性，再受实测约束做输运/供给/成核比率、P、宽度/网格扫描。不可把一张枝状图作为Ag机制或真实材料势垒已证实的证据。
-
-物理检查见 `test_physics.py`：三层极化解析解、零偏补偿与P反向、跳跃局部详细平衡、开放Ag库守恒、金属/离子连通区分。
-
-## 已交付结果
-
-汇总见 [九轨迹运行报告](results/study/运行报告.md)、[形貌对照](results/study/morphology_comparison.png)、[代表细丝](results/study/filament.png)、[分层场对照](results/study/built_in_field.png)、[自然演化](results/seed7/evolution.png)。三种子原始记录分别在 `results/seed7`、`results/seed17`、`results/seed27`；每批保存运行前源码快照及SHA256清单。
-
-`summarize.py` 汇总上述三个固定目录，逐帧核对占据数与Ag源库账本，再输出 `results/study`；不挑选最佳种子，统一展示7、17、27。`results/pilot`是首条调通运行，汇总统计不重复计入。贯通终态NPZ内的电势是成桥事件前的场，见JSON的 `potential_state`，不能将其当作导通后的电势。
-
-配位能中的接触Pt也计作有效金属邻接；本版尚未为Ag–Pt和Ag–Ag分别标定黏附能。中性迁移的独立基准较高，在当前室温短脉冲内可能几乎不发生，必须从事件计数检查其实际贡献。
+后续新运行默认不纳入 Git；需要保存为正式证据时，应先复核并明确加入保留范围。论文原文与数据按其各自来源和使用范围管理，本项目未另行授予第三方材料再分发许可。
