@@ -1,0 +1,86 @@
+{
+  "params": {
+    "reference_voltage_V": 0.33,
+    "eta": 0.03,
+    "assist_eV": 0.05,
+    "pt_mode": "top_front",
+    "source_mu_nm": 25.0,
+    "source_sigma_nm": 6.0,
+    "use_field": true,
+    "field_exponent": 1.05,
+    "field_floor": 0.05,
+    "metal_host_contrast": 10000.0,
+    "crowding_strength": 1.0,
+    "crowding_radius_nm": 2.0,
+    "supply_enabled": true,
+    "soft_volume": 1000.0,
+    "soft_scale": 500.0
+  },
+  "seed": 314,
+  "initial_source": {
+    "path": "D:\\yyang\\kmc40\\replay\\cycles100\\cycle_79\\RESET\\checkpoint",
+    "restart_sha256": "d8d60618cba00ae6f91adb73463b13c09d7c0b43701e1795ec3f0a7ef74fd476",
+    "injected": 7984,
+    "returned": 7558
+  },
+  "initial_rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 72367189477901382403385167178839572998,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 213777293541750614895191198250975216449,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 5.258088457179514e-112,
+    "H": 8.222893424586755e-113,
+    "q": 1.0,
+    "elapsed_units": 32522.000000021504,
+    "recovery_exposure": 19227.267230977086,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "attempts": 142,
+  "successful_depositions": 142,
+  "null_attempts": 0,
+  "injected": 8126,
+  "returned": 7558,
+  "initial_Ag": 426,
+  "final_Ag": 568,
+  "final_clock": 132.30348003638542,
+  "first_bridge_event": 117,
+  "clock_units": "voltage-driven source-attempt exposure including smooth volume feedback",
+  "approximation": "Geometry field recomputed per attempt at reference bias; existing dielectric transport route kernel is retained.",
+  "electronic_state_note": "Inherited initial electronic state only; geometry precomputation does not evolve q. Continuous-cycle driver owns q.",
+  "energies_eV": {
+    "unbound": 0.075,
+    "coordination": 0.035,
+    "adhesion": 0.08,
+    "redox_reference": 0.3,
+    "vacancy_pair_effect": -0.0894
+  },
+  "kernel": "field_growth40/v1",
+  "field_semantics": "Full host-grid quasistatic conductivity surrogate; metal/host contrast; top=1, bottom=0, insulating sides. Field changes candidate probabilities only, distinct from mixed-network terminal I-V.",
+  "selection": "No exp(y/13) depth factor or downward-growth multiplier. Field-enhancement power times local crowding suppression replaces both. Original top-connected supply access and Gaussian lateral source distribution retained.",
+  "supply": "State-dependent attempt rate h(M)=exp(-max(M-soft_volume,0)/soft_scale), or one when disabled. Waiting exposure Exp(1)/h(M); actual material voltage still drives the external clock."
+}

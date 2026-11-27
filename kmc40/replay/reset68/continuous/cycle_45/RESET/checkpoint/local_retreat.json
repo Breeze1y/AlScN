@@ -1,0 +1,24 @@
+{
+  "parameters": {
+    "enabled": true,
+    "subunits": 16,
+    "retreat_duration": 14.0,
+    "local_window": 12.0,
+    "radius_nm": 1.5,
+    "contact_exponent": 4.0
+  },
+  "trigger": {
+    "event_index": 1,
+    "point": 5,
+    "time": 5.11668840883353,
+    "voltage_V": -0.075,
+    "y": 24,
+    "x": 59,
+    "until": 17.11668840883353
+  },
+  "pending_microsteps": [],
+  "elapsed_units": 202.0,
+  "observation_exposure": 807.0476909876321,
+  "final_event": 99,
+  "retreat_mode": "shared_residual"
+}

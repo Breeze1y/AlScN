@@ -1,0 +1,95 @@
+{
+  "schema": "full_chain40/forming/v1",
+  "phase": "FORMING",
+  "source_reference": "inputs/forming_reference",
+  "source_sha256": "d1b90064d8b54353ad0f9c217861e339f4162cdbb5f68b9aa2ee604232be1e2a",
+  "original_fields_exact": [
+    "metal_id",
+    "voltage_V",
+    "current_A",
+    "Ag_total",
+    "injected",
+    "returned",
+    "connected",
+    "VN"
+  ],
+  "initial_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 0.0,
+    "H": 0.0,
+    "q": 1.0,
+    "elapsed_units": 0.0,
+    "recovery_exposure": 0.0,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "final_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 0.0,
+    "H": 0.0,
+    "q": 1.0,
+    "elapsed_units": 202.0,
+    "recovery_exposure": 34.28287744370856,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "clock": {
+    "rate_scale": 0.00038084967548710776,
+    "voltage_scale_V": 0.0243106477248109,
+    "recovery_rate": 3.999999999999999,
+    "recovery_voltage_scale_V": 0.3,
+    "circuit": {
+      "network_scale": 9.987870449406756,
+      "series_contact_ohm": 80.95973988295985,
+      "leakage_S": 8.944110346098897e-07,
+      "positive_limit_A": 0.001,
+      "negative_limit_A": 0.01
+    },
+    "activity_params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "driving_voltage": "material voltage after compliance and effective contact drop",
+    "calibration": "All nonzero C74 SET and RESET samples; parity subsets are descriptive, not held out"
+  },
+  "network_params": {
+    "metal_bond_S": 0.04,
+    "tunnel_prefactor_S": 0.001,
+    "tunnel_beta_nm": 10.25,
+    "trap_prefactor_S": 7.748e-05,
+    "trap_beta_nm": 2.0,
+    "leakage_S": 0.0
+  },
+  "final_Ag": 1335,
+  "final_metal_connected": false,
+  "final_read_G_S": 0.0029814450615210887,
+  "final_read_ohm": 335.4078238456002,
+  "current_semantics": "Common-network frozen endpoint current at each archived forming morphology; legacy_current_A retains original readout. No within-dwell event times are asserted for the original forming kernel.",
+  "forming_dynamics": "Original Pilot forming protocol, including its return-sweep oxidation rule; dynamics were not recalibrated",
+  "following_phase_reason": "Metal disconnected but still electrically conductive; a real INIT_RESET creates the subsequent SET high-resistance initial state",
+  "units": "0.5 nm coarse Ag packets; effective sampling units, not calibrated seconds"
+}

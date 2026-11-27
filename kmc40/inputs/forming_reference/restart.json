@@ -1,0 +1,38 @@
+{
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 117142801240875647020697205338600520429,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "seed": 314,
+  "eta": 0.03,
+  "assist": 0.05,
+  "pt_mode": "top_front",
+  "vn_fraction": 0.15,
+  "injected": 2281,
+  "returned": 825,
+  "mu": 25.0,
+  "sigma": 6.0,
+  "form_scale": 2.5,
+  "phase_end": {
+    "phase": "RESET",
+    "cycle": 3,
+    "point": 201,
+    "voltage_V": -0.0,
+    "current_A": 0.0,
+    "read_G_S": 1e-06,
+    "Ag_total": 1456,
+    "Ag_bottom10nm": 674,
+    "Ag_bottom_interface": 42,
+    "injected": 2281,
+    "returned": 825,
+    "connected": false,
+    "added": 0,
+    "removed": 0,
+    "VN_adjacent_Ag": 295
+  }
+}

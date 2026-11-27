@@ -1,0 +1,11 @@
+{
+  "source_sequence": "D:\\yyang\\kmc40\\replay\\cycles100\\cycle_46\\catalogues\\RESET",
+  "event_index": 85,
+  "last_event_exposure": 793.0953390298247,
+  "observation_exposure": 807.3311448997631,
+  "next_event_exposure": 830.236017560114,
+  "Ag_packets": 435,
+  "mass_balance_error": 0,
+  "continuation": "Restore restart.json/npz and keep the original accumulated exposure when replaying voltage.",
+  "exact_prefix_reproduction": true
+}

@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KMC40 实测与模拟 I–V 对比</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #eef2f2; --paper: #fff; --ink: #142e39; --muted: #52646b;
+  --line: #d5dddd; --grid: #e6ebeb; --axis: #889da1;
+  --observed: #9d411d; --simulated: #006b73; --focus: #007d84;
+  --quiet: #f4f7f7; --header: #17353f; --header-muted: #c8dadc;
+  --font: "Segoe UI", "Microsoft YaHei UI", system-ui, sans-serif;
+  --number: "Cascadia Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: clip; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--font); }
+.wrap { width: min(1160px, 100% - 40px); margin-inline: auto; }
+header { background: var(--header); color: var(--paper); padding: 29px 0 24px; }
+header .wrap { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+h1 { margin: 0; font-size: clamp(26px, 4vw, 40px); line-height: 1.18; font-weight: 690; overflow-wrap: anywhere; }
+header p { margin: 0; color: var(--header-muted); font-size: 14px; }
+main { padding: 24px 0 30px; }
+figure { margin: 0; padding: 22px 24px 14px; background: var(--paper); border: 1px solid var(--line); }
+.filters { display: flex; gap: 14px 26px; flex-wrap: wrap; align-items: end; }
+.field { display: grid; gap: 5px; }
+.field label { color: var(--muted); font-size: 13px; font-weight: 600; }
+.cycle-control { display: flex; gap: 5px; }
+button, select { min-height: 39px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--ink); font: inherit; }
+select { padding: 4px 8px; }
+button { inline-size: 39px; padding: 0; font-size: 20px; cursor: pointer; }
+button:hover:not(:disabled), select:hover { border-color: var(--axis); background: var(--quiet); }
+button:disabled { opacity: .42; cursor: default; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.chart-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 20px; flex-wrap: wrap; margin-top: 21px; padding-top: 12px; border-top: 1px solid var(--line); }
+.keys { display: flex; gap: 6px 20px; flex-wrap: wrap; }
+.key { display: inline-flex; align-items: center; gap: 7px; }
+.key[hidden] { display: none; }
+.key::before { content: ""; width: 22px; border-top: 3px solid; }
+.observed::before { color: var(--observed); }
+.simulated::before { color: var(--simulated); }
+.branch-note, .source { color: var(--muted); font-size: 13px; }
+canvas { display: block; width: 100%; height: clamp(330px, 49vw, 515px); touch-action: pan-y; }
+figcaption { padding: 8px 0 2px; }
+.readout { display: flex; gap: 4px 16px; flex-wrap: wrap; padding: 8px 11px; background: var(--quiet); font-size: 13px; }
+.readout span { white-space: nowrap; }
+.readout strong, #rmse { font-variant-numeric: tabular-nums; }
+.source { margin: 11px 0 0; }
+.source + .source { margin-top: 5px; }
+.report-links { display: flex; flex-wrap: wrap; gap: 3px 18px; margin-top: 10px; font-size: 13px; }
+.report-links a { color: var(--simulated); }
+.overlays { margin-top: 20px; }
+.overlay-note { margin: 0 0 9px; }
+.overlay-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.overlay-grid figure { padding: 15px 17px 8px; }
+.overlay-grid h2 { margin: 0; font-size: 17px; font-weight: 650; }
+.overlay-grid p { margin: 3px 0 7px; }
+.overlay-grid canvas { height: clamp(300px, 33vw, 390px); }
+@media (max-width: 700px) {
+  .wrap { width: calc(100% - 24px); }
+  header { padding: 22px 0 17px; }
+  header .wrap { align-items: start; flex-direction: column; gap: 4px; }
+  main { padding-top: 12px; }
+  figure { padding: 14px 12px 12px; }
+  .filters { column-gap: 12px; }
+  .chart-head { margin-top: 16px; }
+  canvas { height: 365px; }
+  .overlay-grid { grid-template-columns: minmax(0, 1fr); }
+  .overlay-grid figure { padding-inline: 12px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap"><h1>实测与模拟 I–V 对比</h1><p>KMC40 · 40 nm AlScN</p></div>
+</header>
+<main class="wrap">
+<figure>
+  <div class="filters" aria-label="曲线设置">
+    <div class="field">
+      <label for="cycle">模拟圈次</label>
+      <div class="cycle-control">
+        <button id="previous" type="button" aria-label="上一圈">‹</button>
+        <select id="cycle"></select>
+        <button id="next" type="button" aria-label="下一圈">›</button>
+      </div>
+    </div>
+    <div class="field">
+      <label for="measured-cycle">实测圈次</label>
+      <select id="measured-cycle"></select>
+    </div>
+    <div class="field">
+      <label for="display">显示曲线</label>
+      <select id="display"><option value="both">叠加对比</option><option value="sim">仅模拟</option><option value="exp">仅实测</option></select>
+    </div>
+    <div class="field">
+      <label for="phase">扫描阶段</label>
+      <select id="phase"><option value="all">SET + RESET</option><option value="SET">SET</option><option value="RESET">RESET</option></select>
+    </div>
+    <div class="field">
+      <label for="scale">电流尺度</label>
+      <select id="scale"><option value="log">对数 |I|</option><option value="linear">线性 I</option></select>
+    </div>
+  </div>
+  <div class="chart-head">
+    <div class="keys"><span class="key observed" id="observed-key">实测 C74</span><span class="key simulated" id="simulated-key"></span></div>
+    <span class="branch-note">实线为去程，虚线为回扫</span>
+  </div>
+  <canvas id="plot" role="img" aria-label="实测和模拟 I–V 曲线" aria-describedby="source transform"></canvas>
+  <figcaption>
+    <div class="readout" id="readout">悬停或点按曲线查看采样点</div>
+    <p class="source" id="rmse" aria-live="polite"></p>
+    <p class="source" id="source">实测圈号来自仪器文件 D1-104.csv，C74 为原模型标定参考。模拟来自断桥后 Ag 通量共享机制的连续 100 圈，每圈依次继承上一阶段的终态，电流取各偏压驻点平均值。实测与模拟圈次可独立选择。</p>
+    <p class="source" id="transform">对数模式显示非零偏压下的 |I|。线性模式保留全部点及电流符号。</p>
+    <nav class="report-links" aria-label="相关数据与报告">
+      <a href="../../reset68/continuous/iv/iv_all.csv" download>下载连续 100 圈 SET / RESET I–V（CSV）</a>
+      <a href="morphology_100cycles.pdf">100 圈形貌图册（PDF）</a>
+      <a href="../../reset68/report/reset68_comparison.html">C68 断桥机理与采样点对照</a>
+    </nav>
+  </figcaption>
+</figure>
+<section class="overlays" aria-label="100 圈叠加图">
+  <p class="source overlay-note" id="overlay-note">两幅叠加图共用坐标范围，随上方扫描阶段和电流尺度切换。</p>
+  <div class="overlay-grid">
+    <figure>
+      <h2>实测 IV · 100 圈叠加</h2>
+      <p class="source" id="observed-range">按采集时间取前 100 圈，文件圈号 C104–C5</p>
+      <canvas id="observed-overlay" role="img" aria-label="100 圈实测 I–V 叠加" aria-describedby="observed-range overlay-note"></canvas>
+    </figure>
+    <figure>
+      <h2>模拟 IV · 100 圈叠加</h2>
+      <p class="source" id="simulated-range">断桥后 Ag 通量共享 · 连续运行第 1–100 圈</p>
+      <canvas id="simulated-overlay" role="img" aria-label="100 圈模拟 I–V 叠加" aria-describedby="simulated-range overlay-note"></canvas>
+    </figure>
+  </div>
+</section>
+</main>
+<script type="application/json" id="iv-data">__IV_DATA__</script>
+<script>
+"use strict";
+const id = name => document.getElementById(name);
+const data = JSON.parse(id('iv-data').textContent);
+const cycle = id('cycle');
+const measuredCycle = id('measured-cycle');
+const display = id('display');
+const phase = id('phase');
+const scale = id('scale');
+const canvas = id('plot');
+const observedOverlay = id('observed-overlay');
+const simulatedOverlay = id('simulated-overlay');
+const readout = id('readout');
+const styles = getComputedStyle(document.documentElement);
+const color = key => styles.getPropertyValue(`--${key}`).trim();
+const phases = ['SET', 'RESET'];
+const branches = ['outward', 'return'];
+let hover = null;
+let hitPoints = [];
+
+data.simulated.forEach((_, index) => {
+  const n = index + 1;
+  cycle.add(new Option(`第 ${n} 圈`, n));
+});
+cycle.value = '68';
+data.observed.forEach((_, index) => {
+  const n = index + 1;
+  measuredCycle.add(new Option(n === 74 ? 'C74（原标定参考）' : `C${n}`, n));
+});
+measuredCycle.value = '74';
+
+function tracesFor(type, currents) {
+  return phases.filter(p => phase.value === 'all' || p === phase.value).flatMap(p =>
+    branches.map(branch => ({ type, p, branch, v: data.voltage[p][branch], i: currents[p][branch] })));
+}
+
+function logRmse(observed, simulated) {
+  const logAbs = value => Math.log10(Math.max(Math.abs(value), 1e-30));
+  let sum = 0;
+  let count = 0;
+  observed.forEach((trace, t) => trace.v.forEach((volts, i) => {
+    if (volts === 0) return;
+    const residual = logAbs(simulated[t].i[i]) - logAbs(trace.i[i]);
+    sum += residual ** 2;
+    count++;
+  }));
+  return { value: Math.sqrt(sum / count), count };
+}
+
+function currentRange(traces, log) {
+  let min = Infinity;
+  let max = -Infinity;
+  for (const trace of traces) {
+    trace.i.forEach((amps, i) => {
+      const value = plotCurrent(amps, trace.v[i], log);
+      if (value === null) return;
+      min = Math.min(min, value);
+      max = Math.max(max, value);
+    });
+  }
+  if (log) return [Math.floor(min), Math.ceil(max)];
+  const step = 10 ** Math.floor(Math.log10(Math.max(Math.abs(min), Math.abs(max)))) / 2;
+  return [step * Math.floor(min / step), step * Math.ceil(max / step)];
+}
+
+function plotCurrent(amps, volts, log) {
+  if (!log) return amps * 1e3;
+  return volts === 0 || amps === 0 ? null : Math.log10(Math.abs(amps));
+}
+
+function signedNumber(n, digits) {
+  return n.toFixed(digits).replace('-', '−');
+}
+
+function drawPlot(canvas, shown, [minY, maxY], overview = false) {
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+  if (!width || !height) return [];
+  const ctx = canvas.getContext('2d');
+  function text(value, x, y, align = 'center') {
+    ctx.textAlign = align;
+    ctx.fillText(value, x, y);
+  }
+  function line(x1, y1, x2, y2) {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+  }
+  const ratio = window.devicePixelRatio || 1;
+  canvas.width = Math.round(width * ratio);
+  canvas.height = Math.round(height * ratio);
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  const narrow = width < 500;
+  const left = narrow ? 56 : 72;
+  const top = 14;
+  const right = width - 22;
+  const bottom = height - 52;
+  const log = scale.value === 'log';
+  const limits = phase.value === 'SET' ? [0, 1.5] : phase.value === 'RESET' ? [-1.5, 0] : [-1.5, 1.5];
+  const [minX, maxX] = limits;
+  const x = v => left + (right - left) * (v - minX) / (maxX - minX);
+  const y = i => bottom - (bottom - top) * (i - minY) / (maxY - minY);
+  const transform = (i, v) => plotCurrent(i, v, log);
+  const superscript = num => String(num).split('').map(c => ({ '-': '⁻', 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹' })[c]).join('');
+
+  ctx.font = `${narrow ? 11 : 12}px ${color('number')}`;
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = color('muted');
+  ctx.lineWidth = 1;
+  const yTicks = log ? Array.from({ length: maxY - minY + 1 }, (_, k) => minY + k)
+      : Array.from({ length: 5 }, (_, k) => minY + k * (maxY-minY) / 4);
+  for (const tick of yTicks) {
+    const yy = y(tick);
+    ctx.strokeStyle = !log && Math.abs(tick) < 1e-12 ? color('axis') : color('grid');
+    line(left, yy, right, yy);
+    text(log ? `10${superscript(tick)}` : signedNumber(tick, 2), left - 7, yy, 'right');
+  }
+  const divisions = minX === -1.5 && maxX === 1.5 ? (narrow ? 4 : 6) : 5;
+  for (let tick = 0; tick <= divisions; tick++) {
+    const v = minX + tick * (maxX - minX) / divisions;
+    const xx = x(v);
+    ctx.strokeStyle = Math.abs(v) < 1e-12 ? color('axis') : color('grid');
+    line(xx, top, xx, bottom);
+    text(signedNumber(v, divisions === 4 ? 2 : 1), xx, bottom + 16);
+  }
+  ctx.strokeStyle = color('axis');
+  line(left, top, left, bottom);
+  line(left, bottom, right, bottom);
+  ctx.font = `${narrow ? 12 : 13}px ${color('font')}`;
+  text('施加电压 (V)', (left + right) / 2, height - 12);
+  ctx.save();
+  ctx.translate(narrow ? 11 : 18, (top + bottom) / 2);
+  ctx.rotate(-Math.PI / 2);
+  text(log ? '电流绝对值 |I| (A)' : '电流 I (mA)', 0, 0);
+  ctx.restore();
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(left - 1, top - 1, right - left + 2, bottom - top + 2);
+  ctx.clip();
+  const points = [];
+  ctx.globalAlpha = overview ? 0.18 : 1;
+  for (const trace of shown) {
+    ctx.beginPath();
+    ctx.strokeStyle = color(trace.type === 'exp' ? 'observed' : 'simulated');
+    ctx.lineWidth = overview ? 1 : trace.type === 'exp' ? 1.8 : 2.05;
+    ctx.lineJoin = 'round';
+    ctx.setLineDash(trace.branch === 'return' ? [5, 4] : []);
+    let connected = false;
+    trace.v.forEach((v, index) => {
+      const value = transform(trace.i[index], v);
+      if (value === null) { connected = false; return; }
+      const px = x(v);
+      const py = y(value);
+      if (connected) ctx.lineTo(px, py); else ctx.moveTo(px, py);
+      connected = true;
+      if (!overview) points.push({ px, py, v, index, p: trace.p, branch: trace.branch });
+    });
+    ctx.stroke();
+  }
+  ctx.setLineDash([]);
+  if (!overview && hover) {
+    ctx.strokeStyle = color('axis');
+    ctx.lineWidth = 1;
+    line(x(hover.v), top, x(hover.v), bottom);
+    for (const trace of shown.filter(t => t.p === hover.p && t.branch === hover.branch)) {
+      const value = transform(trace.i[hover.index], hover.v);
+      if (value === null) continue;
+      ctx.beginPath();
+      ctx.arc(x(hover.v), y(value), 4, 0, 2 * Math.PI);
+      ctx.fillStyle = color(trace.type === 'exp' ? 'observed' : 'simulated');
+      ctx.fill();
+    }
+  }
+  ctx.restore();
+  return points;
+}
+
+function draw() {
+  const n = Number(cycle.value);
+  const measured = Number(measuredCycle.value);
+  const observedName = `实测 C${measured}`;
+  const observed = tracesFor('exp', data.observed[measured - 1]);
+  const simulated = tracesFor('sim', data.simulated[n - 1]);
+  const shown = [...(display.value === 'sim' ? [] : observed), ...(display.value === 'exp' ? [] : simulated)];
+  hitPoints = drawPlot(canvas, shown, currentRange(shown, scale.value === 'log'));
+
+  id('previous').disabled = n === 1 || display.value === 'exp';
+  id('next').disabled = n === data.simulated.length || display.value === 'exp';
+  cycle.disabled = display.value === 'exp';
+  measuredCycle.disabled = display.value === 'sim';
+  id('observed-key').hidden = display.value === 'sim';
+  id('observed-key').textContent = observedName;
+  id('simulated-key').hidden = display.value === 'exp';
+  id('simulated-key').textContent = `模拟第 ${n} 圈`;
+  canvas.setAttribute('aria-label', `${display.value !== 'sim' ? `${observedName} ` : ''}${display.value !== 'exp' ? `模拟第 ${n} 圈 ` : ''}${phase.options[phase.selectedIndex].text} I–V 曲线`);
+  const rmse = id('rmse');
+  const score = display.value === 'both' ? logRmse(observed, simulated) : null;
+  const scoreText = score ? `对数电流 RMSE ${score.value.toFixed(3)} dec，共 ${score.count} 个非零偏压采样点。` : '';
+  if (rmse.textContent !== scoreText) rmse.textContent = scoreText;
+  if (!hover) { readout.textContent = '悬停或点按曲线查看采样点'; return; }
+  const label = hover.branch === 'outward' ? '去程' : '回扫';
+  const detail = [`${hover.p} ${label} · ${signedNumber(hover.v, 3)} V`];
+  shown.filter(t => t.p === hover.p && t.branch === hover.branch).forEach(t => {
+    detail.push(`${t.type === 'sim' ? `模拟第 ${n} 圈` : observedName} ${t.i[hover.index].toExponential(5)} A`);
+  });
+  readout.replaceChildren(...detail.map(value => {
+    const item = document.createElement('span');
+    item.textContent = value;
+    return item;
+  }));
+}
+
+function drawOverlays() {
+  // Instrument file numbers run backwards in acquisition time (C104, C103, …).
+  const observed = data.observed.slice(-100).reverse().flatMap(curve => tracesFor('exp', curve));
+  const simulated = data.simulated.flatMap(curve => tracesFor('sim', curve));
+  const range = currentRange([...observed, ...simulated], scale.value === 'log');
+  drawPlot(observedOverlay, observed, range, true);
+  drawPlot(simulatedOverlay, simulated, range, true);
+}
+
+function resetHover() { hover = null; draw(); }
+function changeCycle(offset) { cycle.value = Number(cycle.value) + offset; resetHover(); }
+function inspect(event) {
+  const box = canvas.getBoundingClientRect();
+  let closest = null;
+  let distance = 22 ** 2;
+  for (const point of hitPoints) {
+    const squared = (point.px - event.clientX + box.left) ** 2 + (point.py - event.clientY + box.top) ** 2;
+    if (squared < distance) { closest = point; distance = squared; }
+  }
+  if (closest?.p === hover?.p && closest?.branch === hover?.branch && closest?.index === hover?.index) return;
+  hover = closest;
+  draw();
+}
+
+id('previous').addEventListener('click', () => changeCycle(-1));
+id('next').addEventListener('click', () => changeCycle(1));
+for (const control of [cycle, measuredCycle, display]) control.addEventListener('change', resetHover);
+for (const control of [phase, scale]) control.addEventListener('change', () => { resetHover(); drawOverlays(); });
+canvas.addEventListener('pointermove', inspect);
+canvas.addEventListener('click', inspect);
+canvas.addEventListener('pointerleave', resetHover);
+new ResizeObserver(draw).observe(canvas);
+const overlayResize = new ResizeObserver(drawOverlays);
+overlayResize.observe(observedOverlay);
+overlayResize.observe(simulatedOverlay);
+draw();
+drawOverlays();
+</script>
+</body>
+</html>

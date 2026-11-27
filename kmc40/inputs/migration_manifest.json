@@ -1,0 +1,410 @@
+{
+  "schema": "kmc40/migration/v1",
+  "files": {
+    "scripts/complete_cycle40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\complete_cycle40.py",
+      "sha256": "0ec8346d2674abda339fdc67b1cd94c65388d76a46a62cbdcebb970458695fbe",
+      "bytes": 4972,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/complete_cycle40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\complete_cycle40.py",
+      "sha256": "0ec8346d2674abda339fdc67b1cd94c65388d76a46a62cbdcebb970458695fbe",
+      "bytes": 4972,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/cycle_activity40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\cycle_activity40.py",
+      "sha256": "ef8c2ad57789e6507e8139567e541816461660489da820fa44c4ab95cf78a187",
+      "bytes": 8157,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/cycle_activity40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\cycle_activity40.py",
+      "sha256": "ef8c2ad57789e6507e8139567e541816461660489da820fa44c4ab95cf78a187",
+      "bytes": 8157,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/cycle_hourglass40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\cycle_hourglass40.py",
+      "sha256": "34950f9c77dd66bd3423e0f36e5ffc762159f6dd105c69c75ae8674e4b6a745f",
+      "bytes": 17162,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/cycle_hourglass40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\cycle_hourglass40.py",
+      "sha256": "34950f9c77dd66bd3423e0f36e5ffc762159f6dd105c69c75ae8674e4b6a745f",
+      "bytes": 17162,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/cycle_unified40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\cycle_unified40.py",
+      "sha256": "2a29ca84da4e5a3c18812595e1b86f1e651d389802915db7f638f517ebaa3966",
+      "bytes": 14419,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/cycle_unified40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\cycle_unified40.py",
+      "sha256": "2a29ca84da4e5a3c18812595e1b86f1e651d389802915db7f638f517ebaa3966",
+      "bytes": 14419,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/dynamic_kmc.py": {
+      "source": "D:\\Al4memorister\\ag\\dynamic_kmc.py",
+      "sha256": "5957c7dca40832debd3585216c04c77408ed29dda81f2e113c0bd8a37cf75f58",
+      "bytes": 13542,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/dynamic_kmc.py": {
+      "source": "D:\\Al4memorister\\ag\\dynamic_kmc.py",
+      "sha256": "5957c7dca40832debd3585216c04c77408ed29dda81f2e113c0bd8a37cf75f58",
+      "bytes": 13542,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/fast_kmc.py": {
+      "source": "D:\\Al4memorister\\ag\\fast_kmc.py",
+      "sha256": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+      "bytes": 3239,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/fast_kmc.py": {
+      "source": "D:\\Al4memorister\\ag\\fast_kmc.py",
+      "sha256": "1504a6766f98113bb683118995d703bdc4bad315e65f495d00b60c8858ef0778",
+      "bytes": 3239,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/fit_unified_reset40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\fit_unified_reset40.py",
+      "sha256": "c34cc091efb23b7d216713e88ff9b7b7e1f9b5bec6aaee620583cc25bfe687ea",
+      "bytes": 8808,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/fit_unified_reset40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\fit_unified_reset40.py",
+      "sha256": "c34cc091efb23b7d216713e88ff9b7b7e1f9b5bec6aaee620583cc25bfe687ea",
+      "bytes": 8808,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/form_hourglass40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\form_hourglass40.py",
+      "sha256": "8bd5f330985a223dbeeff981a73fbca5422ba21820685a75fb0a23cb3ba26f46",
+      "bytes": 13432,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/form_hourglass40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\form_hourglass40.py",
+      "sha256": "8bd5f330985a223dbeeff981a73fbca5422ba21820685a75fb0a23cb3ba26f46",
+      "bytes": 13432,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/forming_iv.py": {
+      "source": "D:\\Al4memorister\\ag\\forming_iv.py",
+      "sha256": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+      "bytes": 15759,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/forming_iv.py": {
+      "source": "D:\\Al4memorister\\ag\\forming_iv.py",
+      "sha256": "d5e1371a0b7a0a15cf5ba52842f565bbf281f7b6fff6bc1bacc35238be4eda00",
+      "bytes": 15759,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/inspect_midspan_drive.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\inspect_midspan_drive.py",
+      "sha256": "c4cf8e9a7f46903f6f09c688cec80555772210b788303f054785f23d1588f389",
+      "bytes": 8007,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/inspect_midspan_drive.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\inspect_midspan_drive.py",
+      "sha256": "c4cf8e9a7f46903f6f09c688cec80555772210b788303f054785f23d1588f389",
+      "bytes": 8007,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/kmc_model.py": {
+      "source": "D:\\Al4memorister\\ag\\kmc_model.py",
+      "sha256": "3acd977a951b86557a1a937b51ccac7237a4a32cf78dced25c403e2487028aec",
+      "bytes": 25976,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/kmc_model.py": {
+      "source": "D:\\Al4memorister\\ag\\kmc_model.py",
+      "sha256": "3acd977a951b86557a1a937b51ccac7237a4a32cf78dced25c403e2487028aec",
+      "bytes": 25976,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/mixed_network40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\mixed_network40.py",
+      "sha256": "824811621f4427cc7564db9b91d32057f55074170ecaae5b77bafc1ed90cb111",
+      "bytes": 8089,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/mixed_network40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\mixed_network40.py",
+      "sha256": "824811621f4427cc7564db9b91d32057f55074170ecaae5b77bafc1ed90cb111",
+      "bytes": 8089,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/rate_reset40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\rate_reset40.py",
+      "sha256": "7c00f60755fca0aab20f1a2ff0045e562a22103a3f6cc47b2a68141480c2b6ca",
+      "bytes": 18077,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/rate_reset40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\rate_reset40.py",
+      "sha256": "7c00f60755fca0aab20f1a2ff0045e562a22103a3f6cc47b2a68141480c2b6ca",
+      "bytes": 18077,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/set_growth40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\set_growth40.py",
+      "sha256": "e1599ad34df8b6fa90f266c5aadd510d745b7a5b42ebdaabd045400fdd0cad2b",
+      "bytes": 13456,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/set_growth40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\set_growth40.py",
+      "sha256": "e1599ad34df8b6fa90f266c5aadd510d745b7a5b42ebdaabd045400fdd0cad2b",
+      "bytes": 13456,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/source_cycle_vn40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\source_cycle_vn40.py",
+      "sha256": "a05a1b18e43dd9caa36881b330c77311abd6e62d80454e784a0586ffdfd00e77",
+      "bytes": 15104,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/source_cycle_vn40.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\source_cycle_vn40.py",
+      "sha256": "a05a1b18e43dd9caa36881b330c77311abd6e62d80454e784a0586ffdfd00e77",
+      "bytes": 15104,
+      "role": "Original selected-source snapshot"
+    },
+    "scripts/spatial_reset40_erosion.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\spatial_reset40_erosion.py",
+      "sha256": "76198442158c779e53cad4960c8a80216aa48018e0a3543db17246cbb3f5f8c3",
+      "bytes": 12296,
+      "role": "Unmodified legacy kernel; imported by the new entry point"
+    },
+    "archive/source_snapshot/spatial_reset40_erosion.py": {
+      "source": "D:\\Al4memorister\\ag\\scripts\\spatial_reset40_erosion.py",
+      "sha256": "76198442158c779e53cad4960c8a80216aa48018e0a3543db17246cbb3f5f8c3",
+      "bytes": 12296,
+      "role": "Original selected-source snapshot"
+    },
+    "configs/reset_set_20nm_pilot.json": {
+      "source": "D:\\Al4memorister\\ag\\configs\\reset_set_20nm_pilot.json",
+      "sha256": "38d50baac4829d88174ff4be518970e472c44bab85b6a5f1d1a45d4f10b5de8d",
+      "bytes": 4122,
+      "role": "Import-time electronic defaults used by the inherited geometry helper"
+    },
+    "inputs/reference_parameters/network_params.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\reset_unified40\\network_params.json",
+      "sha256": "02e952cbdcd7f202db18d846db3e0c5af54df840789ed6853c2bc3de21b86d3f",
+      "bytes": 162,
+      "role": "Fixed mixed-network parameters"
+    },
+    "inputs/reference_parameters/joint_simple.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\joint_simple.json",
+      "sha256": "f9c6f105ae328be038868c7c16677c263bef6a865a99882dc12e14bd32e7ee15",
+      "bytes": 1841,
+      "role": "Selected legacy clock calibration"
+    },
+    "inputs/cycle_reference/SET_summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\SET\\summary.json",
+      "sha256": "b15fa324dec83396236976952c7349cdc884132fb476eb9128089896a5913f3c",
+      "bytes": 2707,
+      "role": "Selected legacy phase parameters"
+    },
+    "inputs/reference_parameters/SET_summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\SET\\summary.json",
+      "sha256": "b15fa324dec83396236976952c7349cdc884132fb476eb9128089896a5913f3c",
+      "bytes": 2707,
+      "role": "Parameter reference"
+    },
+    "archive/cycle_unified40/SET/summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\SET\\summary.json",
+      "sha256": "b15fa324dec83396236976952c7349cdc884132fb476eb9128089896a5913f3c",
+      "bytes": 2707,
+      "role": "Original fitted phase, not the new continuous trajectory"
+    },
+    "archive/cycle_unified40/SET/states.npz": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\SET\\states.npz",
+      "sha256": "567880e5c8e977362184784270a34591c53cc7a8cd1019d0f284282a166805c8",
+      "bytes": 65768,
+      "role": "Original fitted phase, not the new continuous trajectory"
+    },
+    "archive/cycle_unified40/SET/iv.csv": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\SET\\iv.csv",
+      "sha256": "477f06b3e816b99bb34776e2d7af8d69f5cae2d2f37a8a17e6bdd71c715f60be",
+      "bytes": 40235,
+      "role": "Original fitted phase, not the new continuous trajectory"
+    },
+    "inputs/cycle_reference/RESET_summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\RESET\\summary.json",
+      "sha256": "dbf59704f4ebf5301e5b77cb67e1fbc27732e716809e6b1003a9237dc9d36026",
+      "bytes": 2732,
+      "role": "Selected legacy phase parameters"
+    },
+    "inputs/reference_parameters/RESET_summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\RESET\\summary.json",
+      "sha256": "dbf59704f4ebf5301e5b77cb67e1fbc27732e716809e6b1003a9237dc9d36026",
+      "bytes": 2732,
+      "role": "Parameter reference"
+    },
+    "archive/cycle_unified40/RESET/summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\RESET\\summary.json",
+      "sha256": "dbf59704f4ebf5301e5b77cb67e1fbc27732e716809e6b1003a9237dc9d36026",
+      "bytes": 2732,
+      "role": "Original fitted phase, not the new continuous trajectory"
+    },
+    "archive/cycle_unified40/RESET/states.npz": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\RESET\\states.npz",
+      "sha256": "73b3b8b97fabe77a55caa0097022c95b92f37ef90949f2e0c4e6aed6ea16143b",
+      "bytes": 74419,
+      "role": "Original fitted phase, not the new continuous trajectory"
+    },
+    "archive/cycle_unified40/RESET/iv.csv": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\RESET\\iv.csv",
+      "sha256": "0dea91f112ef4a8e707948224311e68757d9446bdac231c79d72c7cb8bbf8265",
+      "bytes": 44272,
+      "role": "Original fitted phase, not the new continuous trajectory"
+    },
+    "inputs/experimental/cycle074.csv": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\experimental\\cycle074.csv",
+      "sha256": "e2a951271368cf3fc92407ff9136a27e8782111af5eb57e90600ddb3b49a2690",
+      "bytes": 47125,
+      "role": "Measured cycle input"
+    },
+    "inputs/experimental/next_cycle_set.csv": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\experimental\\next_cycle_set.csv",
+      "sha256": "f78a24d0fdd27ea50ab96718534d2ee26db97f186e2d4f2c80e15f5e08479821",
+      "bytes": 23504,
+      "role": "Measured cycle input"
+    },
+    "inputs/experimental/protocol.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\experimental\\protocol.json",
+      "sha256": "50d19834ee52719112675dda5181acf921a0a0dc52d249cb2f0f9f09d6e314e8",
+      "bytes": 7820,
+      "role": "Measured cycle input"
+    },
+    "inputs/cycle_reference/cycle074.csv": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\experimental\\cycle074.csv",
+      "sha256": "e2a951271368cf3fc92407ff9136a27e8782111af5eb57e90600ddb3b49a2690",
+      "bytes": 47125,
+      "role": "Measured cycle input for standalone runner"
+    },
+    "inputs/experimental/forming_AlScN40_set-forming.csv": {
+      "source": "D:\\Al4AlScN\\forming_data\\AlScN-40\\set-forming.csv",
+      "sha256": "cb9d8167db4177d651626c3d67cebc2e00f3f4309656d90d83fceacb2087f5cc",
+      "bytes": 36359,
+      "role": "Existing 40 nm forming measurement snapshot"
+    },
+    "inputs/experimental/forming_AlScN40_reset-forming.csv": {
+      "source": "D:\\Al4AlScN\\forming_data\\AlScN-40\\reset-forming.csv",
+      "sha256": "7ce195ae037472f45cb38c7dcda1f9a1e1e58ad2183228fb87863306e68d5d2a",
+      "bytes": 31725,
+      "role": "Existing 40 nm forming measurement snapshot"
+    },
+    "inputs/forming_reference/states.npz": {
+      "source": "D:\\Al4memorister\\ag\\results\\vacancy_assisted40\\source_cycle\\assisted\\states.npz",
+      "sha256": "d1b90064d8b54353ad0f9c217861e339f4162cdbb5f68b9aa2ee604232be1e2a",
+      "bytes": 357060,
+      "role": "Original forming-plus-cycle archive; forming boundary must be selected explicitly"
+    },
+    "inputs/forming_reference/events.csv": {
+      "source": "D:\\Al4memorister\\ag\\results\\vacancy_assisted40\\source_cycle\\assisted\\events.csv",
+      "sha256": "944bd09ca089d75ebec06deda27416e5bce6cb5eab7bb8ca7a946cf578a9671e",
+      "bytes": 509859,
+      "role": "Original forming-plus-cycle archive; forming boundary must be selected explicitly"
+    },
+    "inputs/forming_reference/transport.npz": {
+      "source": "D:\\Al4memorister\\ag\\results\\vacancy_assisted40\\source_cycle\\assisted\\transport.npz",
+      "sha256": "e26a196647a9dde2845d62c748117c1c4d48adc5bcff3a14ab4cb14484be963d",
+      "bytes": 65110,
+      "role": "Original forming-plus-cycle archive; forming boundary must be selected explicitly"
+    },
+    "inputs/forming_reference/summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\vacancy_assisted40\\source_cycle\\assisted\\summary.json",
+      "sha256": "55d224ac680147d92af66c29fdce1ade35cb3dec1daf4d3c1718a61f622c1648",
+      "bytes": 3812,
+      "role": "Original forming-plus-cycle archive; forming boundary must be selected explicitly"
+    },
+    "inputs/forming_reference/restart.npz": {
+      "source": "D:\\Al4memorister\\ag\\results\\vacancy_assisted40\\source_cycle\\assisted\\restart.npz",
+      "sha256": "732f85a6d22a34cd96f6ecb98afc3bdf71d771d1cd37db370b75973b0542088b",
+      "bytes": 5108,
+      "role": "Original full three-cycle archive; restart is after all cycles, not the forming boundary"
+    },
+    "inputs/forming_reference/restart.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\vacancy_assisted40\\source_cycle\\assisted\\restart.json",
+      "sha256": "016cf77818386d34c1555e2807d22f72910d8714069d2111ef05ed2a92e7d5ae",
+      "bytes": 800,
+      "role": "Original full three-cycle archive; restart is after all cycles, not the forming boundary"
+    },
+    "archive/cycle_unified40/README.md": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\README.md",
+      "sha256": "2ad1a640e5fd8c9df8373c57ef89b57b0f0d6e3b495b8dad3ffa26c2279f0778",
+      "bytes": 5799,
+      "role": "Original calibrated-model reference"
+    },
+    "archive/cycle_unified40/cycle_summary.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\cycle_summary.json",
+      "sha256": "f57072c5e5009c63d1424cb4d53cdd7b5543d442a817d3e6b7e73f9a1cf40aff",
+      "bytes": 2290,
+      "role": "Original calibrated-model reference"
+    },
+    "archive/cycle_unified40/numerical_validation.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\numerical_validation.json",
+      "sha256": "36a345cf9a9357f0239314ea9d495e24d839f4a70e3e22ea1a56b986a1a47fec",
+      "bytes": 16149,
+      "role": "Original calibrated-model reference"
+    },
+    "archive/cycle_unified40/joint_simple.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\joint_simple.json",
+      "sha256": "f9c6f105ae328be038868c7c16677c263bef6a865a99882dc12e14bd32e7ee15",
+      "bytes": 1841,
+      "role": "Original calibrated-model reference"
+    },
+    "archive/cycle_unified40/joint_extended.json": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\joint_extended.json",
+      "sha256": "b97a95d3e43bcb4b6a405874697932c23966f0a219a405bf7250c29764b59d24",
+      "bytes": 1916,
+      "role": "Original calibrated-model reference"
+    },
+    "archive/cycle_unified40/连续循环总览.png": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\连续循环总览.png",
+      "sha256": "9cbbe6141e470b9779123da593a72131abf7aabd783ba0c0198ba580f4ab7d31",
+      "bytes": 522257,
+      "role": "Original calibrated-model reference"
+    },
+    "archive/cycle_unified40/连续循环总览.pdf": {
+      "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\连续循环总览.pdf",
+      "sha256": "231e6b46932de6d1bdf953027dee1fa93aae0f792679f389a4e13ce22994ef8c",
+      "bytes": 95789,
+      "role": "Original calibrated-model reference"
+    },
+    "archive/连续循环与下一圈预测.html": {
+      "source": "C:\\Users\\31826\\Desktop\\kmc\\11.27汇报-40nm-AlScN\\连续循环与下一圈预测.html",
+      "sha256": "8f977448a5e0bf156794643de803d59813abc391a8fe3c2b43f1e3afea557e83",
+      "bytes": 983060,
+      "role": "User-selected self-contained reference page"
+    },
+    "archive/顶源供银与循环残留.html": {
+      "source": "C:\\Users\\31826\\Desktop\\kmc\\11.27汇报-40nm-AlScN\\顶源供银与循环残留.html",
+      "sha256": "e8f857750c5a69246dbd9ee79e9a50b655002a940bff337c1255336694f99364",
+      "bytes": 10586144,
+      "role": "User-selected self-contained reference page"
+    }
+  },
+  "local_python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "copied_modules": 16,
+  "source_policy": "All copied sources and reference artifacts are byte-identical; original source paths are provenance only.",
+  "forming_restart_policy": "Do not use the legacy final restart as the forming endpoint. The standalone runner reconstructs the forming boundary."
+}

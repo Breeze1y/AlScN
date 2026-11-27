@@ -1,0 +1,19 @@
+{
+  "schema": "cycle_activity40/v1",
+  "D": 151.09404171821592,
+  "H": 23.600880793563807,
+  "q": 2.8166275420360853e-06,
+  "elapsed_units": 22220.000000015807,
+  "recovery_exposure": 12289.647653299427,
+  "params": {
+    "dose_scale": 4.409115796801806,
+    "activity_exponent": 0.7778720480535988,
+    "high_field_rate": 0.4240697032605897,
+    "field_scale_V": 0.12,
+    "high_field_reference_V": 1.5,
+    "recovery_rate": 3.999999999999999,
+    "recovery_voltage_scale_V": 0.3,
+    "reference_current_A": 0.001
+  },
+  "units": "effective sampling-time units; not calibrated seconds"
+}

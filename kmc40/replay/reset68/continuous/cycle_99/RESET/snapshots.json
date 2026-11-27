@@ -1,0 +1,38 @@
+[
+  {
+    "label": "retreat_onset_before",
+    "point": 4,
+    "time": 4.639360226072554,
+    "voltage_V": -0.060000000000000005,
+    "q": 0.9846070802354329,
+    "event_index": 1,
+    "current_A": -0.00022839884943109097
+  },
+  {
+    "label": "retreat_onset_after",
+    "point": 4,
+    "time": 4.639360226072554,
+    "voltage_V": -0.060000000000000005,
+    "q": 0.9846070802354329,
+    "event_index": 1,
+    "current_A": -0.00022747104336677198
+  },
+  {
+    "label": "metal_break_before",
+    "point": 12,
+    "time": 12.469801419464865,
+    "voltage_V": -0.18000000000000002,
+    "q": 0.8829701141152314,
+    "event_index": 2,
+    "current_A": -0.0005375677545893058
+  },
+  {
+    "label": "metal_break_after",
+    "point": 12,
+    "time": 12.469801419464865,
+    "voltage_V": -0.18000000000000002,
+    "q": 0.8829701141152314,
+    "event_index": 2,
+    "current_A": -4.146421624487057e-05
+  }
+]

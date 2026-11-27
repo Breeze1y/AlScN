@@ -1,0 +1,10 @@
+{
+  "event_index": 80,
+  "observation_exposure": 73.91305377874663,
+  "last_event_exposure": 73.5719327934459,
+  "next_event_exposure": 73.98901345508565,
+  "source_sequence": "D:\\yyang\\kmc40\\replay\\reset68\\continuous\\cycle_55\\catalogues\\SET",
+  "exact_prefix_reproduction": true,
+  "mass_balance_error": 0,
+  "original_spatial_prefix": "replay\\cycles100\\cycle_55\\SET\\checkpoint"
+}

@@ -1,0 +1,11 @@
+{
+  "source_sequence": "D:\\Al4AlScN\\kmc40\\results\\cycle_reset_fit40\\mid_clock_set\\cycle_02\\catalogues\\RESET",
+  "event_index": 59,
+  "last_event_exposure": 805.0693837234555,
+  "observation_exposure": 805.5222486970354,
+  "next_event_exposure": 812.404117594691,
+  "Ag_packets": 896,
+  "mass_balance_error": 0,
+  "continuation": "Restore restart.json/npz and keep the original accumulated exposure when replaying voltage.",
+  "exact_prefix_reproduction": true
+}

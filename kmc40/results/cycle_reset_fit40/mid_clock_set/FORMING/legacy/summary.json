@@ -1,0 +1,39 @@
+{
+  "seed": 314,
+  "eta": 0.03,
+  "migration_saddle_reduction_eV": 0.05,
+  "pt_mode": "top_front",
+  "pair_formation_pristine_eV": 2.48,
+  "pair_formation_VN_eV": -0.5,
+  "VN_fraction": 0.15,
+  "temperature_K": 300,
+  "metal_packet_count": "0.5nm cell effective packet, not atom",
+  "forming_supply_prefactor": 2.5,
+  "SET_supply_prefactor": 0.025,
+  "RESET_supply_prefactor": 0.16,
+  "source": "Fixed top electrode connected to exposed active Ag surface through instant metallic-reservoir mass exchange; ions start at adjacent host sites",
+  "catalogue": "Phase-conditioned deposition or oxidation. Local paired barriers are reversible, full phase simulation is driven coarse-graining.",
+  "interfacial_adhesion_eV": 0.08,
+  "common_field_redox_coefficient": 0.08,
+  "delivery_window_us": 1000.0,
+  "transfer": "Shortest mean-edge-time dielectric path plus reaction time; success probability 1-exp(-1000us/tau). Failed packets explicitly return. Between events free ions integrated out.",
+  "phase_ends": [
+    {
+      "phase": "forming",
+      "cycle": 0,
+      "point": 201,
+      "voltage_V": 0.0,
+      "current_A": 0.0,
+      "read_G_S": 0.0003597964654059516,
+      "Ag_total": 1335,
+      "Ag_bottom10nm": 275,
+      "Ag_bottom_interface": 10,
+      "injected": 1352,
+      "returned": 17,
+      "connected": false,
+      "added": 0,
+      "removed": 1,
+      "VN_adjacent_Ag": 248
+    }
+  ]
+}

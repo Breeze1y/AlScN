@@ -1,0 +1,78 @@
+{
+  "source": "D:\\Al4memorister\\ag\\results\\cycle_unified40\\growth_initial",
+  "initial_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 151.49999999999991,
+    "H": 23.61374705895562,
+    "q": 2.795625833914446e-06,
+    "elapsed_units": 0.0,
+    "recovery_exposure": 0.0,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "final_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 1.2393054824373275e-43,
+    "H": 1.9316598145908912e-44,
+    "q": 1.0,
+    "elapsed_units": 202.0,
+    "recovery_exposure": 103.81719349579177,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "clock": {
+    "rate_scale": 0.00038084967548710776,
+    "voltage_scale_V": 0.0243106477248109,
+    "recovery_rate": 3.999999999999999,
+    "recovery_voltage_scale_V": 0.3,
+    "circuit": {
+      "network_scale": 9.987870449406756,
+      "series_contact_ohm": 80.95973988295985,
+      "leakage_S": 8.944110346098897e-07,
+      "positive_limit_A": 0.001,
+      "negative_limit_A": 0.01
+    },
+    "activity_params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "driving_voltage": "material voltage after compliance and effective contact drop",
+    "calibration": "All nonzero C74 SET and RESET samples; parity subsets are descriptive, not held out"
+  },
+  "final_event": 403,
+  "event_exposure": 413.7949702281559,
+  "sequence_exhausted": false,
+  "available_events": 700,
+  "metrics": {
+    "all": 0.04123849532071704,
+    "train": 0.04743063310954629,
+    "interleaved": 0.033934673056642446,
+    "out": 0.05726798568907515,
+    "back": 0.01102745699377178,
+    "max_adjacent_jump_dec": 3.2143849968102223
+  }
+}

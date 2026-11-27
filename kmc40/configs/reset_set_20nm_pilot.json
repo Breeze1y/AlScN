@@ -1,0 +1,164 @@
+{
+  "backend": "infinite_ag_v1_restored",
+  "parameter_status": "RESET/SET pilot from blank 20 nm AlN; effective parameters; no experimental fit or validated gradual RESET",
+  "diagnostic_scope": "Blank start, one continuous trajectory; stage names are commands, not validated switching labels; timings and compliance are configured assumptions",
+  "model": {
+    "nx": 8,
+    "layer_cells": 20,
+    "spacing_nm": 1.0,
+    "voltage": 0,
+    "temperature_K": 300.0,
+    "attempt_Hz": 2420000000000.0,
+    "eps_aln": 8.5,
+    "eps_alscn": 15.0,
+    "polarization_C_m2": 0,
+    "hop_aln_eV": 0.3,
+    "hop_alscn_eV": 0.5,
+    "interface_eV": 0.025,
+    "source_barrier_eV": 0.45,
+    "reaction_barrier_eV": 0.32,
+    "pt_nucleation_eV": 0.02,
+    "metal_standard_eV": -0.1,
+    "bond_eV": 0.06,
+    "pt_adhesion_eV": 0.06,
+    "surface_redox_only": true,
+    "migration_eV": 0.8,
+    "disorder_eV": 0,
+    "max_events": 350000,
+    "max_time_s": 2.0,
+    "seed": 17,
+    "disorder_seed": null,
+    "record_events": true,
+    "vacancy_affected_fraction_by_layer": [
+      0.0
+    ],
+    "vacancy_ag_ion_penalty_eV": 0.0,
+    "vacancy_seed": 0,
+    "stack": [
+      [
+        "AlN",
+        20
+      ]
+    ]
+  },
+  "electronics": {
+    "metal_resistivity_ohm_m": 1.6e-08,
+    "effective_depth_nm": 1.0,
+    "contact_resistance_ohm": 500.0,
+    "tunnel_prefactor_S": 7.748091729e-05,
+    "tunnel_barrier_eV": 1.0,
+    "tunnel_effective_mass_ratio": 1.0,
+    "max_tunnel_gap_nm": 2.0,
+    "min_tunnel_conductance_S": 1e-15,
+    "leakage_per_column_S": 1e-12,
+    "leakage_voltage_scale_V": 2.0,
+    "series_resistance_ohm": 100,
+    "compliance_A": 0.001,
+    "leakage_model": "sinh",
+    "leakage_saturation_A": 1e-06,
+    "leakage_half_voltage_V": 1.0,
+    "leakage_exponent": 2.0,
+    "leakage_reference_columns": 150.0,
+    "network_parallel_factor": 1.0
+  },
+  "protocol": {
+    "kind": "explicit_stages",
+    "stages": [
+      {
+        "name": "forming",
+        "compliance_A": 0.001,
+        "points": [
+          {
+            "voltage_V": 1.5,
+            "duration_s": 0.0034
+          }
+        ]
+      },
+      {
+        "name": "zero_after_forming",
+        "points": [
+          {
+            "voltage_V": 0.0,
+            "duration_s": 0.0002
+          }
+        ]
+      },
+      {
+        "name": "reset",
+        "compliance_A": 0.01,
+        "points": [
+          {
+            "voltage_V": -0.3,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": -0.6,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": -0.9,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": -1.2,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": -1.5,
+            "duration_s": 0.0002
+          }
+        ]
+      },
+      {
+        "name": "zero_after_reset",
+        "points": [
+          {
+            "voltage_V": 0.0,
+            "duration_s": 0.0002
+          }
+        ]
+      },
+      {
+        "name": "set",
+        "compliance_A": 0.001,
+        "points": [
+          {
+            "voltage_V": 0.3,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": 0.6,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": 0.9,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": 1.2,
+            "duration_s": 0.0002
+          },
+          {
+            "voltage_V": 1.5,
+            "duration_s": 0.0002
+          }
+        ]
+      },
+      {
+        "name": "zero_after_set",
+        "points": [
+          {
+            "voltage_V": 0.0,
+            "duration_s": 0.0002
+          }
+        ]
+      }
+    ]
+  },
+  "joint_acceptance_passed": false,
+  "model_variant": "paired_reservoir_v1",
+  "reservoir": {
+    "chemical_potential_eV": 0.0
+  },
+  "source_reference_scope": "Legacy effective source potential 0 eV; not a measured Ag chemical potential"
+}

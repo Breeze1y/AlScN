@@ -1,0 +1,82 @@
+{
+  "params": {
+    "eta": 0.03,
+    "assist_eV": 0.05,
+    "kT_eV": 0.025852,
+    "reference_barrier_eV": 0.3,
+    "unbound_energy_eV": 0.075,
+    "coordination_eV": 0.035,
+    "adhesion_eV": 0.08,
+    "background_weight": 0.0004,
+    "power_exponent": 1.0,
+    "path_reference_voltage_V": -0.6
+  },
+  "seed": 314,
+  "initial_source": {
+    "path": "replay\\cycles100\\cycle_43\\SET\\checkpoint",
+    "sha256": "2ed35c68a7360e7b26df7c9b70b53809d9db3cf0154dcc8333f52e21723d7ee0",
+    "injected": 4441,
+    "returned": 3830,
+    "electronic_state": {
+      "schema": "cycle_activity40/v1",
+      "D": 2.6785085461631278e-120,
+      "H": 4.189932692804334e-121,
+      "q": 1.0,
+      "elapsed_units": 17574.00000000434,
+      "recovery_exposure": 9456.665763158868,
+      "params": {
+        "dose_scale": 4.409115796801806,
+        "activity_exponent": 0.7778720480535988,
+        "high_field_rate": 0.4240697032605897,
+        "field_scale_V": 0.12,
+        "high_field_reference_V": 1.5,
+        "recovery_rate": 3.999999999999999,
+        "recovery_voltage_scale_V": 0.3,
+        "reference_current_A": 0.001
+      },
+      "units": "effective sampling-time units; not calibrated seconds"
+    }
+  },
+  "field_solver": {
+    "kind": "mixed_network40",
+    "params": {
+      "metal_bond_S": 0.04,
+      "tunnel_prefactor_S": 0.001,
+      "tunnel_beta_nm": 10.25,
+      "trap_prefactor_S": 7.748e-05,
+      "trap_beta_nm": 2.0,
+      "leakage_S": 0.0
+    },
+    "activity": 1.0
+  },
+  "reference_power": 6.569615910040138e-06,
+  "initial_reference_power": 6.569615910040138e-06,
+  "initial_rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 191458241538898014434620123379987471542,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "events": 320,
+  "null_events": 8,
+  "final_clock": 3554.224038424902,
+  "initial_Ag": 611,
+  "final_Ag": 291,
+  "injected": 4441,
+  "returned": 4150,
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 311259339417197407167161449837662432754,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "clock_units": "dimensionless integrated voltage exposure; dwell in sampling-point units",
+  "approximation": "Separable rates; unit-voltage mixed fields at fixed electronic activity; no thermal memory",
+  "return_paths": "Source-conserving continuous dielectric paths at a fixed reference bias"
+}

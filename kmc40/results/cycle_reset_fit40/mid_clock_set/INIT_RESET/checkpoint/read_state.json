@@ -1,0 +1,11 @@
+{
+  "source_sequence": "D:\\Al4AlScN\\kmc40\\results\\five_cycle_demo40\\pristine\\catalogues\\INIT_RESET",
+  "event_index": 352,
+  "last_event_exposure": 998.5542911176931,
+  "observation_exposure": 998.7641929932464,
+  "next_event_exposure": 999.0376452595095,
+  "Ag_packets": 983,
+  "mass_balance_error": 0,
+  "continuation": "Restore restart.json/npz and keep the original accumulated exposure when replaying voltage.",
+  "exact_prefix_reproduction": true
+}

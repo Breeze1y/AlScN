@@ -1,6 +1,6 @@
 # KMC40 连续 100 圈仿真结果
 
-[完整结果说明](result/README.md) · [100 圈 IV 数据 CSV](result/iv_all.csv)
+[KMC40 项目、运行入口与检查点](kmc40/README.md) · [可下载的离线单圈 I–V 对比页](kmc40/replay/cycles100/report/iv_comparison.html) · [完整结果说明](result/README.md) · [100 圈 IV 数据 CSV](result/iv_all.csv)
 
 ## I–V 曲线与末态读出电阻
 

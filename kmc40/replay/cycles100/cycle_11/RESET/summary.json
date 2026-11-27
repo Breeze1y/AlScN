@@ -1,0 +1,191 @@
+{
+  "schema": "ten_cycles40/phase/v1",
+  "parameters": {
+    "enabled": true,
+    "subunits": 16,
+    "retreat_duration": 14.0,
+    "local_window": 12.0,
+    "radius_nm": 1.5,
+    "contact_exponent": 4.0
+  },
+  "clock": {
+    "rate_scale": 0.14275193713176365,
+    "voltage_scale_V": 0.3023093336191854,
+    "recovery_rate": 3.999999999999999,
+    "recovery_voltage_scale_V": 0.3,
+    "circuit": {
+      "network_scale": 9.987870449406756,
+      "series_contact_ohm": 80.95973988295985,
+      "leakage_S": 8.944110346098897e-07,
+      "positive_limit_A": 0.001,
+      "negative_limit_A": 0.01
+    },
+    "activity_params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "driving_voltage": "material voltage after compliance and effective contact drop",
+    "calibration": "All nonzero C74 SET and RESET samples; parity subsets are descriptive, not held out",
+    "background_oxidation_weight": 0.0004
+  },
+  "network": {
+    "metal_bond_S": 0.04,
+    "tunnel_prefactor_S": 0.001,
+    "tunnel_beta_nm": 10.25,
+    "trap_prefactor_S": 7.748e-05,
+    "trap_beta_nm": 2.0,
+    "leakage_S": 0.0
+  },
+  "integration_substeps": 16,
+  "source_chain": "replay\\cycles100",
+  "source_checkpoint": "replay\\cycles100\\cycle_11\\SET\\checkpoint",
+  "initial_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 7.239824953499675e-66,
+    "H": 1.1341954884496665e-66,
+    "q": 1.0,
+    "elapsed_units": 4646.000000000296,
+    "recovery_exposure": 1503.9342189042786,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "final_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 150.0329251590441,
+    "H": 23.57555976794917,
+    "q": 2.8622394673843255e-06,
+    "elapsed_units": 4848.000000000298,
+    "recovery_exposure": 1503.9342189042786,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "trigger": {
+    "event_index": 1,
+    "point": 7,
+    "time": 7.921500816986885,
+    "voltage_V": -0.10500000000000001,
+    "y": 45,
+    "x": 49,
+    "until": 19.921500816986885
+  },
+  "final_event": 53,
+  "final_event_exposure": 805.0095865256438,
+  "elapsed_units": 202.0,
+  "pending_microsteps": [],
+  "microsteps": 68,
+  "fractional_sites": 1,
+  "exact_fractional_solves": 255,
+  "metrics": {
+    "whole_log_RMSE_dec": 0.13092905754680567,
+    "outward_log_RMSE_dec": 0.12877507851737663,
+    "first_break_max_drop_dec": 0.12920519066496894,
+    "outward_max_drop_dec": 0.19208989949986321,
+    "mid_log_RMSE_dec": 0.12637048313080834,
+    "windows": [
+      {
+        "absV_min": 0.15,
+        "absV_max": 0.3,
+        "model": -3.3813036026873364,
+        "measured": -3.322733542568028
+      },
+      {
+        "absV_min": 0.3,
+        "absV_max": 0.6,
+        "model": -1.4888038682515623,
+        "measured": -1.2401074945294668
+      },
+      {
+        "absV_min": 0.6,
+        "absV_max": 0.9,
+        "model": -0.948493198451815,
+        "measured": -2.160418614918607
+      },
+      {
+        "absV_min": 0.9,
+        "absV_max": 1.2,
+        "model": -1.9670965167965382,
+        "measured": -0.9792398579095022
+      },
+      {
+        "absV_min": 1.2,
+        "absV_max": 1.5,
+        "model": -4.120132294024066,
+        "measured": -4.033927639806506
+      }
+    ],
+    "first_disconnected_sample": 21,
+    "first_disconnected_voltage_V": -0.315,
+    "final_read_ohm": 1117943.9968329142,
+    "final_Ag": 562.0,
+    "final_q": 2.8622394673843255e-06,
+    "ranking_score": 0.19466971943837177
+  },
+  "semantics": "Catalogue entries initiate dissolution; Ag effective volume returns only on actual microsteps. Fixed spatial q=1 event order; dynamic q and event timing recomputed. Every volume removal checks its actual dielectric return route; a blocked inherited path is recomputed without traversing remaining Ag.",
+  "time_units": "effective sampling units; no conversion to seconds",
+  "Ag_units": "0.5 nm coarse-volume packets, subdivided into effective volumes, not atoms",
+  "route_policy": "Before every volume action, the inherited or cached dielectric route must have empty host nodes and end at a live top reservoir with the oxidizing site opened. An invalid path is recomputed on the current geometry at the original reference bias. Every actual route is saved.",
+  "route_kernel": "constrained_retreat40/v1",
+  "rerouted_catalogue_events": 0,
+  "rerouted_volume_actions": 0,
+  "delayed_return_actions": 0,
+  "cycle_number": 11,
+  "phase": "RESET",
+  "source_checkpoint_sha256": "7f170ade9a074e351d50e9de8186a3da70546228f257de5926cd9b28cec3685f",
+  "source_catalogue": "replay\\cycles100\\cycle_11\\catalogues\\RESET",
+  "inherited_rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 34687380294209082052231819328732186466,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "measured_role": "Same C74 reference protocol for all cycles; only cycle 1 inherited calibration, later cycles continuous frozen-parameter evolution",
+  "parameter_role": "Frozen from full_chain_refined and local_retreat40/local_tau8_p12; no cycle-specific fit",
+  "network_params": {
+    "metal_bond_S": 0.04,
+    "tunnel_prefactor_S": 0.001,
+    "tunnel_beta_nm": 10.25,
+    "trap_prefactor_S": 7.748e-05,
+    "trap_beta_nm": 2.0,
+    "leakage_S": 0.0
+  },
+  "final_Ag": 562.0,
+  "final_read_ohm": 1117943.9968329142,
+  "final_metal_connected": false,
+  "lazy_network": {
+    "grid_nodes": 33,
+    "evaluated_unique_cells": 128,
+    "geometries": 321,
+    "unique_geometries": 321,
+    "new_solves": 128,
+    "method": "Same 33-node log-q interpolation as the frozen chain; only queried bracketing grid entries are computed."
+  },
+  "elapsed_seconds": 2.8901028000109363,
+  "return_kernel": "constrained_retreat40: live top-source endpoint and empty-route checks"
+}

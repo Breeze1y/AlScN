@@ -1,0 +1,55 @@
+{
+  "extended": false,
+  "opt_log_parameters": [
+    -1.4589470140254488,
+    -1.1290640264324776,
+    1.3862943611198904
+  ],
+  "SET": {
+    "all": 0.04123849532071704,
+    "train": 0.04743063310954629,
+    "interleaved": 0.033934673056642446,
+    "out": 0.05726798568907515,
+    "back": 0.01102745699377178,
+    "max_adjacent_jump_dec": 3.2143849968102223
+  },
+  "RESET": {
+    "all": 0.1387627388110401,
+    "train": 0.14585358721989813,
+    "interleaved": 0.13128947581496941,
+    "out": 0.1439176833630719,
+    "back": 0.13340875451067088,
+    "max_adjacent_jump_dec": 0.333186631997068
+  },
+  "initial_q": 2.795625833914446e-06,
+  "LRS_q": 1.0,
+  "HRS_q": 2.8706293795932166e-06,
+  "SET_final_event": 403,
+  "RESET_final_event": 264,
+  "negative_clock": {
+    "rate_scale": 0.23248094506443956,
+    "voltage_scale_V": 0.32333574855193065,
+    "recovery_rate": 3.999999999999999,
+    "recovery_voltage_scale_V": 0.3,
+    "circuit": {
+      "network_scale": 9.987870449406756,
+      "series_contact_ohm": 80.95973988295985,
+      "leakage_S": 8.944110346098897e-07,
+      "positive_limit_A": 0.001,
+      "negative_limit_A": 0.01
+    },
+    "activity_params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "driving_voltage": "material voltage after compliance and effective contact drop",
+    "calibration": "All nonzero C74 SET and RESET samples; parity subsets are descriptive, not held out"
+  },
+  "calibration": "All nonzero C74 SET and RESET samples; parity subsets are descriptive, not held out"
+}

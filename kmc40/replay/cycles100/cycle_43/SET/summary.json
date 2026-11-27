@@ -1,0 +1,133 @@
+{
+  "source": "D:\\yyang\\kmc40\\replay\\cycles100\\cycle_43\\catalogues\\SET",
+  "initial_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 150.88788130077333,
+    "H": 23.603063268762327,
+    "q": 2.816927351411748e-06,
+    "elapsed_units": 17372.000000004893,
+    "recovery_exposure": 9176.324275067418,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "final_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 2.6785085461631278e-120,
+    "H": 4.189932692804334e-121,
+    "q": 1.0,
+    "elapsed_units": 17574.00000000434,
+    "recovery_exposure": 9456.665763158868,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "clock": {
+    "rate_scale": 3.046797403896862e-05,
+    "voltage_scale_V": 0.0243106477248109,
+    "recovery_rate": 3.999999999999999,
+    "recovery_voltage_scale_V": 0.3,
+    "circuit": {
+      "network_scale": 9.987870449406756,
+      "series_contact_ohm": 80.95973988295985,
+      "leakage_S": 8.944110346098897e-07,
+      "positive_limit_A": 0.001,
+      "negative_limit_A": 0.01
+    },
+    "activity_params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "driving_voltage": "material voltage after compliance and effective contact drop",
+    "calibration": "All nonzero C74 SET and RESET samples; parity subsets are descriptive, not held out"
+  },
+  "final_event": 157,
+  "event_exposure": 146.1013611225137,
+  "sequence_exhausted": false,
+  "available_events": 224,
+  "metrics": {
+    "all": 0.27398857338661514,
+    "train": 0.3652672496866262,
+    "interleaved": 0.12930318247913736,
+    "out": 0.3704269335856447,
+    "back": 0.11368097275798428,
+    "max_adjacent_jump_dec": 2.583874355730767
+  },
+  "schema": "ten_cycles40/phase/v1",
+  "cycle_number": 43,
+  "phase": "SET",
+  "source_checkpoint": "replay\\cycles100\\cycle_42\\RESET\\checkpoint",
+  "source_checkpoint_sha256": "9eb50cbe6b0b0910eec0e0b4deaa5f361cf78b9aa9dfa4744b78e8a6b775edf9",
+  "source_catalogue": "replay\\cycles100\\cycle_43\\catalogues\\SET",
+  "inherited_rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 84818722562260795665676149911471413310,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "measured_role": "Same C74 reference protocol for all cycles; only cycle 1 inherited calibration, later cycles continuous frozen-parameter evolution",
+  "parameter_role": "Same frozen growth, circuit and RESET parameters across all newly simulated cycles",
+  "network_params": {
+    "metal_bond_S": 0.04,
+    "tunnel_prefactor_S": 0.001,
+    "tunnel_beta_nm": 10.25,
+    "trap_prefactor_S": 7.748e-05,
+    "trap_beta_nm": 2.0,
+    "leakage_S": 0.0
+  },
+  "growth": {
+    "reference_voltage_V": 0.33,
+    "eta": 0.03,
+    "assist_eV": 0.05,
+    "pt_mode": "top_front",
+    "source_mu_nm": 25.0,
+    "source_sigma_nm": 6.0,
+    "use_field": true,
+    "field_exponent": 1.05,
+    "field_floor": 0.05,
+    "metal_host_contrast": 10000.0,
+    "crowding_strength": 1.0,
+    "crowding_radius_nm": 2.0,
+    "supply_enabled": true,
+    "soft_volume": 1000.0,
+    "soft_scale": 500.0
+  },
+  "integration_substeps": 16,
+  "final_Ag": 611,
+  "final_read_ohm": 275.3236226497191,
+  "final_metal_connected": true,
+  "lazy_network": {
+    "grid_nodes": 33,
+    "evaluated_unique_cells": 316,
+    "geometries": 225,
+    "unique_geometries": 223,
+    "new_solves": 101,
+    "method": "Same 33-node log-q interpolation as the frozen chain; only queried bracketing grid entries are computed."
+  },
+  "elapsed_seconds": 4.227119500021217
+}

@@ -1,0 +1,42 @@
+{
+  "cycle": 68,
+  "shift_eV": 0.035,
+  "kT_eV": 0.025852,
+  "steps": 16,
+  "logq_step": 0.1,
+  "source_SET": "replay\\cycles100\\cycle_68\\SET\\checkpoint",
+  "target": "original KMC RESET C68",
+  "metrics": {
+    "peak_V": 0.16499999999999998,
+    "peak_mA": 0.5052228615413772,
+    "first_postpeak_half_current_V": 0.27,
+    "end_uA": 1.6240090634637165,
+    "early_drop_0165_030_dec": 0.3193326353259658,
+    "shoulder_drop_030_0525_dec": 0.341939959437187,
+    "tail_drop_120_150_dec": 0.8635331761983149,
+    "largest_15mV_drop_dec": 0.1446046080683474,
+    "largest_step_start_V": 0.36,
+    "largest_step_end_V": 0.375,
+    "middle_flat_steps": 17,
+    "middle_down_steps": 18,
+    "middle_up_steps": 5,
+    "middle_second_difference_rms_dec": 0.04992975952567511,
+    "macro_offset_dec": 0.16282371134535834,
+    "macro_shape_rmse_dec": 0.08235729570569565,
+    "macro_total_rmse_dec": 0.18246721659583665,
+    "outward_raw_rmse_dec": 0.19057925646432908,
+    "return_raw_rmse_dec": 0.0013227294438327478
+  },
+  "trigger": {
+    "event_index": 1,
+    "point": 5,
+    "time": 5.127188794518187,
+    "voltage_V": -0.075,
+    "y": 70,
+    "x": 52,
+    "until": 17.127188794518187
+  },
+  "events": 136,
+  "final_pending": 0,
+  "final_metal_connected": false
+}

@@ -1,0 +1,248 @@
+{
+  "material": "AlScN",
+  "thickness_nm": 40,
+  "source_hashes": {
+    "D:\\Al4memorister\\baseline\\diff\\fit_baselines\\AlScN_40nm_file074.csv": "e2a951271368cf3fc92407ff9136a27e8782111af5eb57e90600ddb3b49a2690",
+    "D:\\Al4memorister\\baseline\\diff\\AlScN 40\\D1-104.csv": "a99af2eea0869f8a664c5bdacedba8dfe035b923aa772aff0a2fe4d369c28a39",
+    "D:\\Al4memorister\\baseline\\diff\\organized\\all_iv_points.csv": "50ad706fbfde0011ea5772c26210063eebcab1c5a77bc0496b479157ed485150"
+  },
+  "calibrated_loop": {
+    "file_cycle": 74,
+    "time_order_cycle": 31,
+    "samples": 404,
+    "SET_opening": {
+      "threshold_A": 0.0001,
+      "consecutive_points": 3,
+      "last_below_V": 0.315,
+      "first_above_V": 0.33,
+      "current_before_A": 4.72176e-07,
+      "current_after_A": 0.000999986,
+      "first_sweep_point": 23
+    },
+    "SET_low_voltage_return": [
+      {
+        "amplitude_V": 0.015,
+        "SET_return": {
+          "voltage_V": 0.015000000000000001,
+          "current_A": 0.000123144,
+          "resistance_ohm": 121.80861430520368,
+          "sweep_point": 201,
+          "source_line": 67488
+        },
+        "RESET_outward": {
+          "voltage_V": -0.015000000000000001,
+          "current_A": -0.00012614,
+          "resistance_ohm": 118.91549072459172,
+          "sweep_point": 2,
+          "source_line": 66833
+        },
+        "RESET_vs_SET_fraction": -0.023751387347391906
+      },
+      {
+        "amplitude_V": 0.03,
+        "SET_return": {
+          "voltage_V": 0.030000000000000002,
+          "current_A": 0.000246778,
+          "resistance_ohm": 121.56675230368995,
+          "sweep_point": 200,
+          "source_line": 67487
+        },
+        "RESET_outward": {
+          "voltage_V": -0.030000000000000002,
+          "current_A": -0.00025270800000000003,
+          "resistance_ohm": 118.7140889880811,
+          "sweep_point": 3,
+          "source_line": 66834
+        },
+        "RESET_vs_SET_fraction": -0.023465818256644067
+      },
+      {
+        "amplitude_V": 0.045,
+        "SET_return": {
+          "voltage_V": 0.045000000000000005,
+          "current_A": 0.00036967500000000003,
+          "resistance_ohm": 121.72854534388314,
+          "sweep_point": 199,
+          "source_line": 67486
+        },
+        "RESET_outward": {
+          "voltage_V": -0.045000000000000005,
+          "current_A": -0.000378833,
+          "resistance_ohm": 118.78585022952066,
+          "sweep_point": 4,
+          "source_line": 66835
+        },
+        "RESET_vs_SET_fraction": -0.024174240364487787
+      },
+      {
+        "amplitude_V": 0.06,
+        "SET_return": {
+          "voltage_V": 0.060000000000000005,
+          "current_A": 0.000491819,
+          "resistance_ohm": 121.99610019133056,
+          "sweep_point": 198,
+          "source_line": 67485
+        },
+        "RESET_outward": {
+          "voltage_V": -0.060000000000000005,
+          "current_A": -0.0005029580000000001,
+          "resistance_ohm": 119.29425518631774,
+          "sweep_point": 5,
+          "source_line": 66836
+        },
+        "RESET_vs_SET_fraction": -0.022146978475339973
+      },
+      {
+        "amplitude_V": 0.075,
+        "SET_return": {
+          "voltage_V": 0.075,
+          "current_A": 0.0006136290000000001,
+          "resistance_ohm": 122.22368890648907,
+          "sweep_point": 197,
+          "source_line": 67484
+        },
+        "RESET_outward": {
+          "voltage_V": -0.075,
+          "current_A": -0.000623458,
+          "resistance_ohm": 120.29679625572211,
+          "sweep_point": 6,
+          "source_line": 66837
+        },
+        "RESET_vs_SET_fraction": -0.01576529613863309
+      }
+    ],
+    "SET_initial_HRS_0p075V": {
+      "voltage_V": 0.075,
+      "current_A": 8.04784e-08,
+      "resistance_ohm": 931927.0760850116,
+      "sweep_point": 6,
+      "source_line": 67293
+    },
+    "RESET_final_HRS_0p075V": {
+      "voltage_V": -0.075,
+      "current_A": -9.6175e-08,
+      "resistance_ohm": 779828.4377436964,
+      "sweep_point": 197,
+      "source_line": 67028
+    }
+  },
+  "next_SET_validation": {
+    "file_cycle": 73,
+    "time_order_cycle": 32,
+    "samples": 202,
+    "choice": "Immediately subsequent SET in raw instrument timestamps; no curve-quality selection.",
+    "SET_opening": {
+      "threshold_A": 0.0001,
+      "consecutive_points": 3,
+      "last_below_V": 0.195,
+      "first_above_V": 0.21000000000000002,
+      "current_before_A": 7.46179e-05,
+      "current_after_A": 0.000170685,
+      "first_sweep_point": 15
+    },
+    "initial_HRS_0p075V": {
+      "voltage_V": 0.075,
+      "current_A": 3.97522e-07,
+      "resistance_ohm": 188668.80323604733,
+      "sweep_point": 6,
+      "source_line": 66381
+    },
+    "LRS_return_0p075V": {
+      "voltage_V": 0.075,
+      "current_A": 0.0006750450000000001,
+      "resistance_ohm": 111.10370419749792,
+      "sweep_point": 197,
+      "source_line": 66572
+    }
+  },
+  "ordered_stages": [
+    {
+      "phase": "SET",
+      "file_cycle": 74,
+      "time_order_cycle": 31,
+      "record_time": "2026-10-21 23:43:16",
+      "source_start_line": 67034,
+      "first_data_line": 67288,
+      "last_data_line": 67489,
+      "points": 202,
+      "compliance_A": 0.001,
+      "ADC_HighSpeed_Mode": [
+        "PLC"
+      ],
+      "ADC_HighSpeed_Coeff": [
+        "1"
+      ],
+      "timing_delay": [
+        "0"
+      ],
+      "instrument_series_resistor": [
+        "NONE",
+        "NONE"
+      ]
+    },
+    {
+      "phase": "RESET",
+      "file_cycle": 74,
+      "time_order_cycle": 31,
+      "record_time": "2026-10-21 23:43:29",
+      "source_start_line": 66578,
+      "first_data_line": 66832,
+      "last_data_line": 67033,
+      "points": 202,
+      "compliance_A": 0.01,
+      "ADC_HighSpeed_Mode": [
+        "PLC"
+      ],
+      "ADC_HighSpeed_Coeff": [
+        "1"
+      ],
+      "timing_delay": [
+        "0"
+      ],
+      "instrument_series_resistor": [
+        "NONE",
+        "NONE"
+      ]
+    },
+    {
+      "phase": "SET",
+      "file_cycle": 73,
+      "time_order_cycle": 32,
+      "record_time": "2026-10-21 23:43:40",
+      "source_start_line": 66122,
+      "first_data_line": 66376,
+      "last_data_line": 66577,
+      "points": 202,
+      "compliance_A": 0.001,
+      "ADC_HighSpeed_Mode": [
+        "PLC"
+      ],
+      "ADC_HighSpeed_Coeff": [
+        "1"
+      ],
+      "timing_delay": [
+        "0"
+      ],
+      "instrument_series_resistor": [
+        "NONE",
+        "NONE"
+      ]
+    }
+  ],
+  "protocol": {
+    "positive_compliance_A": 0.001,
+    "negative_compliance_A": 0.01,
+    "positive_grid": "0 to +1.5 to 0 V; 15 mV; 202 points including duplicated positive peak",
+    "negative_grid": "0 to -1.5 to 0 V; 15 mV; 202 points including duplicated negative peak",
+    "ADC": "HighSpeed configuration PLC coefficient 1, timing delay 0; not a measured per-point dwell.",
+    "time_units": "effective sample units until point acquisition and read timing are independently identified",
+    "record_time_note": "Timestamps label sweep records. Their 11-13 s gaps cannot be substituted for per-point timestamps.",
+    "instrument_series_resistor": "Raw header says NONE for both channels. The fitted ~81 ohm term is an effective device/contact parameter, not a recorded external instrument resistor."
+  },
+  "verification": {
+    "raw_matches_baseline_404_points": true,
+    "raw_matches_organized_606_points": true,
+    "cycle074_copy_sha256": "e2a951271368cf3fc92407ff9136a27e8782111af5eb57e90600ddb3b49a2690",
+    "next_SET_output_sha256": "f78a24d0fdd27ea50ab96718534d2ee26db97f186e2d4f2c80e15f5e08479821"
+  }
+}

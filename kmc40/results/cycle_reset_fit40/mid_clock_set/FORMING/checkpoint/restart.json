@@ -1,0 +1,57 @@
+{
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 106488340543723296174857620747200818651,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "seed": 314,
+  "eta": 0.03,
+  "assist": 0.05,
+  "pt_mode": "top_front",
+  "vn_fraction": 0.15,
+  "injected": 1352,
+  "returned": 17,
+  "mu": 25.0,
+  "sigma": 6.0,
+  "form_scale": 2.5,
+  "phase_end": {
+    "phase": "forming",
+    "cycle": 0,
+    "point": 201,
+    "voltage_V": 0.0,
+    "current_A": 0.0,
+    "read_G_S": 0.0003597964654059516,
+    "Ag_total": 1335,
+    "Ag_bottom10nm": 275,
+    "Ag_bottom_interface": 10,
+    "injected": 1352,
+    "returned": 17,
+    "connected": false,
+    "added": 0,
+    "removed": 1,
+    "VN_adjacent_Ag": 248
+  },
+  "electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 0.0,
+    "H": 0.0,
+    "q": 1.0,
+    "elapsed_units": 202.0,
+    "recovery_exposure": 34.28287744370856,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\Al4AlScN\\kmc40\\.venv\\Scripts\\python.exe",
+  "base_prefix": "C:\\Python314",
+  "packages": {
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "fonttools": "4.69.1",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "packaging": "26.4",
+    "pillow": "13.0.0",
+    "pip": "26.1.1",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "4.0.0",
+    "scipy": "1.18.1",
+    "tzdata": "2026.6"
+  },
+  "legacy_workspace_reads": [],
+  "imported_module_paths": {
+    "source_cycle_vn40": "D:\\Al4AlScN\\kmc40\\scripts\\source_cycle_vn40.py",
+    "set_growth40": "D:\\Al4AlScN\\kmc40\\scripts\\set_growth40.py",
+    "rate_reset40": "D:\\Al4AlScN\\kmc40\\scripts\\rate_reset40.py",
+    "cycle_unified40": "D:\\Al4AlScN\\kmc40\\scripts\\cycle_unified40.py",
+    "cycle_activity40": "D:\\Al4AlScN\\kmc40\\scripts\\cycle_activity40.py",
+    "mixed_network40": "D:\\Al4AlScN\\kmc40\\scripts\\mixed_network40.py",
+    "fit_unified_reset40": "D:\\Al4AlScN\\kmc40\\scripts\\fit_unified_reset40.py",
+    "complete_cycle40": "D:\\Al4AlScN\\kmc40\\scripts\\complete_cycle40.py"
+  },
+  "verified_migrated_files": 66,
+  "read_policy": "The import audit blocks any attempted read of D:/Al4memorister; all tested runtime imports passed."
+}

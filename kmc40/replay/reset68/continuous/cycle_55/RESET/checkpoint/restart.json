@@ -1,0 +1,101 @@
+{
+  "params": {
+    "eta": 0.03,
+    "assist_eV": 0.05,
+    "kT_eV": 0.025852,
+    "reference_barrier_eV": 0.3,
+    "unbound_energy_eV": 0.075,
+    "coordination_eV": 0.035,
+    "adhesion_eV": 0.08,
+    "background_weight": 0.0004,
+    "power_exponent": 1.0,
+    "path_reference_voltage_V": -0.6
+  },
+  "seed": 314,
+  "initial_source": {
+    "path": "replay\\reset68\\continuous\\cycle_55\\SET\\checkpoint",
+    "sha256": "6673dbc17297e0632d3f04a66d2bcd6fce6b27cf8a80e280cac5e5e4f91a808b",
+    "injected": 5439,
+    "returned": 4948,
+    "electronic_state": {
+      "schema": "cycle_activity40/v1",
+      "D": 9.537063071458663e-117,
+      "H": 1.4896887138009373e-117,
+      "q": 1.0,
+      "elapsed_units": 22422.0000000202,
+      "recovery_exposure": 12561.812826037407,
+      "params": {
+        "dose_scale": 4.409115796801806,
+        "activity_exponent": 0.7778720480535988,
+        "high_field_rate": 0.4240697032605897,
+        "field_scale_V": 0.12,
+        "high_field_reference_V": 1.5,
+        "recovery_rate": 3.999999999999999,
+        "recovery_voltage_scale_V": 0.3,
+        "reference_current_A": 0.001
+      },
+      "units": "effective sampling-time units; not calibrated seconds"
+    }
+  },
+  "field_solver": {
+    "kind": "mixed_network40",
+    "params": {
+      "metal_bond_S": 0.04,
+      "tunnel_prefactor_S": 0.001,
+      "tunnel_beta_nm": 10.25,
+      "trap_prefactor_S": 7.748e-05,
+      "trap_beta_nm": 2.0,
+      "leakage_S": 0.0
+    },
+    "activity": 1.0
+  },
+  "reference_power": 6.329143201982633e-06,
+  "initial_reference_power": 6.329143201982633e-06,
+  "initial_rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 132978667866206079429788018914307457268,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "events": 105,
+  "null_events": 2,
+  "final_clock": 790.2905401548084,
+  "initial_Ag": 491,
+  "final_Ag": 386,
+  "injected": 5439,
+  "returned": 5053,
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 81334864095473638793635557490086846483,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "clock_units": "dimensionless integrated voltage exposure; dwell in sampling-point units",
+  "approximation": "Separable rates; unit-voltage mixed fields at fixed electronic activity; no thermal memory",
+  "return_paths": "Source-conserving continuous dielectric paths at a fixed reference bias",
+  "electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 150.96450820948698,
+    "H": 23.602746320251306,
+    "q": 2.8162251338135614e-06,
+    "elapsed_units": 22624.000000020198,
+    "recovery_exposure": 12561.812826037407,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  }
+}

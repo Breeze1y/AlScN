@@ -1,0 +1,23 @@
+{
+  "parameters": {
+    "enabled": true,
+    "subunits": 16,
+    "retreat_duration": 14.0,
+    "local_window": 12.0,
+    "radius_nm": 1.5,
+    "contact_exponent": 4.0
+  },
+  "trigger": {
+    "event_index": 3,
+    "point": 8,
+    "time": 8.462583144515829,
+    "voltage_V": -0.12000000000000001,
+    "y": 50,
+    "x": 53,
+    "until": 20.46258314451583
+  },
+  "pending_microsteps": [],
+  "elapsed_units": 201.99999999999997,
+  "observation_exposure": 805.6881578442875,
+  "final_event": 70
+}

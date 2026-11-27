@@ -1,0 +1,445 @@
+Collected cycle 1/100
+Collected cycle 2/100
+Collected cycle 3/100
+Collected cycle 4/100
+Collected cycle 5/100
+cycle 6 SET complete Ag=818 R=161.947 connected=True
+cycle 6 RESET complete Ag=750.0 R=1.1178e+06
+Collected cycle 6/100
+cycle 7 SET complete Ag=778 R=140.364 connected=True
+cycle 7 RESET complete Ag=715.0 R=802894
+Collected cycle 7/100
+cycle 8 SET complete Ag=724 R=150.584 connected=True
+cycle 8 RESET complete Ag=678.0 R=801564
+Collected cycle 8/100
+cycle 9 SET complete Ag=685 R=163.038 connected=True
+cycle 9 RESET complete Ag=629.0 R=1.11792e+06
+Collected cycle 9/100
+cycle 10 SET complete Ag=646 R=168.905 connected=True
+cycle 10 RESET complete Ag=593.0 R=1.11792e+06
+Collected cycle 10/100
+cycle 11 SET complete Ag=615 R=167.45 connected=True
+cycle 11 RESET complete Ag=562.0 R=1.11794e+06
+Collected cycle 11/100
+cycle 12 SET complete Ag=583 R=179.228 connected=True
+cycle 12 RESET complete Ag=518.0 R=962267
+Collected cycle 12/100
+cycle 13 SET complete Ag=557 R=191.203 connected=True
+cycle 13 RESET complete Ag=496.0 R=1.11796e+06
+Collected cycle 13/100
+cycle 14 SET complete Ag=544 R=203.252 connected=True
+cycle 14 RESET complete Ag=481.0 R=1.118e+06
+Collected cycle 14/100
+cycle 15 SET complete Ag=512 R=224.139 connected=True
+cycle 15 RESET complete Ag=452.0 R=889012
+Collected cycle 15/100
+cycle 16 SET complete Ag=508 R=239.826 connected=True
+Traceback (most recent call last):
+  File "D:\yyang\kmc40\run_100_cycles.py", line 31, in <module>
+    cp = run_reset(out, n, cp, cfg["negative"], network, grid, retreat, steps)
+  File "D:\yyang\kmc40\scripts\run_ag_constrained_cycles.py", line 94, in run_reset
+    a,s,actions,snaps=retreat_kernel.simulate(cat,retreat,steps)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\yyang\kmc40\scripts\constrained_retreat40.py", line 133, in simulate
+    remove(y,x,1,point,v,'retreat_start',index,1)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yyang\kmc40\scripts\constrained_retreat40.py", line 83, in remove
+    route,route_kind=resolve_route(y,x,event_id)
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\yyang\kmc40\scripts\constrained_retreat40.py", line 66, in resolve_route
+    raise BlockedReturnRoute(event_id,y,x,now,len(queue))
+constrained_retreat40.BlockedReturnRoute: No empty return route: event=4, y=17, x=47, time=16.82443366095466, pending=20
+Collected cycle 1/100
+Collected cycle 2/100
+Collected cycle 3/100
+Collected cycle 4/100
+Collected cycle 5/100
+Collected cycle 6/100
+Collected cycle 7/100
+Collected cycle 8/100
+Collected cycle 9/100
+Collected cycle 10/100
+Collected cycle 11/100
+Collected cycle 12/100
+Collected cycle 13/100
+Collected cycle 14/100
+Collected cycle 15/100
+Traceback (most recent call last):
+  File "D:\yyang\kmc40\run_100_cycles.py", line 31, in <module>
+    cp = run_reset(out, n, cp, cfg["negative"], network, grid, retreat, steps,
+                   wait_for_return_route=True)
+  File "D:\yyang\kmc40\scripts\run_ag_constrained_cycles.py", line 132, in run_reset
+    full.dump(target/'summary.json',s)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yyang\kmc40\scripts\run_full_chain.py", line 31, in dump
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Qilin Hua\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Qilin Hua\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Qilin Hua\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Qilin Hua\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable
+when serializing dict item 'delayed_return_actions'
+Collected cycle 1/100
+Collected cycle 2/100
+Collected cycle 3/100
+Collected cycle 4/100
+Collected cycle 5/100
+Collected cycle 6/100
+Collected cycle 7/100
+Collected cycle 8/100
+Collected cycle 9/100
+Collected cycle 10/100
+Collected cycle 11/100
+Collected cycle 12/100
+Collected cycle 13/100
+Collected cycle 14/100
+Collected cycle 15/100
+cycle 16 RESET complete Ag=446.0 R=1.11801e+06
+Collected cycle 16/100
+cycle 17 SET complete Ag=481 R=229.647 connected=True
+cycle 17 RESET complete Ag=419.0 R=1.11795e+06
+Collected cycle 17/100
+cycle 18 SET complete Ag=474 R=226.081 connected=True
+cycle 18 RESET complete Ag=422.0 R=1.11801e+06
+Collected cycle 18/100
+cycle 19 SET complete Ag=492 R=238.856 connected=True
+cycle 19 RESET complete Ag=393.0 R=1.11798e+06
+Collected cycle 19/100
+cycle 20 SET extends field catalogue from 96
+cycle 20 SET complete Ag=525 R=263.284 connected=True
+cycle 20 RESET complete Ag=428.0 R=1.11795e+06
+Collected cycle 20/100
+cycle 21 SET complete Ag=484 R=247.321 connected=True
+cycle 21 RESET complete Ag=414.0 R=1.11796e+06
+Collected cycle 21/100
+cycle 22 SET complete Ag=500 R=243.617 connected=True
+cycle 22 RESET complete Ag=432.0 R=1.11794e+06
+Collected cycle 22/100
+cycle 23 SET complete Ag=488 R=268.272 connected=True
+cycle 23 RESET complete Ag=408.0 R=1.11796e+06
+Collected cycle 23/100
+cycle 24 SET complete Ag=500 R=267.682 connected=True
+cycle 24 RESET complete Ag=409.0 R=1.11801e+06
+Collected cycle 24/100
+cycle 25 SET complete Ag=480 R=258.341 connected=True
+cycle 25 RESET complete Ag=373.0 R=1.11802e+06
+Collected cycle 25/100
+cycle 26 SET extends field catalogue from 96
+cycle 26 SET complete Ag=514 R=275.68 connected=True
+cycle 26 RESET complete Ag=393.0 R=1.11795e+06
+Collected cycle 26/100
+cycle 27 SET extends field catalogue from 96
+cycle 27 SET complete Ag=533 R=280.914 connected=True
+cycle 27 RESET complete Ag=406.0 R=1.11795e+06
+Collected cycle 27/100
+cycle 28 SET complete Ag=500 R=256.946 connected=True
+cycle 28 RESET complete Ag=380.0 R=1.11794e+06
+Collected cycle 28/100
+cycle 29 SET extends field catalogue from 96
+cycle 29 SET complete Ag=498 R=258.113 connected=True
+Traceback (most recent call last):
+  File "D:\yyang\kmc40\run_100_cycles.py", line 31, in <module>
+    cp = run_reset(out, n, cp, cfg["negative"], network, grid, retreat, steps,
+                   wait_for_return_route=True)
+  File "D:\yyang\kmc40\scripts\run_ag_constrained_cycles.py", line 94, in run_reset
+    a,s,actions,snaps=retreat_kernel.simulate(cat,retreat,steps,wait_for_return_route=wait_for_return_route)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yyang\kmc40\scripts\constrained_retreat40.py", line 126, in simulate
+    remove(y,x,1,point,v,'retreat_microstep',ev,step)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yyang\kmc40\scripts\constrained_retreat40.py", line 86, in remove
+    route,route_kind=resolve_route(y,x,event_id) if resolved_route is None else resolved_route
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\yyang\kmc40\scripts\constrained_retreat40.py", line 69, in resolve_route
+    raise BlockedReturnRoute(event_id,y,x,now,len(queue))
+constrained_retreat40.BlockedReturnRoute: No empty return route: event=4, y=26, x=46, time=13.153566090527814, pending=32
+Collected cycle 1/100
+Collected cycle 2/100
+Collected cycle 3/100
+Collected cycle 4/100
+Collected cycle 5/100
+Collected cycle 6/100
+Collected cycle 7/100
+Collected cycle 8/100
+Collected cycle 9/100
+Collected cycle 10/100
+Collected cycle 11/100
+Collected cycle 12/100
+Collected cycle 13/100
+Collected cycle 14/100
+Collected cycle 15/100
+Collected cycle 16/100
+Collected cycle 17/100
+Collected cycle 18/100
+Collected cycle 19/100
+Collected cycle 20/100
+Collected cycle 21/100
+Collected cycle 22/100
+Collected cycle 23/100
+Collected cycle 24/100
+Collected cycle 25/100
+Collected cycle 26/100
+Collected cycle 27/100
+Collected cycle 28/100
+cycle 29 RESET complete Ag=400.0 R=1.1179e+06
+Collected cycle 29/100
+cycle 30 SET complete Ag=480 R=248.958 connected=True
+cycle 30 RESET complete Ag=390.0 R=1.11796e+06
+Collected cycle 30/100
+cycle 31 SET extends field catalogue from 96
+cycle 31 SET complete Ag=500 R=251.675 connected=True
+cycle 31 RESET complete Ag=420.0 R=1.11791e+06
+Collected cycle 31/100
+cycle 32 SET complete Ag=504 R=255.369 connected=True
+cycle 32 RESET complete Ag=417.0 R=875800
+Collected cycle 32/100
+cycle 33 SET complete Ag=472 R=247.762 connected=True
+cycle 33 RESET complete Ag=377.0 R=1.11795e+06
+Collected cycle 33/100
+cycle 34 SET extends field catalogue from 96
+cycle 34 SET complete Ag=474 R=261.925 connected=True
+cycle 34 RESET complete Ag=368.0 R=1.11801e+06
+Collected cycle 34/100
+cycle 35 SET extends field catalogue from 96
+cycle 35 SET complete Ag=488 R=290.594 connected=True
+cycle 35 RESET complete Ag=396.0 R=1.11801e+06
+Collected cycle 35/100
+cycle 36 SET extends field catalogue from 96
+cycle 36 SET complete Ag=544 R=283.159 connected=True
+cycle 36 RESET complete Ag=449.0 R=1.11801e+06
+Collected cycle 36/100
+cycle 37 SET complete Ag=537 R=260.101 connected=True
+cycle 37 RESET complete Ag=418.0 R=1.11793e+06
+Collected cycle 37/100
+cycle 38 SET extends field catalogue from 96
+cycle 38 SET complete Ag=519 R=258.759 connected=True
+cycle 38 RESET complete Ag=425.0 R=1.11798e+06
+Collected cycle 38/100
+cycle 39 SET extends field catalogue from 96
+cycle 39 SET complete Ag=571 R=268.181 connected=True
+cycle 39 RESET complete Ag=462.0 R=1.11793e+06
+Collected cycle 39/100
+cycle 40 SET extends field catalogue from 96
+cycle 40 SET complete Ag=587 R=295.937 connected=True
+cycle 40 RESET complete Ag=481.0 R=834357
+Collected cycle 40/100
+cycle 41 SET complete Ag=562 R=255.731 connected=True
+cycle 41 RESET complete Ag=458.0 R=1.11801e+06
+Collected cycle 41/100
+cycle 42 SET extends field catalogue from 96
+cycle 42 SET complete Ag=567 R=272.952 connected=True
+cycle 42 RESET complete Ag=455.0 R=1.11797e+06
+Collected cycle 42/100
+cycle 43 SET extends field catalogue from 96
+cycle 43 SET complete Ag=611 R=275.324 connected=True
+cycle 43 RESET complete Ag=499.0 R=1.11801e+06
+Collected cycle 43/100
+cycle 44 SET complete Ag=581 R=243.761 connected=True
+cycle 44 RESET complete Ag=486.0 R=1.1179e+06
+Collected cycle 44/100
+cycle 45 SET complete Ag=545 R=278.048 connected=True
+cycle 45 RESET complete Ag=446.0 R=1.118e+06
+Collected cycle 45/100
+cycle 46 SET complete Ag=520 R=258.637 connected=True
+cycle 46 RESET complete Ag=435.0 R=1.11801e+06
+Collected cycle 46/100
+cycle 47 SET complete Ag=507 R=275.006 connected=True
+cycle 47 RESET complete Ag=426.0 R=1.11801e+06
+Collected cycle 47/100
+cycle 48 SET complete Ag=512 R=263.728 connected=True
+cycle 48 RESET complete Ag=414.0 R=1.11798e+06
+Collected cycle 48/100
+cycle 49 SET extends field catalogue from 96
+cycle 49 SET complete Ag=517 R=251.047 connected=True
+cycle 49 RESET complete Ag=429.0 R=1.11789e+06
+Collected cycle 49/100
+cycle 50 SET complete Ag=483 R=232.911 connected=True
+cycle 50 RESET complete Ag=413.0 R=1.11801e+06
+Collected cycle 50/100
+cycle 51 SET complete Ag=498 R=266.096 connected=True
+cycle 51 RESET complete Ag=386.0 R=1.11792e+06
+Collected cycle 51/100
+cycle 52 SET extends field catalogue from 96
+cycle 52 SET complete Ag=494 R=275.334 connected=True
+cycle 52 RESET complete Ag=409.0 R=1.11794e+06
+Collected cycle 52/100
+cycle 53 SET complete Ag=499 R=265.018 connected=True
+cycle 53 RESET complete Ag=410.0 R=1.11798e+06
+Collected cycle 53/100
+cycle 54 SET extends field catalogue from 96
+cycle 54 SET complete Ag=515 R=269.963 connected=True
+cycle 54 RESET complete Ag=411.0 R=1.1179e+06
+Collected cycle 54/100
+cycle 55 SET complete Ag=491 R=278.877 connected=True
+cycle 55 RESET complete Ag=386.0 R=1.11802e+06
+Collected cycle 55/100
+cycle 56 SET extends field catalogue from 96
+cycle 56 SET complete Ag=556 R=282.068 connected=True
+cycle 56 RESET complete Ag=441.0 R=1.11802e+06
+Collected cycle 56/100
+cycle 57 SET complete Ag=526 R=251.841 connected=True
+cycle 57 RESET complete Ag=431.0 R=1.11795e+06
+Collected cycle 57/100
+cycle 58 SET extends field catalogue from 96
+cycle 58 SET complete Ag=552 R=265.323 connected=True
+cycle 58 RESET complete Ag=436.0 R=1.118e+06
+Collected cycle 58/100
+cycle 59 SET extends field catalogue from 96
+cycle 59 SET complete Ag=553 R=259.982 connected=True
+cycle 59 RESET complete Ag=438.0 R=1.11792e+06
+Collected cycle 59/100
+cycle 60 SET extends field catalogue from 96
+cycle 60 SET complete Ag=543 R=269.12 connected=True
+cycle 60 RESET complete Ag=459.0 R=1.11796e+06
+Collected cycle 60/100
+cycle 61 SET extends field catalogue from 96
+cycle 61 SET complete Ag=573 R=291.844 connected=True
+cycle 61 RESET complete Ag=468.0 R=1.11801e+06
+Collected cycle 61/100
+cycle 62 SET extends field catalogue from 96
+cycle 62 SET complete Ag=616 R=268.405 connected=True
+cycle 62 RESET complete Ag=508.0 R=1.11801e+06
+Collected cycle 62/100
+cycle 63 SET extends field catalogue from 96
+cycle 63 SET complete Ag=604 R=271.773 connected=True
+cycle 63 RESET complete Ag=530.0 R=1.11801e+06
+Collected cycle 63/100
+cycle 64 SET complete Ag=608 R=258.413 connected=True
+cycle 64 RESET complete Ag=458.0 R=1.11794e+06
+Collected cycle 64/100
+cycle 65 SET extends field catalogue from 96
+cycle 65 SET complete Ag=580 R=281.645 connected=True
+cycle 65 RESET complete Ag=461.0 R=1.11797e+06
+Collected cycle 65/100
+cycle 66 SET extends field catalogue from 96
+cycle 66 SET complete Ag=596 R=262.673 connected=True
+cycle 66 RESET complete Ag=488.0 R=1.1179e+06
+Collected cycle 66/100
+cycle 67 SET extends field catalogue from 96
+cycle 67 SET complete Ag=587 R=253.365 connected=True
+cycle 67 RESET complete Ag=500.0 R=1.11794e+06
+Collected cycle 67/100
+cycle 68 SET complete Ag=575 R=270.566 connected=True
+cycle 68 RESET complete Ag=438.0 R=1.11796e+06
+Collected cycle 68/100
+cycle 69 SET complete Ag=533 R=256.96 connected=True
+cycle 69 RESET complete Ag=462.0 R=1.11799e+06
+Collected cycle 69/100
+cycle 70 SET complete Ag=539 R=265.032 connected=True
+cycle 70 RESET complete Ag=391.0 R=1.11786e+06
+Collected cycle 70/100
+cycle 71 SET extends field catalogue from 96
+cycle 71 SET complete Ag=501 R=268.136 connected=True
+cycle 71 RESET complete Ag=384.0 R=1.11792e+06
+Collected cycle 71/100
+cycle 72 SET extends field catalogue from 96
+cycle 72 SET complete Ag=515 R=289.781 connected=True
+cycle 72 RESET complete Ag=428.0 R=1.11796e+06
+Collected cycle 72/100
+cycle 73 SET extends field catalogue from 96
+cycle 73 SET complete Ag=532 R=275.679 connected=True
+cycle 73 RESET complete Ag=451.0 R=1.11794e+06
+Collected cycle 73/100
+cycle 74 SET complete Ag=502 R=271.914 connected=True
+cycle 74 RESET complete Ag=429.0 R=1.11794e+06
+Collected cycle 74/100
+cycle 75 SET complete Ag=508 R=257.636 connected=True
+cycle 75 RESET complete Ag=391.0 R=1.11739e+06
+Collected cycle 75/100
+cycle 76 SET extends field catalogue from 96
+cycle 76 SET complete Ag=512 R=286.91 connected=True
+cycle 76 RESET complete Ag=416.0 R=1.11801e+06
+Collected cycle 76/100
+cycle 77 SET extends field catalogue from 96
+cycle 77 SET complete Ag=536 R=255.27 connected=True
+cycle 77 RESET complete Ag=446.0 R=1.11776e+06
+Collected cycle 77/100
+cycle 78 SET complete Ag=531 R=262.749 connected=True
+cycle 78 RESET complete Ag=437.0 R=1.11801e+06
+Collected cycle 78/100
+cycle 79 SET extends field catalogue from 96
+cycle 79 SET complete Ag=539 R=280.656 connected=True
+cycle 79 RESET complete Ag=426.0 R=1.11801e+06
+Collected cycle 79/100
+cycle 80 SET extends field catalogue from 96
+cycle 80 SET complete Ag=568 R=262.229 connected=True
+cycle 80 RESET complete Ag=470.0 R=1.11801e+06
+Collected cycle 80/100
+cycle 81 SET complete Ag=558 R=249.396 connected=True
+cycle 81 RESET complete Ag=452.0 R=1.11801e+06
+Collected cycle 81/100
+cycle 82 SET extends field catalogue from 96
+cycle 82 SET complete Ag=573 R=268.579 connected=True
+cycle 82 RESET complete Ag=492.0 R=1.1179e+06
+Collected cycle 82/100
+cycle 83 SET complete Ag=578 R=271.91 connected=True
+cycle 83 RESET complete Ag=493.0 R=1.11801e+06
+Collected cycle 83/100
+cycle 84 SET complete Ag=584 R=259.296 connected=True
+cycle 84 RESET complete Ag=464.0 R=1.11684e+06
+Collected cycle 84/100
+cycle 85 SET extends field catalogue from 96
+cycle 85 SET complete Ag=582 R=237.715 connected=True
+cycle 85 RESET complete Ag=479.0 R=1.11793e+06
+Collected cycle 85/100
+cycle 86 SET extends field catalogue from 96
+cycle 86 SET complete Ag=599 R=249.336 connected=True
+cycle 86 RESET complete Ag=473.0 R=1.11801e+06
+Collected cycle 86/100
+cycle 87 SET extends field catalogue from 96
+cycle 87 SET complete Ag=572 R=260.691 connected=True
+cycle 87 RESET complete Ag=452.0 R=1.1179e+06
+Collected cycle 87/100
+cycle 88 SET extends field catalogue from 96
+cycle 88 SET complete Ag=585 R=279.274 connected=True
+cycle 88 RESET complete Ag=460.0 R=1.1179e+06
+Collected cycle 88/100
+cycle 89 SET extends field catalogue from 96
+cycle 89 SET complete Ag=616 R=284.637 connected=True
+cycle 89 RESET complete Ag=480.0 R=1.1179e+06
+Collected cycle 89/100
+cycle 90 SET extends field catalogue from 96
+cycle 90 SET complete Ag=609 R=262.078 connected=True
+cycle 90 RESET complete Ag=503.0 R=1.1179e+06
+Collected cycle 90/100
+cycle 91 SET complete Ag=593 R=276.855 connected=True
+cycle 91 RESET complete Ag=475.0 R=1.11775e+06
+Collected cycle 91/100
+cycle 92 SET complete Ag=561 R=262.521 connected=True
+cycle 92 RESET complete Ag=457.0 R=1.11792e+06
+Collected cycle 92/100
+cycle 93 SET complete Ag=534 R=273.649 connected=True
+cycle 93 RESET complete Ag=452.0 R=1.11794e+06
+Collected cycle 93/100
+cycle 94 SET complete Ag=524 R=275.169 connected=True
+cycle 94 RESET complete Ag=447.0 R=807831
+Collected cycle 94/100
+cycle 95 SET complete Ag=512 R=278.39 connected=True
+cycle 95 RESET complete Ag=418.0 R=1.11801e+06
+Collected cycle 95/100
+cycle 96 SET extends field catalogue from 96
+cycle 96 SET complete Ag=523 R=283.588 connected=True
+cycle 96 RESET complete Ag=420.0 R=1.11787e+06
+Collected cycle 96/100
+cycle 97 SET extends field catalogue from 96
+cycle 97 SET complete Ag=525 R=267.758 connected=True
+cycle 97 RESET complete Ag=437.0 R=1.11801e+06
+Collected cycle 97/100
+cycle 98 SET extends field catalogue from 96
+cycle 98 SET complete Ag=546 R=270.655 connected=True
+cycle 98 RESET complete Ag=440.0 R=1.11794e+06
+Collected cycle 98/100
+cycle 99 SET complete Ag=517 R=262.678 connected=True
+cycle 99 RESET complete Ag=423.0 R=961424
+Collected cycle 99/100
+cycle 100 SET extends field catalogue from 96
+cycle 100 SET complete Ag=531 R=238.427 connected=True
+cycle 100 RESET complete Ag=443.0 R=1.1179e+06
+Collected cycle 100/100

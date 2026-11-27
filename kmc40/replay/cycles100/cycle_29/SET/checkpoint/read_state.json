@@ -1,0 +1,9 @@
+{
+  "event_index": 119,
+  "observation_exposure": 125.33885535059565,
+  "last_event_exposure": 123.90545950914482,
+  "next_event_exposure": 127.546228883923,
+  "source_sequence": "D:\\yyang\\kmc40\\replay\\cycles100\\cycle_29\\catalogues\\SET",
+  "exact_prefix_reproduction": true,
+  "mass_balance_error": 0
+}

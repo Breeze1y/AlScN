@@ -1,0 +1,107 @@
+{
+  "source": "D:\\Al4AlScN\\kmc40\\results\\five_cycle_demo40\\pristine\\catalogues\\INIT_RESET",
+  "initial_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 0.0,
+    "H": 0.0,
+    "q": 1.0,
+    "elapsed_units": 202.0,
+    "recovery_exposure": 34.28287744370856,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "final_electronic_state": {
+    "schema": "cycle_activity40/v1",
+    "D": 150.18000026922275,
+    "H": 23.539371291498757,
+    "q": 2.90435220004816e-06,
+    "elapsed_units": 403.99999999999983,
+    "recovery_exposure": 34.28287744370856,
+    "params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "units": "effective sampling-time units; not calibrated seconds"
+  },
+  "clock": {
+    "rate_scale": 0.23248094506443956,
+    "voltage_scale_V": 0.32333574855193065,
+    "recovery_rate": 3.999999999999999,
+    "recovery_voltage_scale_V": 0.3,
+    "circuit": {
+      "network_scale": 9.987870449406756,
+      "series_contact_ohm": 80.95973988295985,
+      "leakage_S": 8.944110346098897e-07,
+      "positive_limit_A": 0.001,
+      "negative_limit_A": 0.01
+    },
+    "activity_params": {
+      "dose_scale": 4.409115796801806,
+      "activity_exponent": 0.7778720480535988,
+      "high_field_rate": 0.4240697032605897,
+      "field_scale_V": 0.12,
+      "high_field_reference_V": 1.5,
+      "recovery_rate": 3.999999999999999,
+      "recovery_voltage_scale_V": 0.3,
+      "reference_current_A": 0.001
+    },
+    "driving_voltage": "material voltage after compliance and effective contact drop",
+    "calibration": "All nonzero C74 SET and RESET samples; parity subsets are descriptive, not held out"
+  },
+  "final_event": 352,
+  "event_exposure": 998.7641929932464,
+  "sequence_exhausted": false,
+  "available_events": 400,
+  "metrics": {
+    "all": 0.27009347217428203,
+    "train": 0.27432867581765424,
+    "interleaved": 0.2657907918767158,
+    "out": 0.27065260247365897,
+    "back": 0.26953318199538034,
+    "max_adjacent_jump_dec": 0.3010299997121484
+  },
+  "schema": "full_chain40/phase/v1",
+  "phase": "INIT_RESET",
+  "source_checkpoint": "results\\five_cycle_demo40\\pristine\\FORMING\\checkpoint",
+  "source_checkpoint_sha256": "7fdc0bc8269ccb7a456db921f181bdd7f44f000005ad17786a63a405af413e3d",
+  "network_params": {
+    "metal_bond_S": 0.04,
+    "tunnel_prefactor_S": 0.001,
+    "tunnel_beta_nm": 10.25,
+    "trap_prefactor_S": 7.748e-05,
+    "trap_beta_nm": 2.0,
+    "leakage_S": 0.0
+  },
+  "final_Ag": 983,
+  "final_metal_connected": false,
+  "final_read_G_S": 1.2450752211647906e-06,
+  "final_read_ohm": 803164.3253364898,
+  "current_semantics": "Within-dwell time averaged current; morphology and endpoint_current_A are sampled endpoint states",
+  "measured_role": "C74 mature cycle reference; new forming-history trajectory, not the original calibrated geometry",
+  "protocol_substeps": 16,
+  "parameter_role": "Frozen cycle_unified40 selected parameters",
+  "inherited_rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 106488340543723296174857620747200818651,
+      "inc": 164495384327741427094762909963151137623
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  }
+}

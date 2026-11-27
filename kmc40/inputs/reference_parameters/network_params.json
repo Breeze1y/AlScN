@@ -1,0 +1,8 @@
+{
+  "metal_bond_S": 0.04,
+  "tunnel_prefactor_S": 0.001,
+  "tunnel_beta_nm": 10.25,
+  "trap_prefactor_S": 0.00007748,
+  "trap_beta_nm": 2.0,
+  "leakage_S": 0.0
+}
