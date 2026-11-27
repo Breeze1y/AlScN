@@ -1,9 +1,0 @@
-﻿id,claim,pdf_pages,anchor,evidence_type,limitation
-Y01,"3D KMC describes forming,thickening,rupturing,dissolving",1,§2,原文综述,"These are stages, not four microscopic event types"
-Y02,Resistor network incorporates Joule heating,1,§2,原文综述,Heat equation and boundary details not disclosed
-Y03,Claims inverse Ron/compliance and exponential forming-time trends,1,§2,原文综述,"No data plots, statistical fits or valid ranges"
-Y04,"Compact forming has oxidation,migration,backward growth",1–2,§3,原文综述,No closed-form equations printed
-Y05,Five morphology stages in Fig2,2,Fig2,原图,Not five KMC events;LFG/HFG expansions not stated
-Y06,3D code source is private communication,2,Reference4,原文,Cannot reconstruct/claim reproduced from missing source
-Y07,Vacancy-based oxide model distinct from ECM,2,§4,原文综述,No direct evidence for VN in nitride
-Y08,Staged diagnostics and optional future3D path,not applicable,Report adaptation sections,本课题建议,Current code remains2D; fine grid is not3D

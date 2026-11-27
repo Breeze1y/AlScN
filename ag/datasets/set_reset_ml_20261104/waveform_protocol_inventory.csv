@@ -1,4 +1,0 @@
-﻿protocol_profile_id,set_start_V,set_stop_V,set_step_V,reset_start_V,reset_stop_V,reset_step_V,matched_read_bias_V,nature_data_sample_count,A_batch_sample_count,shared_waveform_profile_across_batches_flag,nature_data_SET_compliance_values_A,nature_data_RESET_compliance_values_A,A_batch_SET_compliance_values_A,A_batch_RESET_compliance_values_A,compliance_exactly_matched_flag
-P_22bb73f1d947,0,1.2,0.012,0,-1,-0.01,0.1,0,200,0,,,0.001,0.1,0
-P_c0d225f9ba65,0,1.5,0.015,0,-1,-0.01,0.1,101,1199,1,0.001,0.01,0.001,0.1,0
-P_dcf516f19c7c,0,1.5,0.015,0,-1.5,-0.015,0.1,381,500,1,0.0003|0.0005|0.0007|0.001,0.1,0.001,0.1,0
